@@ -4,7 +4,7 @@ import { motion } from "framer-motion"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
-import { Scale, Shield, ShoppingCart, Play, Star, Clock } from "lucide-react"
+import { Scale, Shield, ShoppingCart, Play, Star, Clock, TrafficCone } from "lucide-react"
 import Link from "next/link"
 
 const gameCategories = [
@@ -40,9 +40,21 @@ const gameCategories = [
     color: "from-green-500 to-green-600",
     bgColor: "bg-green-50",
     borderColor: "border-green-200",
-    levels: 2,
+    levels: 12,
     difficulty: "Beginner",
-    estimatedTime: "12 min",
+    estimatedTime: "45 min",
+  },
+  {
+    id: "traffic-rules",
+    title: "Traffic Rules",
+    description: "Master key road safety rules and penalties under the Motor Vehicles Act",
+    icon: TrafficCone,
+    color: "from-orange-500 to-orange-600",
+    bgColor: "bg-orange-50",
+    borderColor: "border-orange-200",
+    levels: 10,
+    difficulty: "Beginner–Intermediate",
+    estimatedTime: "35 min",
   },
 ]
 
@@ -129,11 +141,11 @@ export function GameSection() {
         >
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
             <div className="bg-white rounded-xl p-6 shadow-lg border border-purple-100">
-              <div className="text-3xl font-bold text-purple-600 mb-2">6+</div>
+              <div className="text-3xl font-bold text-purple-600 mb-2">16+</div>
               <div className="text-gray-600">Interactive Scenarios</div>
             </div>
             <div className="bg-white rounded-xl p-6 shadow-lg border border-purple-100">
-              <div className="text-3xl font-bold text-purple-600 mb-2">3</div>
+              <div className="text-3xl font-bold text-purple-600 mb-2">4</div>
               <div className="text-gray-600">Legal Categories</div>
             </div>
             <div className="bg-white rounded-xl p-6 shadow-lg border border-purple-100">

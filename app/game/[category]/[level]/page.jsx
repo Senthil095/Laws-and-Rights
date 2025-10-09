@@ -51,6 +51,199 @@ const gameData = {
       },
     },
   },
+  "traffic-rules": {
+    title: "Traffic Rules",
+    levels: {
+      1: {
+        title: "Wearing Helmet on Two-Wheeler",
+        scenario:
+          "Raj is riding his motorbike in town without a helmet. A traffic police officer stops him.",
+        question:
+          "According to the Motor Vehicles Act, who must wear a helmet while riding a two-wheeler?",
+        options: [
+          { id: "a", text: "Only the rider, not the pillion passenger.", correct: false },
+          { id: "b", text: "Both the rider and pillion passenger (if over 4 years old).", correct: true },
+          { id: "c", text: "Only when riding on highways, not in the city.", correct: false },
+          { id: "d", text: "Helmets are not compulsory if riding slowly.", correct: false },
+        ],
+        explanation:
+          "Section 129 mandates helmets for rider and pillion (over 4 years). It's mandatory everywhere and reduces head injury risk.",
+        punishment:
+          "Riding without a helmet attracts a ₹1,000 fine and licence disqualification for 3 months; risk of serious injury is high.",
+        timeLimit: 25,
+        scenarioType: "helmet",
+      },
+      2: {
+        title: "Using Seatbelts in a Car",
+        scenario:
+          "Sneha is driving her car with a friend beside her. Neither of them is wearing a seatbelt.",
+        question: "Under Indian traffic rules, who is required to wear a seatbelt in a moving car?",
+        options: [
+          { id: "a", text: "Only the driver.", correct: false },
+          { id: "b", text: "The driver and the front-seat passenger.", correct: true },
+          { id: "c", text: "Everyone in the car, including those in the back seats.", correct: false },
+          { id: "d", text: "Seatbelt use is optional if the car is moving slowly.", correct: false },
+        ],
+        explanation:
+          "Section 194B requires the driver and front-seat passenger to wear seatbelts; child passengers need proper restraints.",
+        punishment:
+          "Fine of ₹1,000 for not wearing seatbelts; higher risk of severe injury in a crash.",
+        timeLimit: 25,
+        scenarioType: "seatbelt",
+      },
+      3: {
+        title: "Speeding on a Road",
+        scenario:
+          "Anand drives at 70 km/h on a city road with a 50 km/h limit.",
+        question:
+          "What is the legal consequence of exceeding the speed limit under the Motor Vehicles Act?",
+        options: [
+          { id: "a", text: "No penalty, as long as driving safely.", correct: false },
+          { id: "b", text: "Imprisonment for 1 year regardless of speed.", correct: false },
+          { id: "c", text: "A fine (up to ₹400 on first offense, ₹1,000 if repeat).", correct: true },
+          { id: "d", text: "Automatic cancellation of vehicle registration.", correct: false },
+        ],
+        explanation:
+          "Section 183 covers excessive speed: fine up to ₹400 for first offence; up to ₹1,000 for repeat. Severe cases may invoke Section 184.",
+        punishment:
+          "Speeding invites fines and increases accident risk, especially in school/residential zones.",
+        timeLimit: 25,
+        scenarioType: "speeding",
+      },
+      4: {
+        title: "Pedestrian Zebra Crossing",
+        scenario:
+          "Mira walks across a zebra crossing while a car approaches. The driver does not stop.",
+        question: "Who has the right of way at a zebra crossing in India?",
+        options: [
+          { id: "a", text: "Pedestrians crossing have right of way.", correct: true },
+          { id: "b", text: "Vehicles have right of way unless a cop signals to stop.", correct: false },
+          { id: "c", text: "Only ambulances have right of way; others can drive.", correct: false },
+          { id: "d", text: "No specific rule; pedestrians must always wait.", correct: false },
+        ],
+        explanation:
+          "Road Regulations (1989) give pedestrians right of way at zebra crossings; drivers must yield.",
+        punishment:
+          "Failing to yield can be dangerous driving (Sec 184) with fines/jail; serious crashes invite harsher penalties.",
+        timeLimit: 25,
+        scenarioType: "zebra",
+      },
+      5: {
+        title: "Drunk Driving (BAC 0.04%)",
+        scenario:
+          "Vikram considers driving home after a party; BAC ~0.04%.",
+        question:
+          "What is the legal BAC limit for driving in India, and what are the penalties if exceeded?",
+        options: [
+          { id: "a", text: "0.05% limit; first offence ₹5,000 fine.", correct: false },
+          { id: "b", text: "0.03% limit; first offence fine up to ₹10,000 and/or 6 months imprisonment.", correct: true },
+          { id: "c", text: "No limit for private cars; only buses/trucks are banned.", correct: false },
+          { id: "d", text: "Any detectable alcohol is illegal; detention only.", correct: false },
+        ],
+        explanation:
+          "Section 185 sets BAC at 0.03%. First offence: up to ₹10,000 fine and/or 6 months jail; repeat stricter.",
+        punishment:
+          "Drunk driving can lead to licence suspension, higher fines, and severe criminal liability in crashes.",
+        timeLimit: 25,
+        scenarioType: "drunk-driving",
+      },
+      6: {
+        title: "Using Mobile Phone While Driving",
+        scenario:
+          "Rina is at a red light and picks up her phone to send a text.",
+        question:
+          "What does Indian law say about using a handheld phone while driving, and what is the penalty?",
+        options: [
+          { id: "a", text: "Allowed if the vehicle is stationary.", correct: false },
+          { id: "b", text: "Illegal; punishable by fine up to ₹5,000.", correct: true },
+          { id: "c", text: "Only illegal at speeds over 60 km/h.", correct: false },
+          { id: "d", text: "Not specified in law.", correct: false },
+        ],
+        explanation:
+          "Using handheld devices is dangerous driving under Sec 184; fines up to ₹5,000; points/suspension possible.",
+        punishment:
+          "Fines, points, and higher crash risk; potential suspension for repeated offences.",
+        timeLimit: 25,
+        scenarioType: "mobile-use",
+      },
+      7: {
+        title: "Jumping a Red Light",
+        scenario:
+          "Aditya crosses an intersection despite the red signal.",
+        question:
+          "What is the penalty for running a red light in India?",
+        options: [
+          { id: "a", text: "A warning by police with no fine.", correct: false },
+          { id: "b", text: "₹500 first offence, ₹1,000 repeat.", correct: false },
+          { id: "c", text: "Dangerous driving (Sec 184): up to ₹5,000 fine or up to 1 year jail.", correct: true },
+          { id: "d", text: "Confiscation of vehicle.", correct: false },
+        ],
+        explanation:
+          "Ignoring a red light is dangerous driving per Sec 184; first offence can attract up to ₹5,000 fine/6–12 months jail.",
+        punishment:
+          "Fines/jail and possible suspension; high crash risk at intersections.",
+        timeLimit: 25,
+        scenarioType: "red-light",
+      },
+      8: {
+        title: "Unsafe Overtaking on a Blind Curve",
+        scenario:
+          "Suresh attempts to overtake on a blind curve.",
+        question:
+          "Is overtaking another vehicle on a blind curve allowed under Indian traffic rules?",
+        options: [
+          { id: "a", text: "Yes, if no oncoming traffic.", correct: false },
+          { id: "b", text: "No, overtaking on a bend/curve is prohibited.", correct: true },
+          { id: "c", text: "Only if the car ahead signals left.", correct: false },
+          { id: "d", text: "Yes, if you honk to warn oncoming traffic.", correct: false },
+        ],
+        explanation:
+          "Road Regulations prohibit overtaking when visibility is limited or near bends; it's inherently unsafe.",
+        punishment:
+          "Punishable as dangerous driving (Sec 184) with fine/jail; severe crashes can lead to harsher charges.",
+        timeLimit: 25,
+        scenarioType: "overtaking",
+      },
+      9: {
+        title: "Obeying STOP Sign",
+        scenario:
+          "A driver approaches a STOP sign but does not stop.",
+        question:
+          "What does the law require at a STOP sign?",
+        options: [
+          { id: "a", text: "Stop only if other vehicles approach.", correct: false },
+          { id: "b", text: "Come to a complete stop, then proceed when safe.", correct: true },
+          { id: "c", text: "Ignore late at night with no traffic.", correct: false },
+          { id: "d", text: "Slow down; no need to fully stop.", correct: false },
+        ],
+        explanation:
+          "Sec 119 requires obeying mandatory signs; a STOP sign mandates a full stop before proceeding.",
+        punishment:
+          "Ignoring signs invites challans under Sec 177 or 184 depending on danger.",
+        timeLimit: 25,
+        scenarioType: "stop-sign",
+      },
+      10: {
+        title: "Stopped by Traffic Police (Documents)",
+        scenario:
+          "A traffic officer asks Anjali to produce documents during a routine check.",
+        question:
+          "Which documents must a driver show when stopped by a uniformed traffic officer?",
+        options: [
+          { id: "a", text: "Driving licence and vehicle registration certificate (RC).", correct: true },
+          { id: "b", text: "Only the driving licence.", correct: false },
+          { id: "c", text: "Driving licence and Aadhar card.", correct: false },
+          { id: "d", text: "No documents need to be shown.", correct: false },
+        ],
+        explanation:
+          "Sec 130: produce licence on demand. RC and insurance must also be produced when demanded by an authorized officer.",
+        punishment:
+          "Failure to produce invites fines under Sec 177; driving without valid licence/RC/insurance has higher penalties.",
+        timeLimit: 25,
+        scenarioType: "documents-check",
+      },
+    },
+  },
   "criminal-law": {
     title: "Criminal Law",
     levels: {
@@ -127,6 +320,186 @@ const gameData = {
           "Not taking action against service deficiency allows businesses to continue harming other consumers.",
         timeLimit: 30,
         scenarioType: "restaurant",
+      },
+      3: {
+        title: "Online Purchase – Broken Phone",
+        scenario:
+          "Rahul orders a smartphone online. It arrives broken, and the seller refuses to repair or replace it. Support gives no resolution.",
+        question: "What should Rahul do to protect his rights?",
+        options: [
+          { id: "a", text: "Give up because online purchases have no guarantee.", correct: false },
+          { id: "b", text: "File a complaint with the Consumer Disputes Redressal Commission (Consumer Forum).", correct: true },
+          { id: "c", text: "Approach the local police station.", correct: false },
+          { id: "d", text: "Sue the seller in a civil court.", correct: false },
+        ],
+        explanation:
+          "The Consumer Protection Act, 2019 covers e-commerce. Rahul has the Right to Seek Redressal and can file a complaint in the District Consumer Commission for repair/replacement/refund. E-commerce platforms must address grievances within stipulated timelines.",
+        punishment:
+          "Doing nothing lets defective sellers escape accountability and you lose money without redressal.",
+        timeLimit: 30,
+        scenarioType: "ecommerce-defect",
+      },
+      4: {
+        title: "Store Purchase – No Return",
+        scenario:
+          "Meera buys a new laptop. It stops working within a week. The shop shows a 'no return after sale' board and refuses help.",
+        question: "Which of the following is true about Meera’s situation?",
+        options: [
+          { id: "a", text: "She can demand repair, replacement, or refund under the Consumer Protection Act.", correct: true },
+          { id: "b", text: "She must accept the broken laptop since she bought it.", correct: false },
+          { id: "c", text: "She should file a criminal complaint against the shop.", correct: false },
+          { id: "d", text: "The law gives her no remedy because the sale is complete.", correct: false },
+        ],
+        explanation:
+          "CPA 2019 allows removal of defects or replacement/refund for defective goods. 'No return' cannot defeat statutory rights in case of defects.",
+        punishment:
+          "Accepting such refusals normalizes unfair trade practices and leaves consumers with defective products.",
+        timeLimit: 30,
+        scenarioType: "warranty-defect-store",
+      },
+      5: {
+        title: "Misleading Advertisement",
+        scenario:
+          "An online ad claims a magic vitamin drink will reduce 10 kg in a week. Rohan buys it but nothing happens.",
+        question: "What does this situation illustrate?",
+        options: [
+          { id: "a", text: "This is a harmless sales pitch with no legal issue.", correct: false },
+          { id: "b", text: "This is a misleading advertisement and violates consumer law.", correct: true },
+          { id: "c", text: "Rohan can only complain to health authorities, not under consumer law.", correct: false },
+          { id: "d", text: "Such ads are protected as free speech.", correct: false },
+        ],
+        explanation:
+          "Misleading advertisements are an unfair trade practice under CPA 2019 and attract penalties. Consumers have the Right to Be Informed with accurate product info.",
+        punishment:
+          "Falling for false claims wastes money and encourages deceptive marketing.",
+        timeLimit: 30,
+        scenarioType: "misleading-ad",
+      },
+      6: {
+        title: "Overcharging at Restaurant",
+        scenario:
+          "Priya buys bottled water labelled ₹20 but is billed ₹164 at a restaurant. She has already paid.",
+        question: "What should Priya do next?",
+        options: [
+          { id: "a", text: "File a complaint in the Consumer Forum for overcharging.", correct: true },
+          { id: "b", text: "Accept it, since prices can vary.", correct: false },
+          { id: "c", text: "Report the restaurant to the police.", correct: false },
+          { id: "d", text: "Ask for manager approval but do nothing legally.", correct: false },
+        ],
+        explanation:
+          "Overcharging constitutes unfair trade practice. The consumer can seek refund of the excess and compensation before the Consumer Commission.",
+        punishment:
+          "Not challenging overcharging incentivizes unlawful pricing and hurts other consumers too.",
+        timeLimit: 30,
+        scenarioType: "overcharge",
+      },
+      7: {
+        title: "Online Course Not Delivered",
+        scenario:
+          "Anita paid ₹5,000 for a one-month online coaching course, but classes never happened and the tutor stopped responding.",
+        question: "What recourse does Anita have?",
+        options: [
+          { id: "a", text: "Complain to the consumer forum for deficient service.", correct: true },
+          { id: "b", text: "Nothing, since online courses are unregulated.", correct: false },
+          { id: "c", text: "Sue the teacher in criminal court.", correct: false },
+          { id: "d", text: "Wait and hope the tutor responds.", correct: false },
+        ],
+        explanation:
+          "Online coaching is a service; failure to deliver is a deficiency in service. She can seek refund/compensation via Consumer Commission.",
+        punishment:
+          "Waiting passively risks losing money and encourages poor service providers.",
+        timeLimit: 30,
+        scenarioType: "online-coaching",
+      },
+      8: {
+        title: "Warranty Denied Unfairly",
+        scenario:
+          "Aman’s laptop with 2-year warranty stops working after 9 months. Service center refuses repair citing 'user misuse' without proof.",
+        question: "Which action is correct?",
+        options: [
+          { id: "a", text: "Insist on repair or replacement under warranty by filing a consumer complaint.", correct: true },
+          { id: "b", text: "Buy a new laptop since warranties aren’t guaranteed.", correct: false },
+          { id: "c", text: "Call the police for fraud.", correct: false },
+          { id: "d", text: "Accept the service center’s decision and do nothing.", correct: false },
+        ],
+        explanation:
+          "A valid warranty is enforceable. Unsubstantiated 'misuse' cannot defeat the promise of quality. Consumer can demand repair/replacement.",
+        punishment:
+          "Accepting denial forfeits your warranty rights and wastes money.",
+        timeLimit: 30,
+        scenarioType: "warranty-denial",
+      },
+      9: {
+        title: "Wrong Size – No Return Policy",
+        scenario:
+          "Kiran receives the wrong shoe size from an online order. Seller claims 'no returns allowed' and refuses exchange.",
+        question: "Is Kiran entitled to an exchange or refund?",
+        options: [
+          { id: "a", text: "Yes. Even with 'no returns', incorrect product allows replacement or refund.", correct: true },
+          { id: "b", text: "No. She agreed to the policy.", correct: false },
+          { id: "c", text: "Only if she calls the manager.", correct: false },
+          { id: "d", text: "She must go to civil court.", correct: false },
+        ],
+        explanation:
+          "A wrong/defective product overrides a 'no return' clause. Consumer can insist on correct replacement or refund under CPA 2019.",
+        punishment:
+          "Letting sellers hide behind policies enables systemic cheating in e-commerce.",
+        timeLimit: 30,
+        scenarioType: "no-return",
+      },
+      10: {
+        title: "Failed Digital Payment",
+        scenario:
+          "Dev pays ₹2,000 via a payment app. The transaction fails but his account is debited. A week later, no refund.",
+        question: "What should Dev do?",
+        options: [
+          { id: "a", text: "Lodge a complaint with the consumer forum against the bank/app as service providers.", correct: true },
+          { id: "b", text: "Complain only to the merchant.", correct: false },
+          { id: "c", text: "File a police complaint for fraud.", correct: false },
+          { id: "d", text: "Do nothing and wait indefinitely.", correct: false },
+        ],
+        explanation:
+          "Digital payment and banking services are 'services' under CPA. Failed transactions causing loss are service deficiencies warranting refund.",
+        punishment:
+          "Waiting indefinitely can forfeit timely refunds and allows poor service standards to persist.",
+        timeLimit: 30,
+        scenarioType: "digital-payment",
+      },
+      11: {
+        title: "Unsafe Food – Allergy Incident",
+        scenario:
+          "Ayesha orders a vegetarian pizza but finds meat in it, eats it, and falls sick due to allergy. Restaurant refuses compensation.",
+        question: "Which consumer right was violated?",
+        options: [
+          { id: "a", text: "Right to Safety (safe products).", correct: true },
+          { id: "b", text: "Right to Be Heard.", correct: false },
+          { id: "c", text: "Right to Choose.", correct: false },
+          { id: "d", text: "Right to Consumer Education.", correct: false },
+        ],
+        explanation:
+          "Serving unsafe/misrepresented food violates the Right to Safety. She can file a consumer complaint for refund and compensation.",
+        punishment:
+          "Ignoring such incidents risks health and lets eateries disregard safety standards.",
+        timeLimit: 30,
+        scenarioType: "food-safety",
+      },
+      12: {
+        title: "Institute Shuts After Fees",
+        scenario:
+          "Vikram pays full fees for a 1-year coaching, but the institute runs only 2 months and then shuts without refund.",
+        question: "What can Vikram do?",
+        options: [
+          { id: "a", text: "File a consumer complaint for deficiency of service to get a refund.", correct: true },
+          { id: "b", text: "Nothing, since the business closed.", correct: false },
+          { id: "c", text: "Write to the education board.", correct: false },
+          { id: "d", text: "Demand the police arrest the owner.", correct: false },
+        ],
+        explanation:
+          "Coaching services that stop prematurely constitute deficiency of service. The Consumer Commission can order refund and damages.",
+        punishment:
+          "Assuming closure ends liability leaves students uncompensated and encourages fly-by-night operations.",
+        timeLimit: 30,
+        scenarioType: "institute-closure",
       },
     },
   },

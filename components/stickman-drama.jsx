@@ -132,6 +132,408 @@ export function StickmanDrama({ scenarioType, outcome = "setup", selectedOption,
         { type: "legal-protection", duration: 3000, description: "Rights protected, due process followed" },
       ],
     },
+    // Traffic Rules Scenarios
+    helmet: {
+      setup: [
+        { type: "ride-no-helmet", duration: 2500, description: "Riding a two-wheeler without helmet in town" },
+        { type: "police-flag-down", duration: 2500, description: "Traffic police stops Raj for helmet check" },
+        { type: "explain-helmet-law", duration: 2500, description: "Officer explains Section 129 helmet rule" },
+        { type: "issue-challan", duration: 2500, description: "Challan may be issued for non-compliance" },
+      ],
+      wrong: [
+        { type: "ignore-helmet", duration: 2500, description: "Ignoring helmet rule increases head injury risk" },
+        { type: "helmet-fine", duration: 2500, description: "₹1,000 fine and possible licence disqualification" },
+        { type: "safety-risk", duration: 2500, description: "High risk of severe injury in crash" },
+        { type: "learn-compliance", duration: 2500, description: "Learn and comply with helmet laws" },
+      ],
+      correct: [
+        { type: "wear-helmet", duration: 2500, description: "Wears helmet properly" },
+        { type: "safety-first", duration: 2500, description: "Safety and compliance ensured" },
+        { type: "no-violation", duration: 2500, description: "No challan; set a positive example" },
+        { type: "ride-safe", duration: 2500, description: "Continues journey safely" },
+      ],
+    },
+    seatbelt: {
+      setup: [
+        { type: "driving-no-belt", duration: 2500, description: "Driving with front passenger without seatbelts" },
+        { type: "police-observe", duration: 2500, description: "Traffic police notice no seatbelts" },
+        { type: "stop-check", duration: 2500, description: "Vehicle stopped for safety check" },
+        { type: "inform-seatbelt-rule", duration: 2500, description: "Officer informs Section 194B requirement" },
+      ],
+      wrong: [
+        { type: "continue-no-belt", duration: 2500, description: "Continuing without belts is unsafe" },
+        { type: "seatbelt-fine", duration: 2500, description: "₹1,000 fine for driver/front passenger" },
+        { type: "injury-risk", duration: 2500, description: "High injury risk in collision" },
+        { type: "comply-later", duration: 2500, description: "Eventually comply after penalty" },
+      ],
+      correct: [
+        { type: "buckle-up", duration: 2500, description: "Both driver and passenger buckle up" },
+        { type: "safer-drive", duration: 2500, description: "Injury risk reduced" },
+        { type: "compliance", duration: 2500, description: "Rule followed; proceed" },
+        { type: "proceed", duration: 2500, description: "Continue journey safely" },
+      ],
+    },
+    speeding: {
+      setup: [
+        { type: "city-road-50", duration: 2500, description: "City road with 50 km/h limit" },
+        { type: "driver-at-70", duration: 2500, description: "Anand drives at 70 km/h" },
+        { type: "speed-gun-detect", duration: 2500, description: "Speed detected by enforcement" },
+        { type: "stop-speeding", duration: 2500, description: "Vehicle stopped for speeding" },
+      ],
+      wrong: [
+        { type: "deny-speeding", duration: 2500, description: "Denies speeding but evidence exists" },
+        { type: "issue-fine-183", duration: 2500, description: "Fine under Sec 183 (₹400 first, ₹1,000 repeat)" },
+        { type: "risk-accident", duration: 2500, description: "Speeding raises crash risk" },
+        { type: "drive-danger", duration: 2500, description: "Potential Sec 184 if dangerous" },
+      ],
+      correct: [
+        { type: "acknowledge-limit", duration: 2500, description: "Acknowledges speed limit" },
+        { type: "pay-fine", duration: 2500, description: "Pays fine if issued" },
+        { type: "drive-within-limit", duration: 2500, description: "Keeps speed <= limit" },
+        { type: "safer-traffic", duration: 2500, description: "Safer for everyone" },
+      ],
+    },
+    zebra: {
+      setup: [
+        { type: "approach-crossing", duration: 2500, description: "Approaches zebra crossing" },
+        { type: "pedestrian-steps", duration: 2500, description: "Pedestrian steps onto crossing" },
+        { type: "driver-doesnt-stop", duration: 2500, description: "Driver fails to yield" },
+        { type: "near-miss", duration: 2500, description: "Near-miss creates danger" },
+      ],
+      wrong: [
+        { type: "dangerous-184", duration: 2500, description: "Counts as dangerous driving (Sec 184)" },
+        { type: "zebra-penalty", duration: 2500, description: "Fine/jail possible; challan issued" },
+        { type: "endanger-lives", duration: 2500, description: "Endangering pedestrians" },
+        { type: "remorse", duration: 2500, description: "Learns to always yield" },
+      ],
+      correct: [
+        { type: "yield-pedestrian", duration: 2500, description: "Stops and yields" },
+        { type: "allow-cross", duration: 2500, description: "Allows safe crossing" },
+        { type: "awareness", duration: 2500, description: "Follows rules" },
+        { type: "safe-passage", duration: 2500, description: "Everyone safe" },
+      ],
+    },
+    "drunk-driving": {
+      setup: [
+        { type: "party-exit", duration: 2500, description: "Exits party; considers driving" },
+        { type: "breath-test", duration: 2500, description: "Police breath-analyzer test" },
+        { type: "bac-over-limit", duration: 2500, description: "BAC over 0.03%" },
+        { type: "arrest-charge-185", duration: 2500, description: "Sec 185 offence explained" },
+      ],
+      wrong: [
+        { type: "drive-intoxicated", duration: 2500, description: "Drives under influence" },
+        { type: "caught-185", duration: 2500, description: "Caught and penalized under Sec 185" },
+        { type: "heavy-penalty", duration: 2500, description: "Up to ₹10,000 and/or 6 months" },
+        { type: "licence-suspend", duration: 2500, description: "Licence suspension" },
+      ],
+      correct: [
+        { type: "take-cab", duration: 2500, description: "Takes cab/ride share" },
+        { type: "avoid-driving", duration: 2500, description: "Avoids driving intoxicated" },
+        { type: "safe-choice", duration: 2500, description: "Protects lives" },
+        { type: "no-penalty", duration: 2500, description: "No legal trouble" },
+      ],
+    },
+    "mobile-use": {
+      setup: [
+        { type: "red-light-stop", duration: 2500, description: "Stops at red light" },
+        { type: "picks-phone", duration: 2500, description: "Picks phone to text" },
+        { type: "police-notice", duration: 2500, description: "Police notice handheld use" },
+        { type: "stop-and-warn", duration: 2500, description: "Stopped and warned/penalized" },
+      ],
+      wrong: [
+        { type: "text-while-driving", duration: 2500, description: "Texts while in control of vehicle" },
+        { type: "penalty-184", duration: 2500, description: "Sec 184 – up to ₹5,000 fine" },
+        { type: "distraction-risk", duration: 2500, description: "Distraction increases crash risk" },
+        { type: "accident-risk", duration: 2500, description: "Potential severe outcomes" },
+      ],
+      correct: [
+        { type: "hands-free-or-wait", duration: 2500, description: "Use hands-free or wait" },
+        { type: "focus-road", duration: 2500, description: "Focus on the road" },
+        { type: "compliance-traffic", duration: 2500, description: "Complies with law" },
+        { type: "proceed-safe", duration: 2500, description: "Proceeds safely" },
+      ],
+    },
+    "red-light": {
+      setup: [
+        { type: "red-signal", duration: 2500, description: "Signal turns red" },
+        { type: "car-runs-red", duration: 2500, description: "Car runs the red light" },
+        { type: "camera-capture", duration: 2500, description: "Camera/police capture violation" },
+        { type: "police-stop", duration: 2500, description: "Vehicle stopped for violation" },
+      ],
+      wrong: [
+        { type: "dangerous-184-signal", duration: 2500, description: "Dangerous driving under Sec 184" },
+        { type: "heavy-fine", duration: 2500, description: "Up to ₹5,000 fine or jail" },
+        { type: "traffic-risk", duration: 2500, description: "High risk at intersections" },
+        { type: "points-suspension", duration: 2500, description: "Points or suspension possible" },
+      ],
+      correct: [
+        { type: "stop-on-red", duration: 2500, description: "Stops on red" },
+        { type: "go-on-green", duration: 2500, description: "Proceeds on green" },
+        { type: "safe-intersection", duration: 2500, description: "Intersection remains safe" },
+        { type: "good-example", duration: 2500, description: "Sets good example" },
+      ],
+    },
+    overtaking: {
+      setup: [
+        { type: "approach-curve", duration: 2500, description: "Approaches a blind curve" },
+        { type: "attempt-overtake", duration: 2500, description: "Attempts to overtake" },
+        { type: "limited-visibility", duration: 2500, description: "Limited visibility on curve" },
+        { type: "near-miss-curve", duration: 2500, description: "Near-miss happens" },
+      ],
+      wrong: [
+        { type: "charge-dangerous", duration: 2500, description: "Charged as dangerous driving" },
+        { type: "penalty-overtake", duration: 2500, description: "Penalty applies" },
+        { type: "high-risk", duration: 2500, description: "High crash risk" },
+        { type: "lessons-learned", duration: 2500, description: "Learns to avoid overtaking on curves" },
+      ],
+      correct: [
+        { type: "wait-straight", duration: 2500, description: "Waits for straight and clear view" },
+        { type: "safe-overtake", duration: 2500, description: "Overtakes safely later" },
+        { type: "rule-compliance", duration: 2500, description: "Complies with rules" },
+        { type: "safe-journey", duration: 2500, description: "Safe journey continues" },
+      ],
+    },
+    "stop-sign": {
+      setup: [
+        { type: "approach-stop-sign", duration: 2500, description: "Approaches STOP sign" },
+        { type: "fails-to-stop", duration: 2500, description: "Fails to stop fully" },
+        { type: "cross-unsafe", duration: 2500, description: "Crosses unsafely" },
+        { type: "police-challan", duration: 2500, description: "Challan issued" },
+      ],
+      wrong: [
+        { type: "challan-177-184", duration: 2500, description: "Sec 177 or 184 depending on danger" },
+        { type: "risk-collision", duration: 2500, description: "Risk of collision" },
+        { type: "legal-trouble", duration: 2500, description: "Legal consequences" },
+        { type: "learn-rule", duration: 2500, description: "Learns to fully stop" },
+      ],
+      correct: [
+        { type: "full-stop", duration: 2500, description: "Makes a full stop" },
+        { type: "check-proceed", duration: 2500, description: "Checks and proceeds when safe" },
+        { type: "safe-compliance", duration: 2500, description: "Compliant and safe" },
+        { type: "community-safety", duration: 2500, description: "Protects community" },
+      ],
+    },
+    "documents-check": {
+      setup: [
+        { type: "routine-check", duration: 2500, description: "Routine traffic check" },
+        { type: "officer-asks-docs", duration: 2500, description: "Officer asks for licence and RC" },
+        { type: "driver-provides", duration: 2500, description: "Driver provides documents" },
+        { type: "verification", duration: 2500, description: "Verification and advice" },
+      ],
+      wrong: [
+        { type: "refuse-docs", duration: 2500, description: "Refuses to show documents" },
+        { type: "challan-177", duration: 2500, description: "Challan for failure to produce" },
+        { type: "impound", duration: 2500, description: "Vehicle may be impounded" },
+        { type: "delays", duration: 2500, description: "Unnecessary delays" },
+      ],
+      correct: [
+        { type: "show-licence-rc", duration: 2500, description: "Shows licence and RC (and insurance)" },
+        { type: "smooth-process", duration: 2500, description: "Smooth verification process" },
+        { type: "thanked", duration: 2500, description: "Officer thanks for cooperation" },
+        { type: "drive-on", duration: 2500, description: "Drives on" },
+      ],
+    },
+    // Consumer Rights – New Scenarios
+    "ecommerce-defect": {
+      setup: [
+        { type: "package-arrives", duration: 2500, description: "Online order delivered at home" },
+        { type: "broken-device", duration: 2500, description: "Phone found broken on unboxing" },
+        { type: "contact-support", duration: 2500, description: "Contacts e-commerce support" },
+        { type: "support-refuses", duration: 2500, description: "Support refuses repair/replacement" },
+      ],
+      wrong: [
+        { type: "walk-away-giveup", duration: 2500, description: "Gives up and bears the loss" },
+        { type: "unfair-practice-continues", duration: 2500, description: "Seller continues unfair practices" },
+        { type: "money-lost-gadget", duration: 2500, description: "Money lost on defective product" },
+        { type: "stress-increases", duration: 2500, description: "Stress and frustration increase" },
+      ],
+      correct: [
+        { type: "file-consumer-complaint", duration: 2500, description: "Files complaint in District Consumer Commission" },
+        { type: "platform-grievance", duration: 2500, description: "Grievance officer notified" },
+        { type: "refund-processed", duration: 2500, description: "Refund/replacement processed" },
+        { type: "consumer-rights-upheld", duration: 2500, description: "Rights upheld; fair outcome" },
+      ],
+    },
+    "warranty-defect-store": {
+      setup: [
+        { type: "store-visit", duration: 2500, description: "Buys a new laptop from store" },
+        { type: "laptop-stops", duration: 2500, description: "Laptop stops working within a week" },
+        { type: "shop-says-no-return", duration: 2500, description: "Shop claims 'no return after sale'" },
+        { type: "customer-requests-help", duration: 2500, description: "Requests repair/replacement" },
+      ],
+      wrong: [
+        { type: "accept-refusal-generic", duration: 2500, description: "Accepts refusal and leaves" },
+        { type: "money-lost", duration: 2500, description: "Stuck with defective product" },
+        { type: "others-at-risk", duration: 2500, description: "Other buyers face same issue" },
+        { type: "unfair-practice-continues", duration: 2500, description: "Unfair practice continues" },
+      ],
+      correct: [
+        { type: "demand-rights", duration: 2500, description: "Demands repair/replacement/refund under CPA" },
+        { type: "file-consumer-complaint", duration: 2500, description: "Files case before Consumer Commission" },
+        { type: "refund-processed", duration: 2500, description: "Gets refund/replacement" },
+        { type: "consumer-rights-upheld", duration: 2500, description: "Rights enforced successfully" },
+      ],
+    },
+    "misleading-ad": {
+      setup: [
+        { type: "ad-claims", duration: 2500, description: "Sees magical weight-loss drink ad online" },
+        { type: "package-arrives", duration: 2500, description: "Orders and receives the product" },
+        { type: "product-ineffective", duration: 2500, description: "Product doesn't work as claimed" },
+        { type: "contact-support", duration: 2500, description: "Asks advertiser for remedy" },
+      ],
+      wrong: [
+        { type: "walk-away-giveup", duration: 2500, description: "Treats it as normal puffery" },
+        { type: "money-lost", duration: 2500, description: "Money wasted on false claims" },
+        { type: "others-at-risk", duration: 2500, description: "Others misled by ad" },
+        { type: "unfair-practice-continues", duration: 2500, description: "Misleading ads continue" },
+      ],
+      correct: [
+        { type: "lodge-complaint-ccpa", duration: 2500, description: "Complains to Consumer Forum/CCPA" },
+        { type: "ad-penalty", duration: 2500, description: "Action/penalty for misleading advertisement" },
+        { type: "refund-processed", duration: 2500, description: "Refund secured" },
+        { type: "consumer-rights-upheld", duration: 2500, description: "Truthful advertising enforced" },
+      ],
+    },
+    overcharge: {
+      setup: [
+        { type: "restaurant-entry", duration: 2500, description: "Visits restaurant and orders water" },
+        { type: "bill-overcharge", duration: 2500, description: "Bill shows ₹164 for a ₹20 bottle" },
+        { type: "ask-refund", duration: 2500, description: "Asks for correct billing" },
+        { type: "no-refund", duration: 2500, description: "Restaurant refuses to correct bill" },
+      ],
+      wrong: [
+        { type: "walk-away-giveup", duration: 2500, description: "Accepts overcharge silently" },
+        { type: "money-lost", duration: 2500, description: "Loses money; practice continues" },
+        { type: "others-at-risk", duration: 2500, description: "Others face overcharging" },
+        { type: "unfair-practice-continues", duration: 2500, description: "Illegal pricing persists" },
+      ],
+      correct: [
+        { type: "file-consumer-complaint", duration: 2500, description: "Files complaint before District Commission" },
+        { type: "refund-processed", duration: 2500, description: "Refund of excess with compensation" },
+        { type: "public-awareness", duration: 2500, description: "Deters overcharging" },
+        { type: "consumer-rights-upheld", duration: 2500, description: "Fair pricing ensured" },
+      ],
+    },
+    "online-coaching": {
+      setup: [
+        { type: "course-paid", duration: 2500, description: "Pays ₹5,000 for 1-month course" },
+        { type: "classes-missing", duration: 2500, description: "Classes never start" },
+        { type: "tutor-unresponsive", duration: 2500, description: "Tutor stops responding" },
+        { type: "contact-support", duration: 2500, description: "Seeks resolution online" },
+      ],
+      wrong: [
+        { type: "wait-indefinitely", duration: 2500, description: "Keeps waiting without action" },
+        { type: "money-lost", duration: 2500, description: "Money stuck; no service" },
+        { type: "stress-increases", duration: 2500, description: "Stress builds up" },
+        { type: "unfair-practice-continues", duration: 2500, description: "Service providers get away" },
+      ],
+      correct: [
+        { type: "file-consumer-complaint", duration: 2500, description: "Files consumer complaint for deficiency" },
+        { type: "refund-processed", duration: 2500, description: "Refund/compensation ordered" },
+        { type: "consumer-rights-upheld", duration: 2500, description: "Services improved" },
+        { type: "public-awareness", duration: 2500, description: "Prevents future abuse" },
+      ],
+    },
+    "warranty-denial": {
+      setup: [
+        { type: "warranty-valid", duration: 2500, description: "Laptop under 2-year warranty fails in 9 months" },
+        { type: "service-center-deny", duration: 2500, description: "Service center alleges 'user misuse'" },
+        { type: "customer-requests-help", duration: 2500, description: "Requests warranty repair/replacement" },
+        { type: "support-refuses", duration: 2500, description: "Refusal without proof" },
+      ],
+      wrong: [
+        { type: "walk-away-giveup", duration: 2500, description: "Accepts denial; buys new device" },
+        { type: "money-lost-gadget", duration: 2500, description: "Wastes money despite warranty" },
+        { type: "unfair-practice-continues", duration: 2500, description: "Warranty promises become meaningless" },
+        { type: "stress-increases", duration: 2500, description: "Stress due to loss" },
+      ],
+      correct: [
+        { type: "file-consumer-complaint", duration: 2500, description: "Files complaint to enforce warranty" },
+        { type: "refund-processed", duration: 2500, description: "Repair/replacement directed" },
+        { type: "consumer-rights-upheld", duration: 2500, description: "Warranty honored" },
+        { type: "public-awareness", duration: 2500, description: "Better service standards" },
+      ],
+    },
+    "no-return": {
+      setup: [
+        { type: "package-arrives", duration: 2500, description: "Online shoes delivered" },
+        { type: "wrong-size-delivered", duration: 2500, description: "Wrong size received" },
+        { type: "exchange-refused", duration: 2500, description: "Seller cites 'no return' policy" },
+        { type: "contact-support", duration: 2500, description: "Requests exchange/refund" },
+      ],
+      wrong: [
+        { type: "walk-away-giveup", duration: 2500, description: "Accepts unusable product" },
+        { type: "money-lost", duration: 2500, description: "Money stuck; no remedy" },
+        { type: "unfair-practice-continues", duration: 2500, description: "Policy misused against buyers" },
+        { type: "others-at-risk", duration: 2500, description: "Others face same issue" },
+      ],
+      correct: [
+        { type: "file-consumer-complaint", duration: 2500, description: "Files complaint insisting replacement/refund" },
+        { type: "refund-processed", duration: 2500, description: "Correct size/refund provided" },
+        { type: "consumer-rights-upheld", duration: 2500, description: "Policies aligned with law" },
+        { type: "public-awareness", duration: 2500, description: "E-commerce fairness improved" },
+      ],
+    },
+    "digital-payment": {
+      setup: [
+        { type: "payment-failed", duration: 2500, description: "Payment fails during checkout" },
+        { type: "money-debited", duration: 2500, description: "Bank account debited" },
+        { type: "no-refund-delay", duration: 2500, description: "Refund not received even after a week" },
+        { type: "contact-support", duration: 2500, description: "Contacts bank/app support" },
+      ],
+      wrong: [
+        { type: "wait-indefinitely", duration: 2500, description: "Waits without escalation" },
+        { type: "money-lost", duration: 2500, description: "Cashflow blocked" },
+        { type: "stress-increases", duration: 2500, description: "Uncertainty and stress" },
+        { type: "unfair-practice-continues", duration: 2500, description: "Poor service continues" },
+      ],
+      correct: [
+        { type: "file-consumer-complaint", duration: 2500, description: "Treats bank/app as service providers" },
+        { type: "refund-processed", duration: 2500, description: "Refund credited" },
+        { type: "consumer-rights-upheld", duration: 2500, description: "Service standards enforced" },
+        { type: "public-awareness", duration: 2500, description: "Faster grievance redressal" },
+      ],
+    },
+    "food-safety": {
+      setup: [
+        { type: "restaurant-entry", duration: 2500, description: "Orders vegetarian pizza" },
+        { type: "unsafe-food-served", duration: 2500, description: "Meat found in food" },
+        { type: "allergy-incident", duration: 2500, description: "Allergic reaction; falls sick" },
+        { type: "no-refund", duration: 2500, description: "Restaurant refuses compensation" },
+      ],
+      wrong: [
+        { type: "walk-away-giveup", duration: 2500, description: "Does not report incident" },
+        { type: "others-at-risk", duration: 2500, description: "Public health at risk" },
+        { type: "unfair-practice-continues", duration: 2500, description: "Safety ignored" },
+        { type: "stress-increases", duration: 2500, description: "Medical costs and stress" },
+      ],
+      correct: [
+        { type: "file-consumer-complaint", duration: 2500, description: "Files complaint for refund/compensation" },
+        { type: "public-awareness", duration: 2500, description: "Deters unsafe practices" },
+        { type: "refund-processed", duration: 2500, description: "Compensation awarded" },
+        { type: "consumer-rights-upheld", duration: 2500, description: "Right to Safety protected" },
+      ],
+    },
+    "institute-closure": {
+      setup: [
+        { type: "institute-enroll", duration: 2500, description: "Pays full fee for 1-year coaching" },
+        { type: "classes-missing", duration: 2500, description: "Only 2 months taught" },
+        { type: "institute-shuts", duration: 2500, description: "Institute shuts without refund" },
+        { type: "contact-support", duration: 2500, description: "Attempts contact; no response" },
+      ],
+      wrong: [
+        { type: "walk-away-giveup", duration: 2500, description: "Assumes no remedy as business closed" },
+        { type: "money-lost", duration: 2500, description: "Fees lost" },
+        { type: "others-at-risk", duration: 2500, description: "Others also suffer" },
+        { type: "stress-increases", duration: 2500, description: "Stress without resolution" },
+      ],
+      correct: [
+        { type: "file-consumer-complaint", duration: 2500, description: "Files deficiency of service case" },
+        { type: "refund-processed", duration: 2500, description: "Refund/compensation ordered" },
+        { type: "consumer-rights-upheld", duration: 2500, description: "Closure doesn't end liability" },
+        { type: "public-awareness", duration: 2500, description: "Protects future students" },
+      ],
+    },
   }
 
   const currentScenario = scenarios[scenarioType] || scenarios["police-stop"]
@@ -171,6 +573,577 @@ export function StickmanDrama({ scenarioType, outcome = "setup", selectedOption,
             </div>
             <div className="absolute bottom-24 right-60">
               <DetailedBarrierSVG />
+            </div>
+            <SceneDescription text={description} />
+          </div>
+        )
+
+      // Consumer Rights – Generic/e-commerce/service scenes
+      case "package-arrives":
+        return (
+          <div className="stickman-drama-large">
+            <DetailedBackground type="home" />
+            <div className="absolute bottom-24 left-1/2 -translate-x-1/2">
+              <DetailedStickmanSVG type="customer" />
+            </div>
+            <div className="absolute top-10 right-12">
+              <ShopCounterSVG />
+            </div>
+            <SceneDescription text={description} />
+          </div>
+        )
+      case "broken-device":
+        return (
+          <div className="stickman-drama-large">
+            <DetailedBackground type="home" />
+            <div className="absolute bottom-24 left-1/2 -translate-x-1/2">
+              <DetailedStickmanSVG type="shocked" />
+            </div>
+            <div className="absolute top-10 left-1/2 -translate-x-1/2">
+              <DetailedPhoneSVG broken />
+            </div>
+            <SceneDescription text={description} />
+          </div>
+        )
+      case "contact-support":
+      case "platform-grievance":
+        return (
+          <div className="stickman-drama-large">
+            <DetailedBackground type="office" />
+            <div className="absolute bottom-24 left-20">
+              <OfficeDeskSVG />
+            </div>
+            <div className="absolute bottom-24 right-24">
+              <DetailedStickmanSVG type="customer" />
+            </div>
+            <SceneDescription text={description} />
+          </div>
+        )
+      case "support-refuses":
+      case "exchange-refused":
+      case "no-refund":
+        return (
+          <div className="stickman-drama-large">
+            <DetailedBackground type="office" />
+            <div className="absolute bottom-24 left-24">
+              <DetailedStickmanSVG type="defeated" />
+            </div>
+            <SceneDescription text={description} />
+          </div>
+        )
+      case "file-consumer-complaint":
+        return (
+          <div className="stickman-drama-large">
+            <DetailedBackground type="office" />
+            <div className="absolute bottom-24 left-1/2 -translate-x-1/2">
+              <DetailedStickmanSVG type="confident" />
+            </div>
+            <div className="absolute top-10 left-1/2 -translate-x-1/2">
+              <CheckpointSignSVG />
+            </div>
+            <SceneDescription text={description} />
+          </div>
+        )
+      case "refund-processed":
+      case "consumer-rights-upheld":
+        return (
+          <div className="stickman-drama-large">
+            <DetailedBackground type="home" />
+            <div className="absolute bottom-24 left-1/2 -translate-x-1/2">
+              <DetailedStickmanSVG type="confident" />
+            </div>
+            <SceneDescription text={description} />
+          </div>
+        )
+
+      // Store/warranty scenes
+      case "laptop-stops":
+      case "shop-says-no-return":
+      case "customer-requests-help":
+      case "accept-refusal-generic":
+        return (
+          <div className="stickman-drama-large">
+            <DetailedBackground type="store" />
+            <div className="absolute bottom-24 left-16">
+              <ShopCounterSVG />
+            </div>
+            <div className="absolute bottom-24 right-20">
+              <DetailedStickmanSVG type="customer" />
+            </div>
+            <SceneDescription text={description} />
+          </div>
+        )
+
+      // Advertising scenes
+      case "ad-claims":
+      case "product-ineffective":
+      case "lodge-complaint-ccpa":
+      case "ad-penalty":
+        return (
+          <div className="stickman-drama-large">
+            <DetailedBackground type="home" />
+            <div className="absolute top-10 right-12">
+              <DetailedPhoneSVG />
+            </div>
+            <div className="absolute bottom-24 left-1/2 -translate-x-1/2">
+              <DetailedStickmanSVG type="customer" />
+            </div>
+            <SceneDescription text={description} />
+          </div>
+        )
+
+      // Overcharge billing
+      case "bill-overcharge":
+      case "ask-refund":
+        return (
+          <div className="stickman-drama-large">
+            <DetailedBackground type="store" />
+            <div className="absolute bottom-24 left-16">
+              <ShopCounterSVG />
+            </div>
+            <div className="absolute bottom-24 right-20">
+              <DetailedStickmanSVG type="frustrated" />
+            </div>
+            <SceneDescription text={description} />
+          </div>
+        )
+
+      // Online coaching
+      case "course-paid":
+      case "classes-missing":
+      case "tutor-unresponsive":
+      case "wait-indefinitely":
+        return (
+          <div className="stickman-drama-large">
+            <DetailedBackground type="home" />
+            <div className="absolute bottom-24 left-1/2 -translate-x-1/2">
+              <DetailedStickmanSVG type="customer" />
+            </div>
+            <SceneDescription text={description} />
+          </div>
+        )
+
+      // Warranty denial
+      case "warranty-valid":
+      case "service-center-deny":
+        return (
+          <div className="stickman-drama-large">
+            <DetailedBackground type="office" />
+            <div className="absolute bottom-24 left-20">
+              <OfficeDeskSVG />
+            </div>
+            <div className="absolute bottom-24 right-24">
+              <DetailedStickmanSVG type="frustrated" />
+            </div>
+            <SceneDescription text={description} />
+          </div>
+        )
+
+      // No-return / wrong size
+      case "wrong-size-delivered":
+        return (
+          <div className="stickman-drama-large">
+            <DetailedBackground type="home" />
+            <div className="absolute bottom-24 left-1/2 -translate-x-1/2">
+              <DetailedStickmanSVG type="shocked" />
+            </div>
+            <SceneDescription text={description} />
+          </div>
+        )
+
+      // Digital payment
+      case "payment-failed":
+      case "money-debited":
+      case "no-refund-delay":
+        return (
+          <div className="stickman-drama-large">
+            <DetailedBackground type="home" />
+            <div className="absolute top-10 right-12">
+              <DetailedPhoneSVG />
+            </div>
+            <div className="absolute bottom-24 left-1/2 -translate-x-1/2">
+              <DetailedStickmanSVG type="frustrated" />
+            </div>
+            <SceneDescription text={description} />
+          </div>
+        )
+
+      // Food safety
+      case "unsafe-food-served":
+      case "allergy-incident":
+        return (
+          <div className="stickman-drama-large">
+            <DetailedBackground type="store" />
+            <div className="absolute bottom-24 left-16">
+              <ShopCounterSVG />
+            </div>
+            <div className="absolute bottom-24 right-20">
+              <DetailedStickmanSVG type="scared" />
+            </div>
+            <SceneDescription text={description} />
+          </div>
+        )
+
+      // Institute closure
+      case "institute-enroll":
+      case "institute-shuts":
+        return (
+          <div className="stickman-drama-large">
+            <DetailedBackground type="office" />
+            <div className="absolute bottom-24 left-20">
+              <OfficeDeskSVG />
+            </div>
+            <div className="absolute bottom-24 right-24">
+              <DetailedStickmanSVG type="customer" />
+            </div>
+            <SceneDescription text={description} />
+          </div>
+        )
+
+      // Traffic generic police stop
+      case "police-flag-down":
+      case "police-observe":
+      case "stop-check":
+      case "police-stop":
+        return (
+          <div className="stickman-drama-large">
+            <DetailedBackground type="road" />
+            <div className="absolute bottom-24 left-24">
+              <DetailedStickmanSVG type="citizen" />
+            </div>
+            <div className="absolute bottom-24 right-24">
+              <DetailedPoliceSVG />
+            </div>
+            <SceneDescription text={description} />
+          </div>
+        )
+
+      // Helmet
+      case "ride-no-helmet":
+        return (
+          <div className="stickman-drama-large">
+            <DetailedBackground type="road" />
+            <motion.div className="absolute bottom-24 left-8" animate={{ x: [0, 140] }} transition={{ duration: 2.2 }}>
+              <DetailedCarSVG />
+            </motion.div>
+            <div className="absolute top-10 left-10">
+              <HelmetIconSVG crossed />
+            </div>
+            <SceneDescription text={description} />
+          </div>
+        )
+      case "explain-helmet-law":
+      case "issue-challan":
+      case "ignore-helmet":
+      case "helmet-fine":
+      case "safety-risk":
+      case "learn-compliance":
+      case "wear-helmet":
+      case "safety-first":
+      case "no-violation":
+      case "ride-safe":
+        return (
+          <div className="stickman-drama-large">
+            <DetailedBackground type="road" />
+            <div className="absolute bottom-24 left-24">
+              <DetailedStickmanSVG type="citizen" />
+            </div>
+            <div className="absolute bottom-24 right-24">
+              <DetailedPoliceSVG />
+            </div>
+            <motion.div className="absolute top-10 left-1/2 -translate-x-1/2">
+              <HelmetIconSVG />
+            </motion.div>
+            <SceneDescription text={description} />
+          </div>
+        )
+
+      // Seatbelt
+      case "driving-no-belt":
+        return (
+          <div className="stickman-drama-large">
+            <DetailedBackground type="road" />
+            <div className="absolute bottom-24 left-16">
+              <DetailedCarSVG />
+            </div>
+            <div className="absolute top-10 left-1/2 -translate-x-1/2">
+              <SeatbeltIconSVG crossed />
+            </div>
+            <SceneDescription text={description} />
+          </div>
+        )
+      case "inform-seatbelt-rule":
+      case "continue-no-belt":
+      case "seatbelt-fine":
+      case "injury-risk":
+      case "comply-later":
+      case "buckle-up":
+      case "safer-drive":
+      case "compliance":
+      case "proceed":
+        return (
+          <div className="stickman-drama-large">
+            <DetailedBackground type="road" />
+            <div className="absolute bottom-24 left-24">
+              <DetailedPoliceSVG />
+            </div>
+            <div className="absolute bottom-24 right-24">
+              <DetailedStickmanSVG type="citizen" />
+            </div>
+            <div className="absolute top-10 left-1/2 -translate-x-1/2">
+              <SeatbeltIconSVG />
+            </div>
+            <SceneDescription text={description} />
+          </div>
+        )
+
+      // Speeding
+      case "city-road-50":
+        return (
+          <div className="stickman-drama-large">
+            <DetailedBackground type="road" />
+            <div className="absolute top-12 right-16">
+              <SpeedLimitSignSVG limit={50} />
+            </div>
+            <motion.div className="absolute bottom-24 left-8" animate={{ x: [0, 160] }} transition={{ duration: 1.6 }}>
+              <DetailedCarSVG />
+            </motion.div>
+            <SceneDescription text={description} />
+          </div>
+        )
+      case "driver-at-70":
+      case "speed-gun-detect":
+      case "stop-speeding":
+      case "deny-speeding":
+      case "issue-fine-183":
+      case "risk-accident":
+      case "drive-danger":
+      case "acknowledge-limit":
+      case "pay-fine":
+      case "drive-within-limit":
+      case "safer-traffic":
+        return (
+          <div className="stickman-drama-large">
+            <DetailedBackground type="road" />
+            <div className="absolute top-12 right-16">
+              <SpeedLimitSignSVG limit={50} />
+            </div>
+            <div className="absolute bottom-24 left-20">
+              <DetailedPoliceSVG />
+            </div>
+            <div className="absolute bottom-24 right-20">
+              <DetailedStickmanSVG type="citizen" />
+            </div>
+            <SceneDescription text={description} />
+          </div>
+        )
+
+      // Zebra crossing
+      case "approach-crossing":
+      case "pedestrian-steps":
+      case "driver-doesnt-stop":
+      case "near-miss":
+      case "dangerous-184":
+      case "zebra-penalty":
+      case "endanger-lives":
+      case "remorse":
+      case "yield-pedestrian":
+      case "allow-cross":
+      case "awareness":
+      case "safe-passage":
+        return (
+          <div className="stickman-drama-large">
+            <DetailedBackground type="intersection" />
+            <div className="absolute bottom-24 left-24">
+              <DetailedCarSVG />
+            </div>
+            <div className="absolute bottom-24 right-36">
+              <DetailedStickmanSVG type="citizen" />
+            </div>
+            <SceneDescription text={description} />
+          </div>
+        )
+
+      // Drunk driving
+      case "party-exit":
+        return (
+          <div className="stickman-drama-large">
+            <DetailedBackground type="road" />
+            <div className="absolute bottom-24 left-1/2 -translate-x-1/2">
+              <DetailedStickmanSVG type="citizen" />
+            </div>
+            <div className="absolute top-10 right-10">
+              <BottleIconSVG />
+            </div>
+            <SceneDescription text={description} />
+          </div>
+        )
+      case "breath-test":
+      case "bac-over-limit":
+      case "arrest-charge-185":
+      case "drive-intoxicated":
+      case "caught-185":
+      case "heavy-penalty":
+      case "licence-suspend":
+      case "take-cab":
+      case "avoid-driving":
+      case "safe-choice":
+      case "no-penalty":
+        return (
+          <div className="stickman-drama-large">
+            <DetailedBackground type="road" />
+            <div className="absolute bottom-24 left-24">
+              <DetailedPoliceSVG />
+            </div>
+            <div className="absolute bottom-24 right-24">
+              <DetailedStickmanSVG type="citizen" />
+            </div>
+            <div className="absolute top-10 right-10">
+              <BottleIconSVG />
+            </div>
+            <SceneDescription text={description} />
+          </div>
+        )
+
+      // Mobile use
+      case "red-light-stop":
+        return (
+          <div className="stickman-drama-large">
+            <DetailedBackground type="intersection" />
+            <div className="absolute top-8 right-12">
+              <TrafficLightSVG state="red" />
+            </div>
+            <div className="absolute bottom-24 left-24">
+              <DetailedCarSVG />
+            </div>
+            <SceneDescription text={description} />
+          </div>
+        )
+      case "picks-phone":
+      case "police-notice":
+      case "stop-and-warn":
+      case "text-while-driving":
+      case "penalty-184":
+      case "distraction-risk":
+      case "accident-risk":
+      case "hands-free-or-wait":
+      case "focus-road":
+      case "compliance-traffic":
+      case "proceed-safe":
+        return (
+          <div className="stickman-drama-large">
+            <DetailedBackground type="intersection" />
+            <div className="absolute top-8 right-12">
+              <TrafficLightSVG state="red" />
+            </div>
+            <div className="absolute bottom-24 left-16">
+              <DetailedPoliceSVG />
+            </div>
+            <div className="absolute bottom-24 right-16">
+              <PhoneIconSVG />
+            </div>
+            <SceneDescription text={description} />
+          </div>
+        )
+
+      // Red light
+      case "red-signal":
+      case "car-runs-red":
+      case "camera-capture":
+      case "dangerous-184-signal":
+      case "heavy-fine":
+      case "traffic-risk":
+      case "points-suspension":
+      case "stop-on-red":
+      case "go-on-green":
+      case "safe-intersection":
+      case "good-example":
+        return (
+          <div className="stickman-drama-large">
+            <DetailedBackground type="intersection" />
+            <div className="absolute top-8 right-12">
+              <TrafficLightSVG state="red" />
+            </div>
+            <div className="absolute bottom-24 left-24">
+              <DetailedCarSVG />
+            </div>
+            <SceneDescription text={description} />
+          </div>
+        )
+
+      // Overtaking
+      case "approach-curve":
+      case "attempt-overtake":
+      case "limited-visibility":
+      case "near-miss-curve":
+      case "charge-dangerous":
+      case "penalty-overtake":
+      case "high-risk":
+      case "lessons-learned":
+      case "wait-straight":
+      case "safe-overtake":
+      case "rule-compliance":
+      case "safe-journey":
+        return (
+          <div className="stickman-drama-large">
+            <DetailedBackground type="road" />
+            <motion.div className="absolute bottom-24 left-8" animate={{ x: [0, 100] }} transition={{ duration: 1.4 }}>
+              <DetailedCarSVG />
+            </motion.div>
+            <motion.div className="absolute bottom-24 left-24" animate={{ x: [0, 140] }} transition={{ duration: 1.6 }}>
+              <DetailedCarSVG />
+            </motion.div>
+            <SceneDescription text={description} />
+          </div>
+        )
+
+      // Stop sign
+      case "approach-stop-sign":
+      case "fails-to-stop":
+      case "cross-unsafe":
+      case "police-challan":
+      case "challan-177-184":
+      case "risk-collision":
+      case "legal-trouble":
+      case "learn-rule":
+      case "full-stop":
+      case "check-proceed":
+      case "safe-compliance":
+      case "community-safety":
+        return (
+          <div className="stickman-drama-large">
+            <DetailedBackground type="intersection" />
+            <div className="absolute top-10 left-12">
+              <StopSignSVG />
+            </div>
+            <div className="absolute bottom-24 left-24">
+              <DetailedCarSVG />
+            </div>
+            <SceneDescription text={description} />
+          </div>
+        )
+
+      // Documents check
+      case "routine-check":
+      case "officer-asks-docs":
+      case "driver-provides":
+      case "verification":
+      case "refuse-docs":
+      case "challan-177":
+      case "impound":
+      case "delays":
+      case "show-licence-rc":
+      case "smooth-process":
+      case "thanked":
+      case "drive-on":
+        return (
+          <div className="stickman-drama-large">
+            <DetailedBackground type="road" />
+            <div className="absolute bottom-24 left-24">
+              <DetailedPoliceSVG />
+            </div>
+            <div className="absolute bottom-24 right-24">
+              <DetailedStickmanSVG type="citizen" />
             </div>
             <SceneDescription text={description} />
           </div>
@@ -572,6 +1545,362 @@ export function StickmanDrama({ scenarioType, outcome = "setup", selectedOption,
           </div>
         )
 
+      // Restaurant Scenarios
+      case "restaurant-entry":
+        return (
+          <div className="stickman-drama-large">
+            <DetailedBackground type="store" />
+            <motion.div className="absolute bottom-24 left-16" animate={{ x: [0, 120] }} transition={{ duration: 2.5 }}>
+              <DetailedStickmanSVG type="customer" />
+            </motion.div>
+            <div className="absolute bottom-24 right-48">
+              <DetailedStickmanSVG type="shopkeeper" />
+            </div>
+            <motion.div
+              className="absolute top-16 left-1/2 transform -translate-x-1/2 bg-yellow-600 text-white px-4 py-2 rounded-lg text-lg font-bold shadow-lg"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+            >
+              🍽️ Restaurant
+            </motion.div>
+            <SceneDescription text={description} />
+          </div>
+        )
+
+      case "order-food":
+        return (
+          <div className="stickman-drama-large">
+            <DetailedBackground type="store" />
+            <div className="absolute bottom-24 left-40">
+              <DetailedStickmanSVG type="customer" />
+            </div>
+            <div className="absolute bottom-24 right-48">
+              <DetailedStickmanSVG type="shopkeeper" />
+            </div>
+            <motion.div
+              className="absolute top-16 right-40 bg-green-600 text-white px-4 py-2 rounded-lg text-lg font-medium shadow-lg max-w-xs"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+            >
+              Your meal will be served soon 🍲
+            </motion.div>
+            <SceneDescription text={description} />
+          </div>
+        )
+
+      case "contaminated-food":
+        return (
+          <div className="stickman-drama-large">
+            <DetailedBackground type="home" />
+            <motion.div
+              className="absolute bottom-24 left-1/2 transform -translate-x-1/2"
+              animate={{ x: [-4, 4, -4, 4, 0], rotate: [-2, 2, -2, 2, 0] }}
+              transition={{ duration: 1.5 }}
+            >
+              <DetailedStickmanSVG type="shocked" />
+            </motion.div>
+            <motion.div
+              className="absolute top-16 left-1/2 transform -translate-x-1/2 bg-red-600 text-white px-4 py-2 rounded-lg text-lg font-bold shadow-lg max-w-xs"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+            >
+              Food seems contaminated! ⚠️
+            </motion.div>
+            <SceneDescription text={description} />
+          </div>
+        )
+
+      case "customer-sick":
+        return (
+          <div className="stickman-drama-large">
+            <DetailedBackground type="home" />
+            <motion.div
+              className="absolute bottom-24 left-1/2 transform -translate-x-1/2"
+              animate={{ y: [0, -6, 0], scale: [1, 0.95, 1] }}
+              transition={{ duration: 1.2, repeat: 1 }}
+            >
+              <DetailedStickmanSVG type="defeated" />
+            </motion.div>
+            <SceneDescription text={description} />
+          </div>
+        )
+
+      case "just-avoid":
+      case "no-action":
+      case "others-at-risk":
+      case "business-continues":
+        return (
+          <div className="stickman-drama-large">
+            <DetailedBackground type="store" />
+            <div className="absolute bottom-24 left-1/2 transform -translate-x-1/2">
+              <DetailedStickmanSVG type="defeated" />
+            </div>
+            <motion.div
+              className="absolute top-16 left-1/2 transform -translate-x-1/2 bg-yellow-500 text-black px-4 py-2 rounded-lg text-lg font-medium shadow-lg max-w-xs"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+            >
+              No action taken… others remain at risk
+            </motion.div>
+            <SceneDescription text={description} />
+          </div>
+        )
+
+      case "document-evidence":
+      case "file-consumer-case":
+      case "medical-compensation":
+      case "public-safety":
+        return (
+          <div className="stickman-drama-large">
+            <DetailedBackground type="store" />
+            <div className="absolute bottom-24 left-1/2 transform -translate-x-1/2">
+              <DetailedStickmanSVG type="confident" />
+            </div>
+            <motion.div
+              className="absolute top-16 left-1/2 transform -translate-x-1/2 bg-green-600 text-white px-4 py-2 rounded-lg text-lg font-medium shadow-lg max-w-xs"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+            >
+              Taking legal action to ensure safety ✅
+            </motion.div>
+            <SceneDescription text={description} />
+          </div>
+        )
+
+      // Protest Scenarios
+      case "policy-announcement":
+        return (
+          <div className="stickman-drama-large">
+            <DetailedBackground type="park" />
+            <motion.div className="absolute bottom-24 left-16" animate={{ x: [0, 80] }} transition={{ duration: 2 }}>
+              <DetailedStickmanSVG type="citizen" />
+            </motion.div>
+            <motion.div
+              className="absolute top-16 left-1/2 transform -translate-x-1/2 bg-blue-600 text-white px-4 py-2 rounded-lg text-lg font-bold shadow-lg"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+            >
+              📢 New Policy Announced
+            </motion.div>
+            <SceneDescription text={description} />
+          </div>
+        )
+
+      case "public-concern":
+        return (
+          <div className="stickman-drama-large">
+            <DetailedBackground type="park" />
+            <div className="absolute bottom-24 left-20">
+              <DetailedStickmanSVG type="citizen" />
+            </div>
+            <div className="absolute bottom-24 left-40">
+              <DetailedStickmanSVG type="citizen" />
+            </div>
+            <div className="absolute bottom-24 left-60">
+              <DetailedStickmanSVG type="citizen" />
+            </div>
+            <motion.div
+              className="absolute top-16 left-1/2 transform -translate-x-1/2 bg-yellow-500 text-black px-4 py-2 rounded-lg text-lg font-medium shadow-lg"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+            >
+              People are concerned 😟
+            </motion.div>
+            <SceneDescription text={description} />
+          </div>
+        )
+
+      case "organize-protest":
+        return (
+          <div className="stickman-drama-large">
+            <DetailedBackground type="park" />
+            <div className="absolute bottom-24 left-28">
+              <DetailedStickmanSVG type="confident" />
+            </div>
+            <motion.div
+              className="absolute top-16 left-1/2 transform -translate-x-1/2 bg-green-600 text-white px-4 py-2 rounded-lg text-lg font-bold shadow-lg"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+            >
+              Organizing a peaceful protest ✊
+            </motion.div>
+            <SceneDescription text={description} />
+          </div>
+        )
+
+      case "venue-selection":
+        return (
+          <div className="stickman-drama-large">
+            <DetailedBackground type="park" />
+            <div className="absolute bottom-24 left-1/2 transform -translate-x-1/2">
+              <DetailedStickmanSVG type="citizen" />
+            </div>
+            <motion.div
+              className="absolute top-16 left-1/2 transform -translate-x-1/2 bg-purple-600 text-white px-4 py-2 rounded-lg text-lg font-medium shadow-lg"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+            >
+              Public Park Chosen 🌳
+            </motion.div>
+            <SceneDescription text={description} />
+          </div>
+        )
+
+      case "seek-permission":
+      case "bureaucratic-delays":
+      case "opportunity-lost":
+      case "voice-silenced":
+        return (
+          <div className="stickman-drama-large">
+            <DetailedBackground type="park" />
+            <div className="absolute bottom-24 left-1/2 transform -translate-x-1/2">
+              <DetailedStickmanSVG type="defeated" />
+            </div>
+            <motion.div
+              className="absolute top-16 left-1/2 transform -translate-x-1/2 bg-red-600 text-white px-4 py-2 rounded-lg text-lg font-medium shadow-lg max-w-xs"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+            >
+              Delay and red tape weaken your voice
+            </motion.div>
+            <SceneDescription text={description} />
+          </div>
+        )
+
+      case "peaceful-assembly":
+      case "constitutional-right":
+      case "public-awareness":
+      case "democratic-participation":
+        return (
+          <div className="stickman-drama-large">
+            <DetailedBackground type="park" />
+            <div className="absolute bottom-24 left-16">
+              <DetailedStickmanSVG type="confident" />
+            </div>
+            <div className="absolute bottom-24 left-36">
+              <DetailedStickmanSVG type="citizen" />
+            </div>
+            <div className="absolute bottom-24 left-56">
+              <DetailedStickmanSVG type="citizen" />
+            </div>
+            <motion.div
+              className="absolute top-16 left-1/2 transform -translate-x-1/2 bg-green-600 text-white px-4 py-2 rounded-lg text-lg font-bold shadow-lg max-w-xs"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+            >
+              Peaceful protest in action ✅
+            </motion.div>
+            <SceneDescription text={description} />
+          </div>
+        )
+
+      // Arrest Scenarios
+      case "police-approach":
+        return (
+          <div className="stickman-drama-large">
+            <DetailedBackground type="jail" />
+            <div className="absolute bottom-24 left-32">
+              <DetailedStickmanSVG type="citizen" />
+            </div>
+            <div className="absolute bottom-24 right-32">
+              <DetailedPoliceSVG />
+            </div>
+            <SceneDescription text={description} />
+          </div>
+        )
+
+      case "arrest-announcement":
+        return (
+          <div className="stickman-drama-large">
+            <DetailedBackground type="jail" />
+            <div className="absolute bottom-24 left-32">
+              <DetailedStickmanSVG type="shocked" />
+            </div>
+            <motion.div
+              className="absolute bottom-24 right-32"
+              animate={{ y: [0, -4, 0] }}
+              transition={{ duration: 1, repeat: 1 }}
+            >
+              <DetailedPoliceSVG aggressive />
+            </motion.div>
+            <motion.div
+              className="absolute top-16 left-1/2 transform -translate-x-1/2 bg-red-600 text-white px-4 py-2 rounded-lg text-lg font-bold shadow-lg"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+            >
+              You are under arrest
+            </motion.div>
+            <SceneDescription text={description} />
+          </div>
+        )
+
+      case "no-reason-given":
+      case "no-contact-allowed":
+        return (
+          <div className="stickman-drama-large">
+            <DetailedBackground type="jail" />
+            <div className="absolute bottom-24 left-32">
+              <DetailedStickmanSVG type="uncomfortable" />
+            </div>
+            <div className="absolute bottom-24 right-32">
+              <DetailedPoliceSVG aggressive />
+            </div>
+            <motion.div
+              className="absolute top-16 left-1/2 transform -translate-x-1/2 bg-yellow-500 text-black px-4 py-2 rounded-lg text-lg font-medium shadow-lg max-w-xs"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+            >
+              Rights ignored
+            </motion.div>
+            <SceneDescription text={description} />
+          </div>
+        )
+
+      case "silent-submission":
+      case "prolonged-detention":
+      case "family-unaware":
+      case "due-process-violated":
+        return (
+          <div className="stickman-drama-large">
+            <DetailedBackground type="jail" />
+            <div className="absolute bottom-24 left-1/2 transform -translate-x-1/2">
+              <DetailedStickmanSVG type="defeated" />
+            </div>
+            <motion.div
+              className="absolute top-16 left-1/2 transform -translate-x-1/2 bg-red-700 text-white px-4 py-2 rounded-lg text-lg font-medium shadow-lg max-w-xs"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+            >
+              Due process violated
+            </motion.div>
+            <SceneDescription text={description} />
+          </div>
+        )
+
+      case "demand-charges":
+      case "request-family-contact":
+      case "cite-article-22":
+      case "legal-protection":
+        return (
+          <div className="stickman-drama-large">
+            <DetailedBackground type="jail" />
+            <div className="absolute bottom-24 left-32">
+              <DetailedStickmanSVG type="confident" />
+            </div>
+            <div className="absolute bottom-24 right-32">
+              <DetailedPoliceSVG />
+            </div>
+            <motion.div
+              className="absolute top-16 left-1/2 transform -translate-x-1/2 bg-green-600 text-white px-4 py-2 rounded-lg text-lg font-bold shadow-lg max-w-xs"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+            >
+              Rights asserted, protection ensured ✅
+            </motion.div>
+            <SceneDescription text={description} />
+          </div>
+        )
+
       default:
         return (
           <div className="stickman-drama-large">
@@ -614,6 +1943,72 @@ export function StickmanDrama({ scenarioType, outcome = "setup", selectedOption,
       <div className="absolute top-0 left-0 w-full h-8 bg-gradient-to-b from-black/20 to-transparent"></div>
       <div className="absolute bottom-0 left-0 w-full h-8 bg-gradient-to-t from-black/20 to-transparent"></div>
     </div>
+  )
+}
+
+// Simple Traffic Icons
+function StopSignSVG() {
+  return (
+    <svg width="40" height="40" viewBox="0 0 40 40" className="drop-shadow-sm">
+      <polygon points="20,2 36,10 36,30 20,38 4,30 4,10" fill="#ef4444" stroke="#991b1b" strokeWidth="2" />
+      <text x="20" y="23" textAnchor="middle" fontSize="10" fill="#fff" fontWeight="bold">STOP</text>
+    </svg>
+  )
+}
+
+function TrafficLightSVG({ state = 'red' }) {
+  return (
+    <svg width="24" height="64" viewBox="0 0 24 64" className="drop-shadow-sm">
+      <rect x="6" y="2" width="12" height="60" rx="4" fill="#1f2937" />
+      <circle cx="12" cy="14" r="5" fill={state === 'red' ? '#ef4444' : '#7f1d1d'} />
+      <circle cx="12" cy="32" r="5" fill={state === 'yellow' ? '#f59e0b' : '#78350f'} />
+      <circle cx="12" cy="50" r="5" fill={state === 'green' ? '#10b981' : '#064e3b'} />
+    </svg>
+  )
+}
+
+function SpeedLimitSignSVG({ limit = 50 }) {
+  return (
+    <svg width="40" height="40" viewBox="0 0 40 40" className="drop-shadow-sm">
+      <circle cx="20" cy="20" r="18" fill="#fff" stroke="#ef4444" strokeWidth="4" />
+      <text x="20" y="26" textAnchor="middle" fontSize="12" fill="#111827" fontWeight="bold">{limit}</text>
+    </svg>
+  )
+}
+
+function SeatbeltIconSVG({ crossed = false }) {
+  return (
+    <svg width="50" height="30" viewBox="0 0 50 30" className="drop-shadow-sm">
+      <rect x="5" y="10" width="40" height="10" fill="#374151" rx="2" />
+      {crossed && <line x1="5" y1="25" x2="45" y2="5" stroke="#ef4444" strokeWidth="3" />}
+    </svg>
+  )
+}
+
+function HelmetIconSVG({ crossed = false }) {
+  return (
+    <svg width="40" height="30" viewBox="0 0 40 30" className="drop-shadow-sm">
+      <path d="M5 20 Q 20 2 35 20 L 5 20 Z" fill="#1f2937" />
+      {crossed && <line x1="5" y1="25" x2="35" y2="5" stroke="#ef4444" strokeWidth="3" />}
+    </svg>
+  )
+}
+
+function PhoneIconSVG() {
+  return (
+    <svg width="20" height="36" viewBox="0 0 20 36" className="drop-shadow-sm">
+      <rect x="2" y="2" width="16" height="32" rx="3" fill="#111827" />
+      <rect x="4" y="6" width="12" height="20" rx="2" fill="#1e40af" />
+    </svg>
+  )
+}
+
+function BottleIconSVG() {
+  return (
+    <svg width="20" height="36" viewBox="0 0 20 36" className="drop-shadow-sm">
+      <rect x="7" y="2" width="6" height="8" fill="#065f46" />
+      <rect x="4" y="10" width="12" height="22" rx="4" fill="#10b981" />
+    </svg>
   )
 }
 
@@ -728,6 +2123,43 @@ function DetailedBackground({ type }) {
 
           {/* Floor */}
           <div className="absolute bottom-0 left-0 w-full h-16 bg-gradient-to-t from-brown-300 to-brown-200"></div>
+        </div>
+      )
+
+    case "park":
+      return (
+        <div className="absolute inset-0">
+          {/* Sky */}
+          <div className="absolute inset-0 bg-gradient-to-b from-sky-300 to-sky-200"></div>
+          {/* Grass */}
+          <div className="absolute bottom-0 left-0 w-full h-20 bg-green-400"></div>
+          {/* Trees */}
+          <div className="absolute bottom-16 left-8">
+            <TreeSVG />
+          </div>
+          <div className="absolute bottom-16 right-8">
+            <TreeSVG />
+          </div>
+          {/* Stage/Banner */}
+          <div className="absolute top-10 left-1/2 transform -translate-x-1/2 w-48 h-6 bg-purple-600 rounded"></div>
+        </div>
+      )
+
+    case "jail":
+      return (
+        <div className="absolute inset-0">
+          {/* Wall */}
+          <div className="absolute inset-0 bg-gradient-to-b from-gray-300 to-gray-200"></div>
+          {/* Bars */}
+          <div className="absolute inset-0">
+            {Array.from({ length: 10 }).map((_, i) => (
+              <div key={i} className="absolute top-0 bottom-0" style={{ left: `${i * 10}%` }}>
+                <div className="w-1 h-full bg-gray-500/60"></div>
+              </div>
+            ))}
+          </div>
+          {/* Floor */}
+          <div className="absolute bottom-0 left-0 w-full h-16 bg-gradient-to-t from-gray-500 to-gray-400"></div>
         </div>
       )
 
