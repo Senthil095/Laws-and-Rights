@@ -7,19 +7,22 @@ import { Button } from "@/components/ui/button"
 import { Play, Pause } from "lucide-react"
 import { StickmanDrama } from "@/components/stickman-drama"
 
-export function ScenarioAnimation({ scenario, scenarioType, onComplete }) {
+export function ScenarioAnimation({ scenario = "", scenarioType, onComplete }) {
   const [currentText, setCurrentText] = useState("")
   const [isPlaying, setIsPlaying] = useState(true)
   const [currentIndex, setCurrentIndex] = useState(0)
   const [showDrama, setShowDrama] = useState(false)
   const [dramaComplete, setDramaComplete] = useState(false)
 
+  // Safety check for scenario
+  const safeScenario = scenario || "Loading scenario..."
+
   useEffect(() => {
     if (!isPlaying) return
 
-    if (currentIndex < scenario.length) {
+    if (currentIndex < safeScenario.length) {
       const timer = setTimeout(() => {
-        setCurrentText(scenario.slice(0, currentIndex + 1))
+        setCurrentText(safeScenario.slice(0, currentIndex + 1))
         setCurrentIndex(currentIndex + 1)
       }, 50) // Typing speed
 
@@ -28,7 +31,7 @@ export function ScenarioAnimation({ scenario, scenarioType, onComplete }) {
       // Show drama when text is complete
       setShowDrama(true)
     }
-  }, [currentIndex, isPlaying, scenario])
+  }, [currentIndex, isPlaying, safeScenario])
 
   const handleDramaComplete = () => {
     setDramaComplete(true)
@@ -42,8 +45,8 @@ export function ScenarioAnimation({ scenario, scenarioType, onComplete }) {
   }
 
   const skipAnimation = () => {
-    setCurrentText(scenario)
-    setCurrentIndex(scenario.length)
+    setCurrentText(safeScenario)
+    setCurrentIndex(safeScenario.length)
     setShowDrama(true)
   }
 
@@ -100,7 +103,7 @@ export function ScenarioAnimation({ scenario, scenarioType, onComplete }) {
               className="text-xl text-gray-700 dark:text-gray-300 leading-relaxed text-center max-w-4xl"
             >
               {currentText}
-              {currentIndex < scenario.length && (
+              {currentIndex < safeScenario.length && (
                 <motion.span
                   animate={{ opacity: [1, 0] }}
                   transition={{ duration: 0.8, repeat: Number.POSITIVE_INFINITY }}
@@ -127,7 +130,7 @@ export function ScenarioAnimation({ scenario, scenarioType, onComplete }) {
                 className="bg-gradient-to-r from-purple-600 to-pink-600 h-3 rounded-full"
                 initial={{ width: 0 }}
                 animate={{
-                  width: showDrama && dramaComplete ? "100%" : `${(currentIndex / scenario.length) * 80}%`,
+                  width: showDrama && dramaComplete ? "100%" : `${(currentIndex / safeScenario.length) * 80}%`,
                 }}
                 transition={{ duration: 0.1 }}
               />
@@ -137,7 +140,7 @@ export function ScenarioAnimation({ scenario, scenarioType, onComplete }) {
                 ? "Ready to answer..."
                 : showDrama
                   ? "Watching scenario..."
-                  : `Reading scenario... ${Math.round((currentIndex / scenario.length) * 100)}%`}
+                  : `Reading scenario... ${Math.round((currentIndex / safeScenario.length) * 100)}%`}
             </p>
           </div>
         </CardContent>
