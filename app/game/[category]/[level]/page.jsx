@@ -7,12 +7,14 @@ import { Button } from "@/components/ui/button"
 import { Progress } from "@/components/ui/progress"
 import { Badge } from "@/components/ui/badge"
 import { useParams, useRouter } from "next/navigation"
-import { ArrowLeft, Clock, Trophy, Home } from "lucide-react"
+import { ArrowLeft, Clock, Trophy, Home, Star, Award } from "lucide-react"
 import { ScenarioAnimation } from "@/components/scenario-animation"
 import { SuccessAnimation } from "@/components/success-animation"
 import { PunishmentAnimation } from "@/components/punishment-animation"
-import { setLevelCompleted } from "@/lib/progress"
+import { setLevelCompleted, checkAndAwardBadge } from "@/lib/progress"
 import { gameData } from "@/lib/game-data"
+import { CATEGORY_BADGES, POINTS_PER_LEVEL } from "@/lib/rewards"
+import { useToast } from "@/hooks/use-toast"
 
 // Using centralized game data from lib/game-data.js
 const legacyGameData = {
@@ -877,6 +879,7 @@ export default function GamePage() {
   const params = useParams()
   const router = useRouter()
   const { category, level } = params
+  const { toast } = useToast()
 
   const [currentQuestion, setCurrentQuestion] = useState(null)
   const [selectedOption, setSelectedOption] = useState(null)
@@ -886,6 +889,8 @@ export default function GamePage() {
   const [gameState, setGameState] = useState("scenario") // scenario, playing, success, punishment
   const [showAnimation, setShowAnimation] = useState(true)
   const [gameStarted, setGameStarted] = useState(false)
+  const [pointsEarned, setPointsEarned] = useState(0)
+  const [badgeEarned, setBadgeEarned] = useState(null)
 
   useEffect(() => {
     const gameCategory = gameData[category]
@@ -935,14 +940,43 @@ export default function GamePage() {
     if (isCorrect) {
       setScore(100)
       setGameState("success")
+      
       try {
-        setLevelCompleted(category, String(level))
+        // Award points for completing level
+        const points = setLevelCompleted(category, String(level), POINTS_PER_LEVEL)
+        if (points > 0) {
+          setPointsEarned(points)
+          
+          // Show points toast
+          toast({
+            title: `+${points} Points! 🎉`,
+            description: "Level completed successfully!",
+          })
+        }
+        
+        // Check if category is completed and award badge
+        const gameCategory = gameData[category]
+        const totalLevels = gameCategory?.levels ? Object.keys(gameCategory.levels).length : 0
+        const earnedBadge = checkAndAwardBadge(category, totalLevels)
+        
+        if (earnedBadge) {
+          setBadgeEarned(earnedBadge)
+          const badge = CATEGORY_BADGES[earnedBadge]
+          
+          // Show badge toast
+          setTimeout(() => {
+            toast({
+              title: `🏆 Badge Unlocked!`,
+              description: `${badge?.name || "Achievement"} - ${badge?.description || "Category completed!"}`,
+            })
+          }, 1000)
+        }
       } catch {}
     } else {
       setScore(0)
       setGameState("punishment")
       try {
-        setLevelCompleted(category, String(level))
+        setLevelCompleted(category, String(level), POINTS_PER_LEVEL)
       } catch {}
     }
   }

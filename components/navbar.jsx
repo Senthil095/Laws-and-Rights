@@ -4,7 +4,7 @@ import { useState } from "react"
 import { motion } from "framer-motion"
 import { Button } from "@/components/ui/button"
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
-import { Menu, Scale, User, BookOpen, MessageSquare, LogOut } from "lucide-react"
+import { Menu, Scale, User, BookOpen, MessageSquare, LogOut, Trophy } from "lucide-react"
 import { ThemeToggle } from "@/components/theme-toggle"
 import { useAuth } from "@/contexts/AuthContext"
 import { useRouter } from "next/navigation"
@@ -36,6 +36,7 @@ export function Navbar() {
 
   const navItems = [
     { href: "/", label: "Home", icon: Scale },
+    { href: "/achievements", label: "Achievements", icon: Trophy },
     { href: "/ai-assistant", label: "AI Assistant", icon: BookOpen },
     { href: "/feedback", label: "Feedback", icon: MessageSquare },
   ]
