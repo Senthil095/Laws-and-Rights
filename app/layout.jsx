@@ -1,6 +1,7 @@
 import { Inter } from "next/font/google"
 import "./globals.css"
 import { ThemeProvider } from "@/components/theme-provider"
+import { AuthProvider } from "@/contexts/AuthContext"
 import { Navbar } from "@/components/navbar"
 import { FloatingAIButton } from "@/components/floating-ai-button"
 import { FloatingFeedbackButton } from "@/components/floating-feedback-button"
@@ -20,11 +21,13 @@ export default function RootLayout({ children }) {
     <html lang="en" suppressHydrationWarning>
       <body className={inter.className}>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
-          <Navbar />
-          <main>{children}</main>
-          <FloatingAIButton />
-          <FloatingFeedbackButton />
-          <Toaster />
+          <AuthProvider>
+            <Navbar />
+            <main>{children}</main>
+            <FloatingAIButton />
+            <FloatingFeedbackButton />
+            <Toaster />
+          </AuthProvider>
         </ThemeProvider>
       </body>
     </html>

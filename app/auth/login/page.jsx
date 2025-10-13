@@ -8,6 +8,8 @@ import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Separator } from "@/components/ui/separator"
 import { Eye, EyeOff, Mail, Lock, ArrowLeft } from "lucide-react"
+import { useAuth } from "@/contexts/AuthContext"
+import { useToast } from "@/hooks/use-toast"
 import Link from "next/link"
 import { useRouter } from "next/navigation"
 
@@ -18,17 +20,47 @@ export default function LoginPage() {
     password: "",
   })
   const [isLoading, setIsLoading] = useState(false)
+  const { login, signInWithGoogle } = useAuth()
+  const { toast } = useToast()
   const router = useRouter()
 
   const handleSubmit = async (e) => {
     e.preventDefault()
     setIsLoading(true)
 
-    // Simulate login process
-    setTimeout(() => {
-      setIsLoading(false)
+    try {
+      await login(formData.email, formData.password)
+      toast({
+        title: "Welcome back!",
+        description: "You have successfully logged in.",
+      })
       router.push("/")
-    }, 2000)
+    } catch (error) {
+      toast({
+        title: "Login failed",
+        description: error.message || "Invalid email or password. Please try again.",
+        variant: "destructive",
+      })
+    } finally {
+      setIsLoading(false)
+    }
+  }
+
+  const handleGoogleSignIn = async () => {
+    try {
+      await signInWithGoogle()
+      toast({
+        title: "Welcome!",
+        description: "You have successfully logged in with Google.",
+      })
+      router.push("/")
+    } catch (error) {
+      toast({
+        title: "Login failed",
+        description: error.message || "Failed to sign in with Google. Please try again.",
+        variant: "destructive",
+      })
+    }
   }
 
   const handleInputChange = (e) => {
@@ -140,7 +172,7 @@ export default function LoginPage() {
             </div>
 
             <div className="grid grid-cols-2 gap-4">
-              <Button variant="outline" className="w-full bg-transparent">
+              <Button variant="outline" className="w-full bg-transparent" onClick={handleGoogleSignIn}>
                 <svg className="w-4 h-4 mr-2" viewBox="0 0 24 24">
                   <path
                     fill="currentColor"

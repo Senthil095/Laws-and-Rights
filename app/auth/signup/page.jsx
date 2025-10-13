@@ -9,6 +9,8 @@ import { Label } from "@/components/ui/label"
 import { Separator } from "@/components/ui/separator"
 import { Checkbox } from "@/components/ui/checkbox"
 import { Eye, EyeOff, Mail, Lock, User, ArrowLeft } from "lucide-react"
+import { useAuth } from "@/contexts/AuthContext"
+import { useToast } from "@/hooks/use-toast"
 import Link from "next/link"
 import { useRouter } from "next/navigation"
 
@@ -23,26 +25,64 @@ export default function SignupPage() {
     agreeToTerms: false,
   })
   const [isLoading, setIsLoading] = useState(false)
+  const { signup, signInWithGoogle } = useAuth()
+  const { toast } = useToast()
   const router = useRouter()
 
   const handleSubmit = async (e) => {
     e.preventDefault()
     if (formData.password !== formData.confirmPassword) {
-      alert("Passwords don't match!")
+      toast({
+        title: "Error",
+        description: "Passwords don't match!",
+        variant: "destructive",
+      })
       return
     }
     if (!formData.agreeToTerms) {
-      alert("Please agree to the terms and conditions")
+      toast({
+        title: "Error",
+        description: "Please agree to the terms and conditions",
+        variant: "destructive",
+      })
       return
     }
 
     setIsLoading(true)
 
-    // Simulate signup process
-    setTimeout(() => {
-      setIsLoading(false)
+    try {
+      await signup(formData.email, formData.password)
+      toast({
+        title: "Account created!",
+        description: "Welcome to Laws & Rights. Start your legal learning journey!",
+      })
       router.push("/")
-    }, 2000)
+    } catch (error) {
+      toast({
+        title: "Signup failed",
+        description: error.message || "Failed to create account. Please try again.",
+        variant: "destructive",
+      })
+    } finally {
+      setIsLoading(false)
+    }
+  }
+
+  const handleGoogleSignIn = async () => {
+    try {
+      await signInWithGoogle()
+      toast({
+        title: "Welcome!",
+        description: "You have successfully signed up with Google.",
+      })
+      router.push("/")
+    } catch (error) {
+      toast({
+        title: "Signup failed",
+        description: error.message || "Failed to sign up with Google. Please try again.",
+        variant: "destructive",
+      })
+    }
   }
 
   const handleInputChange = (e) => {
@@ -213,7 +253,7 @@ export default function SignupPage() {
             </div>
 
             <div className="grid grid-cols-2 gap-4">
-              <Button variant="outline" className="w-full bg-transparent">
+              <Button variant="outline" className="w-full bg-transparent" onClick={handleGoogleSignIn}>
                 <svg className="w-4 h-4 mr-2" viewBox="0 0 24 24">
                   <path
                     fill="currentColor"

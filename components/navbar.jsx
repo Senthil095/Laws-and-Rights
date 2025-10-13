@@ -4,12 +4,35 @@ import { useState } from "react"
 import { motion } from "framer-motion"
 import { Button } from "@/components/ui/button"
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
-import { Menu, Scale, User, BookOpen, MessageSquare } from "lucide-react"
+import { Menu, Scale, User, BookOpen, MessageSquare, LogOut } from "lucide-react"
 import { ThemeToggle } from "@/components/theme-toggle"
+import { useAuth } from "@/contexts/AuthContext"
+import { useRouter } from "next/navigation"
 import Link from "next/link"
 
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
+  const { user, logout } = useAuth()
+  const router = useRouter()
+
+  const handleLogout = async () => {
+    try {
+      await logout()
+      router.push("/")
+    } catch (error) {
+      console.error("Failed to log out", error)
+    }
+  }
+
+  const getUserName = () => {
+    if (user?.email) {
+      const emailPrefix = user.email.split("@")[0]
+      // Remove all numbers from the username
+      const nameOnly = emailPrefix.replace(/[0-9]/g, "")
+      return nameOnly || "User"
+    }
+    return "User"
+  }
 
   const navItems = [
     { href: "/", label: "Home", icon: Scale },
@@ -52,20 +75,35 @@ export function Navbar() {
           {/* Right Side */}
           <div className="hidden md:flex items-center space-x-4">
             <ThemeToggle />
-            <Link href="/auth/login">
-              <Button variant="ghost" size="sm">
-                <User className="h-4 w-4 mr-2" />
-                Login
-              </Button>
-            </Link>
-            <Link href="/auth/signup">
-              <Button
-                size="sm"
-                className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700"
-              >
-                Sign Up
-              </Button>
-            </Link>
+            {user ? (
+              <>
+                <div className="flex items-center space-x-2 px-3 py-2 bg-purple-50 rounded-lg">
+                  <User className="h-4 w-4 text-purple-600" />
+                  <span className="text-sm font-medium text-purple-700">{getUserName()}</span>
+                </div>
+                <Button variant="ghost" size="sm" onClick={handleLogout}>
+                  <LogOut className="h-4 w-4 mr-2" />
+                  Logout
+                </Button>
+              </>
+            ) : (
+              <>
+                <Link href="/auth/login">
+                  <Button variant="ghost" size="sm">
+                    <User className="h-4 w-4 mr-2" />
+                    Login
+                  </Button>
+                </Link>
+                <Link href="/auth/signup">
+                  <Button
+                    size="sm"
+                    className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700"
+                  >
+                    Sign Up
+                  </Button>
+                </Link>
+              </>
+            )}
           </div>
 
           {/* Mobile Menu */}
@@ -92,17 +130,39 @@ export function Navbar() {
                   ))}
 
                   <div className="border-t pt-4 space-y-2">
-                    <Link href="/auth/login" onClick={() => setIsOpen(false)}>
-                      <Button variant="ghost" className="w-full justify-start">
-                        <User className="h-4 w-4 mr-2" />
-                        Login
-                      </Button>
-                    </Link>
-                    <Link href="/auth/signup" onClick={() => setIsOpen(false)}>
-                      <Button className="w-full bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700">
-                        Sign Up
-                      </Button>
-                    </Link>
+                    {user ? (
+                      <>
+                        <div className="flex items-center space-x-2 px-3 py-2 bg-purple-50 rounded-lg mb-2">
+                          <User className="h-4 w-4 text-purple-600" />
+                          <span className="text-sm font-medium text-purple-700">{getUserName()}</span>
+                        </div>
+                        <Button 
+                          variant="ghost" 
+                          className="w-full justify-start" 
+                          onClick={() => {
+                            handleLogout()
+                            setIsOpen(false)
+                          }}
+                        >
+                          <LogOut className="h-4 w-4 mr-2" />
+                          Logout
+                        </Button>
+                      </>
+                    ) : (
+                      <>
+                        <Link href="/auth/login" onClick={() => setIsOpen(false)}>
+                          <Button variant="ghost" className="w-full justify-start">
+                            <User className="h-4 w-4 mr-2" />
+                            Login
+                          </Button>
+                        </Link>
+                        <Link href="/auth/signup" onClick={() => setIsOpen(false)}>
+                          <Button className="w-full bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700">
+                            Sign Up
+                          </Button>
+                        </Link>
+                      </>
+                    )}
                   </div>
                 </div>
               </SheetContent>
