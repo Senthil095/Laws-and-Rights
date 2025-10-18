@@ -25,6 +25,9 @@ export function Navbar() {
   }
 
   const getUserName = () => {
+    if (user?.displayName) {
+      return user.displayName
+    }
     if (user?.email) {
       const emailPrefix = user.email.split("@")[0]
       // Remove all numbers from the username

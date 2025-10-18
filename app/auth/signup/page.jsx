@@ -51,7 +51,7 @@ export default function SignupPage() {
     setIsLoading(true)
 
     try {
-      await signup(formData.email, formData.password)
+      await signup(formData.email, formData.password, formData.name)
       toast({
         title: "Account created!",
         description: "Welcome to Laws & Rights. Start your legal learning journey!",
