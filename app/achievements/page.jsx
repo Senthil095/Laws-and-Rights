@@ -6,36 +6,43 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Progress } from "@/components/ui/progress"
 import { Badge } from "@/components/ui/badge"
-import { Trophy, Star, Award, Home, ArrowLeft } from "lucide-react"
+import { Trophy, Star, Award, Home, ArrowLeft, Flame, Zap } from "lucide-react"
 import Link from "next/link"
-import { getTotalPoints, getAllProgress, getEarnedBadges } from "@/lib/progress"
 import { CATEGORY_BADGES, getCategoryPoints } from "@/lib/rewards"
 import { gameData } from "@/lib/game-data"
+import { useStreak } from "@/contexts/StreakContext"
+import { useProgress } from "@/contexts/ProgressContext"
+import { StreakDisplay } from "@/components/streak-display"
+import { useAuth } from "@/contexts/AuthContext"
+import { useRouter } from "next/navigation"
 
 export default function AchievementsPage() {
-  const [totalPoints, setTotalPoints] = useState(0)
-  const [earnedBadgeIds, setEarnedBadgeIds] = useState([])
-  const [categoryProgress, setCategoryProgress] = useState({})
   const [mounted, setMounted] = useState(false)
+  const { user } = useAuth()
+  const router = useRouter()
+  const { progressData, loading: progressLoading } = useProgress()
+  const { streakData, loading: streakLoading } = useStreak()
 
   useEffect(() => {
     setMounted(true)
-    loadProgress()
-  }, [])
-
-  const loadProgress = () => {
-    const points = getTotalPoints()
-    const badges = getEarnedBadges()
-    const progress = getAllProgress()
     
-    setTotalPoints(points)
-    setEarnedBadgeIds(badges)
-    setCategoryProgress(progress)
-  }
+    // Redirect to login if not authenticated
+    if (mounted && !user && !progressLoading) {
+      router.push('/auth/login')
+    }
+  }, [mounted, user, progressLoading, router])
 
-  if (!mounted) {
+  if (!mounted || progressLoading) {
     return <div className="min-h-screen bg-gradient-to-br from-purple-50 to-pink-50" />
   }
+
+  if (!user) {
+    return null // Will redirect in useEffect
+  }
+
+  const totalPoints = progressData?.totalPoints || 0
+  const earnedBadgeIds = progressData?.earnedBadges || []
+  const categoryProgress = progressData?.completedLevels || {}
 
   const earnedBadges = earnedBadgeIds.map((badgeId) => CATEGORY_BADGES[badgeId]).filter(Boolean)
   const allBadges = Object.values(CATEGORY_BADGES)
@@ -78,14 +85,15 @@ export default function AchievementsPage() {
             </Button>
           </Link>
           
-          <div className="flex items-center justify-between flex-wrap gap-4">
-            <div>
-              <h1 className="text-4xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
-                Your Achievements
-              </h1>
-              <p className="text-gray-600 mt-2">Track your progress and earned rewards</p>
-            </div>
-            
+          <div>
+            <h1 className="text-4xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
+              Your Achievements
+            </h1>
+            <p className="text-gray-600 mt-2">Track your progress and earned rewards</p>
+          </div>
+          
+          {/* Points and Streak Summary */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
             <Card className="shadow-lg border-2 border-purple-200">
               <CardContent className="p-6">
                 <div className="flex items-center gap-4">
@@ -93,18 +101,45 @@ export default function AchievementsPage() {
                     <Trophy className="h-8 w-8 text-white" />
                   </div>
                   <div>
-                    <p className="text-sm text-gray-600">Total Points</p>
+                    <p className="text-sm text-gray-600">Quiz Points</p>
                     <p className="text-3xl font-bold text-purple-600">{totalPoints}</p>
                   </div>
                 </div>
               </CardContent>
             </Card>
+            
+            {streakData && (
+              <Card className="shadow-lg border-2 border-orange-200">
+                <CardContent className="p-6">
+                  <div className="flex items-center gap-4">
+                    <div className="w-16 h-16 bg-gradient-to-r from-orange-500 to-red-500 rounded-full flex items-center justify-center">
+                      <Flame className="h-8 w-8 text-white" />
+                    </div>
+                    <div>
+                      <p className="text-sm text-gray-600">Streak Points</p>
+                      <p className="text-3xl font-bold text-orange-600">{streakData.totalPoints || 0}</p>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            )}
           </div>
         </motion.div>
 
         <div className="grid lg:grid-cols-3 gap-8">
           {/* Main Content */}
           <div className="lg:col-span-2 space-y-6">
+            {/* Daily Streak Card */}
+            {streakData && (
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.05 }}
+              >
+                <StreakDisplay />
+              </motion.div>
+            )}
+
             {/* Category Progress */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -170,6 +205,53 @@ export default function AchievementsPage() {
 
           {/* Sidebar - Badges */}
           <div className="space-y-6">
+            {/* Streak Badges */}
+            {streakData && streakData.badges && streakData.badges.length > 0 && (
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.15 }}
+              >
+                <Card className="shadow-lg border-2 border-orange-200">
+                  <CardHeader>
+                    <CardTitle className="flex items-center gap-2">
+                      <Flame className="h-5 w-5 text-orange-600" />
+                      Streak Badges ({streakData.badges.length})
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent className="space-y-3">
+                    {streakData.badges.map((badge, index) => (
+                      <motion.div
+                        key={index}
+                        initial={{ opacity: 0, scale: 0.9 }}
+                        animate={{ opacity: 1, scale: 1 }}
+                        transition={{ delay: 0.2 + index * 0.05 }}
+                        className={`p-4 rounded-lg border-2 ${
+                          badge.golden 
+                            ? "bg-gradient-to-r from-yellow-400 to-orange-500 border-transparent text-white"
+                            : badge.ultimate
+                            ? "bg-gradient-to-r from-purple-600 to-pink-600 border-transparent text-white"
+                            : "bg-gradient-to-r from-orange-500 to-red-500 border-transparent text-white"
+                        }`}
+                      >
+                        <div>
+                          <h4 className="font-semibold text-white flex items-center gap-2">
+                            {badge.ultimate ? "👑" : badge.golden ? "🏅" : "🏆"} {badge.name}
+                          </h4>
+                          <p className="text-sm text-white/90 mt-1">
+                            Day {badge.day}
+                          </p>
+                          <Badge className="mt-2 bg-white/20 text-white border-white/30">
+                            ✓ Earned
+                          </Badge>
+                        </div>
+                      </motion.div>
+                    ))}
+                  </CardContent>
+                </Card>
+              </motion.div>
+            )}
+
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -179,7 +261,7 @@ export default function AchievementsPage() {
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2">
                     <Award className="h-5 w-5 text-purple-600" />
-                    Badges ({earnedBadges.length}/{allBadges.length})
+                    Quiz Badges ({earnedBadges.length}/{allBadges.length})
                   </CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-3">

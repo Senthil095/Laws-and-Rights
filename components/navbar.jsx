@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button"
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
 import { Menu, Scale, User, BookOpen, MessageSquare, LogOut, Trophy } from "lucide-react"
 import { ThemeToggle } from "@/components/theme-toggle"
+import { StreakDisplay } from "@/components/streak-display"
 import { useAuth } from "@/contexts/AuthContext"
 import { useRouter } from "next/navigation"
 import Link from "next/link"
@@ -81,6 +82,7 @@ export function Navbar() {
             <ThemeToggle />
             {user ? (
               <>
+                <StreakDisplay compact />
                 <div className="flex items-center space-x-2 px-3 py-2 bg-purple-50 rounded-lg">
                   <User className="h-4 w-4 text-purple-600" />
                   <span className="text-sm font-medium text-purple-700">{getUserName()}</span>
@@ -136,6 +138,9 @@ export function Navbar() {
                   <div className="border-t pt-4 space-y-2">
                     {user ? (
                       <>
+                        <div className="mb-3">
+                          <StreakDisplay compact />
+                        </div>
                         <div className="flex items-center space-x-2 px-3 py-2 bg-purple-50 rounded-lg mb-2">
                           <User className="h-4 w-4 text-purple-600" />
                           <span className="text-sm font-medium text-purple-700">{getUserName()}</span>

@@ -11,10 +11,11 @@ import { ArrowLeft, Clock, Trophy, Home, Star, Award } from "lucide-react"
 import { ScenarioAnimation } from "@/components/scenario-animation"
 import { SuccessAnimation } from "@/components/success-animation"
 import { PunishmentAnimation } from "@/components/punishment-animation"
-import { setLevelCompleted, checkAndAwardBadge } from "@/lib/progress"
 import { gameData } from "@/lib/game-data"
 import { CATEGORY_BADGES, POINTS_PER_LEVEL } from "@/lib/rewards"
 import { useToast } from "@/hooks/use-toast"
+import { useProgress } from "@/contexts/ProgressContext"
+import { useAuth } from "@/contexts/AuthContext"
 
 // Using centralized game data from lib/game-data.js
 const legacyGameData = {
@@ -880,6 +881,8 @@ export default function GamePage() {
   const router = useRouter()
   const { category, level } = params
   const { toast } = useToast()
+  const { user } = useAuth()
+  const { setLevelCompleted, checkAndAwardBadge } = useProgress()
 
   const [currentQuestion, setCurrentQuestion] = useState(null)
   const [selectedOption, setSelectedOption] = useState(null)
@@ -910,13 +913,17 @@ export default function GamePage() {
     }
   }, [timeLeft, showResult, gameStarted, gameState])
 
-  const handleTimeUp = () => {
+  const handleTimeUp = async () => {
     setShowResult(true)
     setGameState("punishment")
     // mark level completed on timeout as an attempt finished
-    try {
-      setLevelCompleted(category, String(level))
-    } catch {}
+    if (user) {
+      try {
+        await setLevelCompleted(category, String(level))
+      } catch (error) {
+        console.error("Error saving progress:", error)
+      }
+    }
   }
 
   const handleScenarioComplete = () => {
@@ -931,8 +938,16 @@ export default function GamePage() {
     setSelectedOption(optionId)
   }
 
-  const handleSubmit = () => {
+  const handleSubmit = async () => {
     if (!selectedOption) return
+    if (!user) {
+      toast({
+        title: "Login Required",
+        description: "Please login to save your progress",
+        variant: "destructive"
+      })
+      return
+    }
 
     const isCorrect = currentQuestion.options.find((opt) => opt.id === selectedOption)?.correct
     setShowResult(true)
@@ -943,13 +958,14 @@ export default function GamePage() {
       
       try {
         // Award points for completing level
-        const points = setLevelCompleted(category, String(level), POINTS_PER_LEVEL)
-        if (points > 0) {
-          setPointsEarned(points)
+        const result = await setLevelCompleted(category, String(level), POINTS_PER_LEVEL)
+        
+        if (result.success && result.pointsAwarded > 0) {
+          setPointsEarned(result.pointsAwarded)
           
           // Show points toast
           toast({
-            title: `+${points} Points! 🎉`,
+            title: `+${result.pointsAwarded} Points! 🎉`,
             description: "Level completed successfully!",
           })
         }
@@ -957,7 +973,7 @@ export default function GamePage() {
         // Check if category is completed and award badge
         const gameCategory = gameData[category]
         const totalLevels = gameCategory?.levels ? Object.keys(gameCategory.levels).length : 0
-        const earnedBadge = checkAndAwardBadge(category, totalLevels)
+        const earnedBadge = await checkAndAwardBadge(category, totalLevels)
         
         if (earnedBadge) {
           setBadgeEarned(earnedBadge)
@@ -971,13 +987,17 @@ export default function GamePage() {
             })
           }, 1000)
         }
-      } catch {}
+      } catch (error) {
+        console.error("Error saving progress:", error)
+      }
     } else {
       setScore(0)
       setGameState("punishment")
       try {
-        setLevelCompleted(category, String(level), POINTS_PER_LEVEL)
-      } catch {}
+        await setLevelCompleted(category, String(level), POINTS_PER_LEVEL)
+      } catch (error) {
+        console.error("Error saving progress:", error)
+      }
     }
   }
 

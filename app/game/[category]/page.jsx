@@ -10,8 +10,9 @@ import { Button } from "@/components/ui/button"
 import { Progress } from "@/components/ui/progress"
 import { CheckCircle, Play, ArrowLeft, Trophy, Star, Award } from "lucide-react"
 import { gameData } from "@/lib/game-data"
-import { isLevelCompleted, getCategoryProgress, getEarnedBadges } from "@/lib/progress"
 import { CATEGORY_BADGES, getCategoryPoints } from "@/lib/rewards"
+import { useProgress } from "@/contexts/ProgressContext"
+import { useAuth } from "@/contexts/AuthContext"
 
 const categoryThemes = {
   "fundamental-rights": {
@@ -69,7 +70,8 @@ const categoryThemes = {
 export default function CategoryLevelsPage() {
   const { category } = useParams()
   const data = gameData[category]
-  const [completedLevels, setCompletedLevels] = useState({})
+  const { user } = useAuth()
+  const { progressData } = useProgress()
   const [mounted, setMounted] = useState(false)
 
   const levelsArray = useMemo(() => {
@@ -82,13 +84,7 @@ export default function CategoryLevelsPage() {
 
   useEffect(() => {
     setMounted(true)
-    // Load completion status from localStorage after mount
-    const completion = {}
-    levelsArray.forEach((lvl) => {
-      completion[lvl.num] = isLevelCompleted(category, String(lvl.num))
-    })
-    setCompletedLevels(completion)
-  }, [category, levelsArray])
+  }, [])
 
   if (!data) {
     return (
@@ -107,15 +103,21 @@ export default function CategoryLevelsPage() {
 
   const theme = categoryThemes[category] || categoryThemes["fundamental-rights"]
   
-  // Calculate progress and points
-  const progress = getCategoryProgress(category)
+  // Calculate progress and points from ProgressContext
+  const progress = progressData?.completedLevels?.[category] || {}
   const completedCount = Object.keys(progress).length
   const totalLevels = levelsArray.length
   const progressPercentage = totalLevels > 0 ? Math.round((completedCount / totalLevels) * 100) : 0
   const categoryPoints = getCategoryPoints(category, { [category]: progress })
-  const earnedBadges = getEarnedBadges()
+  const earnedBadges = progressData?.earnedBadges || []
   const hasBadge = earnedBadges.includes(category)
   const badge = CATEGORY_BADGES[category]
+  
+  // Check if each level is completed
+  const completedLevels = {}
+  levelsArray.forEach((lvl) => {
+    completedLevels[lvl.num] = Boolean(progress[String(lvl.num)])
+  })
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-purple-50 to-pink-50">

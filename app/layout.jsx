@@ -2,9 +2,12 @@ import { Inter } from "next/font/google"
 import "./globals.css"
 import { ThemeProvider } from "@/components/theme-provider"
 import { AuthProvider } from "@/contexts/AuthContext"
+import { StreakProvider } from "@/contexts/StreakContext"
+import { ProgressProvider } from "@/contexts/ProgressContext"
 import { Navbar } from "@/components/navbar"
 import { FloatingAIButton } from "@/components/floating-ai-button"
 import { FloatingFeedbackButton } from "@/components/floating-feedback-button"
+import { RewardModal } from "@/components/reward-modal"
 import { Toaster } from "@/components/ui/toaster"
 
 const inter = Inter({ subsets: ["latin"] })
@@ -22,11 +25,16 @@ export default function RootLayout({ children }) {
       <body className={inter.className}>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
           <AuthProvider>
-            <Navbar />
-            <main>{children}</main>
-            <FloatingAIButton />
-            <FloatingFeedbackButton />
-            <Toaster />
+            <ProgressProvider>
+              <StreakProvider>
+                <Navbar />
+                <main>{children}</main>
+                <FloatingAIButton />
+                <FloatingFeedbackButton />
+                <RewardModal />
+                <Toaster />
+              </StreakProvider>
+            </ProgressProvider>
           </AuthProvider>
         </ThemeProvider>
       </body>
