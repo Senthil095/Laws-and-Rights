@@ -13,8 +13,13 @@ import { Badge } from "@/components/ui/badge"
 import { ArrowLeft, Send, Star, MessageSquare, Bug, Lightbulb, Heart } from "lucide-react"
 import Link from "next/link"
 import { FeedbackStatus } from "@/components/feedback-status"
+import { useAuth } from "@/contexts/AuthContext"
+import { submitFeedback, FEEDBACK_CATEGORIES } from "@/lib/feedback-service"
+import { useToast } from "@/hooks/use-toast"
 
 export default function FeedbackPage() {
+  const { user } = useAuth()
+  const { toast } = useToast()
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -26,23 +31,64 @@ export default function FeedbackPage() {
   })
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [submitted, setSubmitted] = useState(false)
+  
+  // Auto-fill user data if logged in
+  useState(() => {
+    if (user) {
+      setFormData(prev => ({
+        ...prev,
+        name: user.displayName || "",
+        email: user.email || ""
+      }))
+    }
+  }, [user])
 
   const feedbackTypes = [
-    { value: "general", label: "General Feedback", icon: MessageSquare, color: "blue" },
-    { value: "bug", label: "Bug Report", icon: Bug, color: "red" },
-    { value: "feature", label: "Feature Request", icon: Lightbulb, color: "yellow" },
-    { value: "appreciation", label: "Appreciation", icon: Heart, color: "pink" },
+    { value: FEEDBACK_CATEGORIES.GENERAL, label: "General Feedback", icon: MessageSquare, color: "blue" },
+    { value: FEEDBACK_CATEGORIES.BUG_REPORT, label: "Bug Report", icon: Bug, color: "red" },
+    { value: FEEDBACK_CATEGORIES.FEATURE_REQUEST, label: "Feature Request", icon: Lightbulb, color: "yellow" },
+    { value: FEEDBACK_CATEGORIES.APPRECIATION, label: "Appreciation", icon: Heart, color: "pink" },
   ]
 
   const handleSubmit = async (e) => {
     e.preventDefault()
     setIsSubmitting(true)
 
-    // Simulate form submission
-    setTimeout(() => {
+    try {
+      const result = await submitFeedback({
+        userId: user?.uid || null,
+        userName: formData.name,
+        userEmail: formData.email,
+        category: formData.type,
+        subject: formData.subject,
+        message: formData.message,
+        rating: formData.rating ? parseInt(formData.rating) : null,
+        page: window.location.pathname
+      })
+
+      if (result.success) {
+        setSubmitted(true)
+        toast({
+          title: "Feedback Submitted!",
+          description: "Thank you for helping us improve."
+        })
+      } else {
+        toast({
+          title: "Submission Failed",
+          description: result.message,
+          variant: "destructive"
+        })
+      }
+    } catch (error) {
+      console.error("Error submitting feedback:", error)
+      toast({
+        title: "Error",
+        description: "Failed to submit feedback. Please try again.",
+        variant: "destructive"
+      })
+    } finally {
       setIsSubmitting(false)
-      setSubmitted(true)
-    }, 2000)
+    }
   }
 
   const handleInputChange = (e) => {
