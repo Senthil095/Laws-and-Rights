@@ -12365,11 +12365,6 @@ function MedicalKitSVG() {
     <div className="w-full h-96 relative bg-gradient-to-b from-sky-300 via-sky-200 to-green-300 rounded-xl overflow-hidden shadow-2xl border-4 border-white">
       {currentScene < scenes.length && renderScene(scenes[currentScene].type, scenes[currentScene].description)}
 
-      {/* Enhanced Scene indicator */}
-      <div className="absolute bottom-4 left-4 text-sm text-gray-800 bg-white/90 px-3 py-2 rounded-lg shadow-lg font-medium">
-        🎬 Scene {currentScene + 1}/{scenes.length}
-      </div>
-
       {/* Enhanced Progress bar */}
       <div className="absolute bottom-4 right-4 w-32 h-2 bg-white/70 rounded-full shadow-lg">
         <motion.div

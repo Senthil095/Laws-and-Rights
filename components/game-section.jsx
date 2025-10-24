@@ -16,9 +16,9 @@ const gameCategories = [
     color: "from-blue-500 to-blue-600",
     bgColor: "bg-blue-50",
     borderColor: "border-blue-200",
-    levels: 2,
+    levels: 12,
     difficulty: "Beginner",
-    estimatedTime: "15 min",
+    estimatedTime: "45 min",
   },
   {
     id: "human-rights",
@@ -52,9 +52,9 @@ const gameCategories = [
     color: "from-red-500 to-red-600",
     bgColor: "bg-red-50",
     borderColor: "border-red-200",
-    levels: 2,
+    levels: 12,
     difficulty: "Intermediate",
-    estimatedTime: "20 min",
+    estimatedTime: "40 min",
   },
   {
     id: "consumer-rights",

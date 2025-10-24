@@ -69,50 +69,17 @@ export function Hero() {
             {/* Stats */}
             <div className="grid grid-cols-3 gap-8 pt-8">
               <div className="text-center">
-                <div className="text-2xl font-bold text-purple-600">6+</div>
+                <div className="text-2xl font-bold text-purple-600">98+</div>
                 <div className="text-sm text-gray-600">Legal Scenarios</div>
               </div>
               <div className="text-center">
-                <div className="text-2xl font-bold text-purple-600">3</div>
+                <div className="text-2xl font-bold text-purple-600">11</div>
                 <div className="text-sm text-gray-600">Law Categories</div>
               </div>
               <div className="text-center">
                 <div className="text-2xl font-bold text-purple-600">AI</div>
                 <div className="text-sm text-gray-600">Powered Help</div>
               </div>
-            </div>
-          </motion.div>
-
-          {/* Right Content - Hero Image */}
-          <motion.div
-            initial={{ opacity: 0, x: 20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="relative"
-          >
-            <div className="relative bg-white rounded-2xl shadow-2xl p-8 border border-purple-100">
-              <img
-                src="/images/indian-laws-hero.png"
-                alt="Indian Laws and Rights Learning"
-                className="w-full h-auto rounded-xl"
-              />
-
-              {/* Floating Elements */}
-              <motion.div
-                animate={{ y: [0, -10, 0] }}
-                transition={{ duration: 3, repeat: Number.POSITIVE_INFINITY }}
-                className="absolute -top-4 -right-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white p-3 rounded-full shadow-lg"
-              >
-                <Award className="h-6 w-6" />
-              </motion.div>
-
-              <motion.div
-                animate={{ y: [0, 10, 0] }}
-                transition={{ duration: 3, repeat: Number.POSITIVE_INFINITY, delay: 1.5 }}
-                className="absolute -bottom-4 -left-4 bg-gradient-to-r from-blue-500 to-indigo-500 text-white p-3 rounded-full shadow-lg"
-              >
-                <Users className="h-6 w-6" />
-              </motion.div>
             </div>
           </motion.div>
         </div>
