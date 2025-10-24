@@ -900,7 +900,16 @@ export default function GamePage() {
     if (gameCategory && gameCategory.levels[level]) {
       const question = gameCategory.levels[level]
       setCurrentQuestion(question)
-      // Don't start timer until game actually starts
+      // Reset all state when level changes
+      setSelectedOption(null)
+      setShowResult(false)
+      setTimeLeft(0)
+      setScore(0)
+      setGameState("scenario")
+      setShowAnimation(true)
+      setGameStarted(false)
+      setPointsEarned(0)
+      setBadgeEarned(null)
     }
   }, [category, level])
 
@@ -1081,13 +1090,14 @@ export default function GamePage() {
           <AnimatePresence mode="wait">
             {gameState === "scenario" && (
               <motion.div
-                key="scenario-animation"
+                key={`scenario-${category}-${level}`}
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
                 className="mb-8"
               >
                 <ScenarioAnimation
+                  key={`scenario-anim-${category}-${level}`}
                   scenario={currentQuestion.scenario}
                   scenarioType={currentQuestion.scenarioType}
                   onComplete={handleScenarioComplete}
@@ -1097,7 +1107,7 @@ export default function GamePage() {
 
             {gameState === "playing" && (
               <motion.div
-                key="game-content"
+                key={`playing-${category}-${level}`}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -20 }}
@@ -1149,12 +1159,13 @@ export default function GamePage() {
 
             {gameState === "success" && (
               <motion.div
-                key="success"
+                key={`success-${category}-${level}`}
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.8 }}
               >
                 <SuccessAnimation
+                  key={`success-anim-${category}-${level}`}
                   explanation={currentQuestion.explanation}
                   score={score}
                   scenarioType={currentQuestion.scenarioType}
@@ -1168,12 +1179,13 @@ export default function GamePage() {
 
             {gameState === "punishment" && (
               <motion.div
-                key="punishment"
+                key={`punishment-${category}-${level}`}
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.8 }}
               >
                 <PunishmentAnimation
+                  key={`punishment-anim-${category}-${level}`}
                   punishment={currentQuestion.punishment}
                   correctAnswer={currentQuestion.options.find((opt) => opt.correct)?.text}
                   explanation={currentQuestion.explanation}

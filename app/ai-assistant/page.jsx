@@ -671,11 +671,11 @@ Please provide more specific details about your situation for targeted legal adv
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-gray-900 dark:to-gray-800">
+    <div className="min-h-screen bg-gradient-to-br from-purple-50 to-pink-50 dark:from-gray-900 dark:to-gray-800">
       <div className="container mx-auto px-4 py-8">
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="max-w-4xl mx-auto">
           <Card className="h-[80vh] flex flex-col dark:bg-gray-800 dark:border-gray-700">
-            <CardHeader className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white rounded-t-lg">
+            <CardHeader className="bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-t-lg">
               <CardTitle className="flex items-center gap-2 text-xl">
                 <Bot className="h-6 w-6" />
                 AI Legal Assistant
@@ -699,20 +699,20 @@ Please provide more specific details about your situation for targeted legal adv
                       <div
                         className={`max-w-[80%] rounded-lg p-3 ${
                           message.type === "user"
-                            ? "bg-blue-600 text-white"
+                            ? "bg-gradient-to-r from-purple-600 to-pink-600 text-white"
                             : "bg-gray-100 dark:bg-gray-700 text-gray-900 dark:text-gray-100 border dark:border-gray-600"
                         }`}
                       >
                         <div className="flex items-start gap-2">
                           {message.type === "bot" && (
-                            <Bot className="h-4 w-4 mt-0.5 text-blue-600 dark:text-blue-400" />
+                            <Bot className="h-4 w-4 mt-0.5 text-purple-600 dark:text-purple-400" />
                           )}
                           {message.type === "user" && <User className="h-4 w-4 mt-0.5" />}
                           <div className="flex-1">
                             <div className="text-sm whitespace-pre-line">{message.content}</div>
                             <p
                               className={`text-xs mt-1 ${
-                                message.type === "user" ? "text-blue-100" : "text-gray-500 dark:text-gray-400"
+                                message.type === "user" ? "text-purple-100" : "text-gray-500 dark:text-gray-400"
                               }`}
                             >
                               {message.timestamp.toLocaleTimeString()}
@@ -727,15 +727,15 @@ Please provide more specific details about your situation for targeted legal adv
                     <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="flex justify-start">
                       <div className="bg-gray-100 dark:bg-gray-700 rounded-lg p-3 border dark:border-gray-600">
                         <div className="flex items-center gap-2">
-                          <Bot className="h-4 w-4 text-blue-600 dark:text-blue-400" />
+                          <Bot className="h-4 w-4 text-purple-600 dark:text-purple-400" />
                           <div className="flex space-x-1">
-                            <div className="w-2 h-2 bg-blue-600 dark:bg-blue-400 rounded-full animate-bounce"></div>
+                            <div className="w-2 h-2 bg-purple-600 dark:bg-purple-400 rounded-full animate-bounce"></div>
                             <div
-                              className="w-2 h-2 bg-blue-600 dark:bg-blue-400 rounded-full animate-bounce"
+                              className="w-2 h-2 bg-purple-600 dark:bg-purple-400 rounded-full animate-bounce"
                               style={{ animationDelay: "0.1s" }}
                             ></div>
                             <div
-                              className="w-2 h-2 bg-blue-600 dark:bg-blue-400 rounded-full animate-bounce"
+                              className="w-2 h-2 bg-purple-600 dark:bg-purple-400 rounded-full animate-bounce"
                               style={{ animationDelay: "0.2s" }}
                             ></div>
                           </div>
@@ -758,7 +758,7 @@ Please provide more specific details about your situation for targeted legal adv
                       onClick={() => handleQuickQuestion(q.text)}
                       className="justify-start text-left h-auto p-2 dark:border-gray-600 dark:hover:bg-gray-700"
                     >
-                      <q.icon className="h-4 w-4 mr-2 text-blue-600 dark:text-blue-400" />
+                      <q.icon className="h-4 w-4 mr-2 text-purple-600 dark:text-purple-400" />
                       <div>
                         <div className="text-xs text-gray-500 dark:text-gray-400">{q.category}</div>
                         <div className="text-sm">{q.text}</div>

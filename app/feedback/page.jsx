@@ -110,7 +110,7 @@ export default function FeedbackPage() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-50">
+    <div className="min-h-screen bg-gradient-to-br from-purple-50 to-pink-50">
       <div className="container mx-auto px-4 py-8">
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="max-w-2xl mx-auto">
           <div className="flex items-center gap-4 mb-6">
@@ -127,7 +127,7 @@ export default function FeedbackPage() {
           </div>
 
           <Card className="shadow-lg border-0">
-            <CardHeader className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white rounded-t-lg">
+            <CardHeader className="bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-t-lg">
               <CardTitle className="flex items-center gap-2">
                 <MessageSquare className="h-5 w-5" />
                 We Value Your Opinion
@@ -256,7 +256,7 @@ export default function FeedbackPage() {
                 {/* Submit Button */}
                 <Button
                   type="submit"
-                  className="w-full bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700"
+                  className="w-full bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700"
                   disabled={isSubmitting}
                 >
                   {isSubmitting ? (
@@ -282,7 +282,7 @@ export default function FeedbackPage() {
             transition={{ delay: 0.2 }}
             className="mt-6 text-center"
           >
-            <Card className="bg-gradient-to-r from-green-50 to-blue-50 border-green-200">
+            <Card className="bg-gradient-to-r from-green-50 to-purple-50 border-purple-200">
               <CardContent className="p-4">
                 <p className="text-sm text-gray-600">
                   <strong>Thank you for helping us improve!</strong> Your feedback is valuable and helps us create a

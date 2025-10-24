@@ -17,6 +17,15 @@ export function ScenarioAnimation({ scenario = "", scenarioType, onComplete }) {
   // Safety check for scenario
   const safeScenario = scenario || "Loading scenario..."
 
+  // Reset state when scenario or scenarioType changes
+  useEffect(() => {
+    setCurrentText("")
+    setCurrentIndex(0)
+    setShowDrama(false)
+    setDramaComplete(false)
+    setIsPlaying(true)
+  }, [scenario, scenarioType])
+
   useEffect(() => {
     if (!isPlaying) return
 

@@ -65,6 +65,11 @@ const categoryThemes = {
     bg: "bg-teal-50",
     border: "border-teal-200",
   },
+  "environmental-laws": {
+    gradient: "from-green-500 to-emerald-600",
+    bg: "bg-green-50",
+    border: "border-green-200",
+  },
 }
 
 export default function CategoryLevelsPage() {

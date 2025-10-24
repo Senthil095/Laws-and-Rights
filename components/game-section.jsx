@@ -4,7 +4,7 @@ import { motion } from "framer-motion"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
-import { Scale, Shield, ShoppingCart, Play, Star, Clock, TrafficCone, Lock, Users, Heart, Baby, HeartHandshake, GraduationCap } from "lucide-react"
+import { Scale, Shield, ShoppingCart, Play, Star, Clock, TrafficCone, Lock, Users, Heart, Baby, HeartHandshake, GraduationCap, Leaf } from "lucide-react"
 import Link from "next/link"
 
 const gameCategories = [
@@ -128,6 +128,18 @@ const gameCategories = [
     difficulty: "Beginner",
     estimatedTime: "30 min",
   },
+  {
+    id: "environmental-laws",
+    title: "Environmental Laws",
+    description: "Learn about environmental protection laws, pollution control, wildlife conservation, and citizen duties",
+    icon: Leaf,
+    color: "from-green-500 to-emerald-600",
+    bgColor: "bg-green-50",
+    borderColor: "border-green-200",
+    levels: 10,
+    difficulty: "Beginner",
+    estimatedTime: "30 min",
+  },
 ]
 
 export function GameSection() {
@@ -213,11 +225,11 @@ export function GameSection() {
         >
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
             <div className="bg-white rounded-xl p-6 shadow-lg border border-purple-100">
-              <div className="text-3xl font-bold text-purple-600 mb-2">88+</div>
+              <div className="text-3xl font-bold text-purple-600 mb-2">98+</div>
               <div className="text-gray-600">Interactive Scenarios</div>
             </div>
             <div className="bg-white rounded-xl p-6 shadow-lg border border-purple-100">
-              <div className="text-3xl font-bold text-purple-600 mb-2">10</div>
+              <div className="text-3xl font-bold text-purple-600 mb-2">11</div>
               <div className="text-gray-600">Legal Categories</div>
             </div>
             <div className="bg-white rounded-xl p-6 shadow-lg border border-purple-100">

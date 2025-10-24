@@ -2113,6 +2113,207 @@ export function StickmanDrama({ scenarioType, outcome = "setup", selectedOption,
         { type: "edu-linguistic-rights", duration: 3000, description: "Linguistic and cultural rights protected" },
       ],
     },
+    // Environmental Laws Scenarios
+    "factory-pollution": {
+      setup: [
+        { type: "env-factory-riverside", duration: 3000, description: "Factory located near Rahul's village river" },
+        { type: "env-chemical-waste-pipe", duration: 3000, description: "Untreated chemical waste pipe visible" },
+        { type: "env-dead-fish-floating", duration: 3000, description: "Dead fish floating in contaminated water" },
+        { type: "env-villagers-sick", duration: 3000, description: "Villagers falling sick from drinking water" },
+      ],
+      wrong: [
+        { type: "env-ignore-pollution", duration: 3000, description: "Villagers ignore the pollution problem" },
+        { type: "env-more-waste-dumped", duration: 3000, description: "Factory continues dumping toxic waste" },
+        { type: "env-health-crisis-worsens", duration: 3000, description: "Health crisis worsens in the village" },
+        { type: "env-right-to-life-violated", duration: 3000, description: "Article 21 right to clean environment violated" },
+      ],
+      correct: [
+        { type: "env-villagers-document-evidence", duration: 3000, description: "Rahul documents water contamination" },
+        { type: "env-file-complaint-pcb", duration: 3000, description: "Files complaint with Pollution Control Board" },
+        { type: "env-factory-inspected", duration: 3000, description: "Authorities inspect factory operations" },
+        { type: "env-treatment-plant-installed", duration: 3000, description: "Factory installs waste treatment plant" },
+      ],
+    },
+    "illegal-deforestation": {
+      setup: [
+        { type: "env-forest-area", duration: 3000, description: "Dense forest area for resort project" },
+        { type: "env-chainsaws-cutting", duration: 3000, description: "Construction company cutting hundreds of trees" },
+        { type: "env-no-clearance-shown", duration: 3000, description: "No government clearance obtained" },
+        { type: "env-wildlife-fleeing", duration: 3000, description: "Wildlife fleeing from habitat destruction" },
+      ],
+      wrong: [
+        { type: "env-deforestation-continues", duration: 3000, description: "Tree cutting continues unchecked" },
+        { type: "env-ecosystem-destroyed", duration: 3000, description: "Forest ecosystem completely destroyed" },
+        { type: "env-climate-impact", duration: 3000, description: "Local climate adversely affected" },
+        { type: "env-biodiversity-lost", duration: 3000, description: "Biodiversity permanently lost" },
+      ],
+      correct: [
+        { type: "env-activists-alerted", duration: 3000, description: "Environmental activists alerted" },
+        { type: "env-forest-dept-complaint", duration: 3000, description: "Complaint filed with Forest Department" },
+        { type: "env-cutting-stopped", duration: 3000, description: "Court orders immediate stop to cutting" },
+        { type: "env-reforestation-ordered", duration: 3000, description: "Company ordered to plant compensatory trees" },
+      ],
+    },
+    "vehicular-pollution": {
+      setup: [
+        { type: "env-city-traffic", duration: 3000, description: "Priya observes city bus traffic" },
+        { type: "env-diesel-smoke-thick", duration: 3000, description: "Dense black smoke from diesel buses" },
+        { type: "env-people-coughing", duration: 3000, description: "People coughing due to smoke" },
+        { type: "env-complaint-ignored", duration: 3000, description: "Initial complaints to authorities ignored" },
+      ],
+      wrong: [
+        { type: "env-air-quality-worsens", duration: 3000, description: "Air quality index reaches hazardous levels" },
+        { type: "env-respiratory-diseases", duration: 3000, description: "Respiratory diseases increase in city" },
+        { type: "env-children-affected", duration: 3000, description: "Children especially affected by pollution" },
+        { type: "env-health-crisis", duration: 3000, description: "Public health crisis declared" },
+      ],
+      correct: [
+        { type: "env-priya-documents-buses", duration: 3000, description: "Priya documents polluting buses with photos" },
+        { type: "env-spcb-complaint", duration: 3000, description: "Files complaint with State Pollution Control Board" },
+        { type: "env-emission-testing", duration: 3000, description: "Buses undergo mandatory emission testing" },
+        { type: "env-clean-buses-deployed", duration: 3000, description: "Old buses retired, clean vehicles deployed" },
+      ],
+    },
+    "plastic-pollution": {
+      setup: [
+        { type: "env-grocery-shop", duration: 3000, description: "Grocery shop in residential area" },
+        { type: "env-plastic-bags-used", duration: 3000, description: "Shop using banned single-use plastic bags" },
+        { type: "env-customer-notices", duration: 3000, description: "Customer notices illegal plastic use" },
+        { type: "env-shopkeeper-dismissive", duration: 3000, description: "Shopkeeper dismisses concerns" },
+      ],
+      wrong: [
+        { type: "env-plastic-waste-piles", duration: 3000, description: "Plastic waste accumulates in neighborhood" },
+        { type: "env-drains-clogged", duration: 3000, description: "Drainage systems clogged with plastic" },
+        { type: "env-animals-harmed", duration: 3000, description: "Stray animals consume plastic and suffer" },
+        { type: "env-environment-degraded", duration: 3000, description: "Local environment severely degraded" },
+      ],
+      correct: [
+        { type: "env-customer-educates", duration: 3000, description: "Customer informs shopkeeper about ban" },
+        { type: "env-municipal-complaint", duration: 3000, description: "Reports violation to municipal authorities" },
+        { type: "env-fine-imposed", duration: 3000, description: "Shop fined under Environment Protection Act" },
+        { type: "env-cloth-bags-adopted", duration: 3000, description: "Shop switches to eco-friendly cloth bags" },
+      ],
+    },
+    "noise-pollution": {
+      setup: [
+        { type: "env-temple-night", duration: 3000, description: "Temple festival at midnight" },
+        { type: "env-loud-loudspeakers", duration: 3000, description: "Loudspeakers blaring at full volume" },
+        { type: "env-hospital-nearby", duration: 3000, description: "Hospital and residences disturbed" },
+        { type: "env-patients-suffering", duration: 3000, description: "Patients and babies unable to sleep" },
+      ],
+      wrong: [
+        { type: "env-noise-continues", duration: 3000, description: "Loudspeakers continue past midnight" },
+        { type: "env-health-deteriorates", duration: 3000, description: "Residents' health deteriorates" },
+        { type: "env-stress-increases", duration: 3000, description: "Stress and hearing problems increase" },
+        { type: "env-peace-disturbed", duration: 3000, description: "Community peace permanently disturbed" },
+      ],
+      correct: [
+        { type: "env-residents-approach", duration: 3000, description: "Residents approach temple committee" },
+        { type: "env-noise-rules-cited", duration: 3000, description: "Cites Noise Pollution Rules 2000" },
+        { type: "env-police-intervene", duration: 3000, description: "Police ensure sound level compliance" },
+        { type: "env-volume-lowered", duration: 3000, description: "Temple reduces volume, respects 10 PM rule" },
+      ],
+    },
+    "wildlife-poaching": {
+      setup: [
+        { type: "env-national-park", duration: 3000, description: "Hunters enter national park illegally" },
+        { type: "env-deer-targeted", duration: 3000, description: "Protected deer spotted by hunters" },
+        { type: "env-shots-fired", duration: 3000, description: "Hunters fire at animals" },
+        { type: "env-deer-killed", duration: 3000, description: "Deer killed in protected area" },
+      ],
+      wrong: [
+        { type: "env-poaching-continues", duration: 3000, description: "Poachers escape, continue hunting" },
+        { type: "env-deer-population-declines", duration: 3000, description: "Deer population rapidly declines" },
+        { type: "env-ecosystem-imbalance", duration: 3000, description: "Ecosystem balance disrupted" },
+        { type: "env-species-endangered", duration: 3000, description: "Species pushed toward extinction" },
+      ],
+      correct: [
+        { type: "env-rangers-alerted", duration: 3000, description: "Forest rangers hear gunshots" },
+        { type: "env-poachers-caught", duration: 3000, description: "Hunters caught in the act" },
+        { type: "env-wildlife-act-invoked", duration: 3000, description: "Charged under Wildlife Protection Act 1972" },
+        { type: "env-imprisonment-fine", duration: 3000, description: "Poachers imprisoned and heavily fined" },
+      ],
+    },
+    "industrial-pollution": {
+      setup: [
+        { type: "env-industrial-area", duration: 3000, description: "Factory in residential neighborhood" },
+        { type: "env-black-smoke-daily", duration: 3000, description: "Black smoke released without filters daily" },
+        { type: "env-residents-coughing", duration: 3000, description: "Nearby residents develop breathing issues" },
+        { type: "env-children-asthma", duration: 3000, description: "Children diagnosed with asthma" },
+      ],
+      wrong: [
+        { type: "env-pollution-unchecked", duration: 3000, description: "Industrial pollution continues unchecked" },
+        { type: "env-chronic-diseases", duration: 3000, description: "Chronic respiratory diseases spread" },
+        { type: "env-life-expectancy-drops", duration: 3000, description: "Life expectancy drops in area" },
+        { type: "env-mass-health-crisis", duration: 3000, description: "Community faces health emergency" },
+      ],
+      correct: [
+        { type: "env-residents-unite", duration: 3000, description: "Residents form action committee" },
+        { type: "env-pcb-inspection", duration: 3000, description: "Pollution Control Board inspects factory" },
+        { type: "env-air-filters-mandated", duration: 3000, description: "Factory ordered to install air filters" },
+        { type: "env-compliance-achieved", duration: 3000, description: "Air quality improves, health restored" },
+      ],
+    },
+    "waste-dumping": {
+      setup: [
+        { type: "env-housing-society", duration: 3000, description: "Housing society with waste problem" },
+        { type: "env-garbage-dumped-open", duration: 3000, description: "Solid waste dumped in open plot" },
+        { type: "env-no-segregation", duration: 3000, description: "No waste segregation practiced" },
+        { type: "env-stench-spread", duration: 3000, description: "Foul smell spreads in neighborhood" },
+      ],
+      wrong: [
+        { type: "env-waste-pile-grows", duration: 3000, description: "Waste pile grows larger daily" },
+        { type: "env-disease-outbreak", duration: 3000, description: "Vector-borne diseases outbreak" },
+        { type: "env-groundwater-contaminated", duration: 3000, description: "Groundwater contaminated by leachate" },
+        { type: "env-public-health-emergency", duration: 3000, description: "Public health emergency declared" },
+      ],
+      correct: [
+        { type: "env-resident-complaint", duration: 3000, description: "Resident files complaint with municipality" },
+        { type: "env-swm-rules-cited", duration: 3000, description: "Cites Solid Waste Management Rules 2016" },
+        { type: "env-segregation-bins", duration: 3000, description: "Society installs segregation bins" },
+        { type: "env-proper-disposal", duration: 3000, description: "Waste properly collected and disposed" },
+      ],
+    },
+    "burning-plastic": {
+      setup: [
+        { type: "env-backyard-scene", duration: 3000, description: "Rohit in his backyard with waste" },
+        { type: "env-plastic-pile", duration: 3000, description: "Pile of plastic waste accumulated" },
+        { type: "env-sets-fire", duration: 3000, description: "Sets plastic on fire to dispose" },
+        { type: "env-toxic-fumes", duration: 3000, description: "Thick toxic black smoke released" },
+      ],
+      wrong: [
+        { type: "env-burning-continues", duration: 3000, description: "Rohit continues burning plastic regularly" },
+        { type: "env-neighbors-affected", duration: 3000, description: "Neighbors inhale toxic dioxins" },
+        { type: "env-cancer-risk", duration: 3000, description: "Cancer risk increases in neighborhood" },
+        { type: "env-civic-duty-violated", duration: 3000, description: "Article 51A(g) environmental duty violated" },
+      ],
+      correct: [
+        { type: "env-neighbor-educates", duration: 3000, description: "Neighbor explains health hazards" },
+        { type: "env-article-51a-cited", duration: 3000, description: "Reminds about fundamental duty Article 51A(g)" },
+        { type: "env-plastic-recycled", duration: 3000, description: "Rohit sends plastic for recycling" },
+        { type: "env-community-aware", duration: 3000, description: "Community adopts proper waste disposal" },
+      ],
+    },
+    "eia-violation": {
+      setup: [
+        { type: "env-protected-forest", duration: 3000, description: "Protected forest area near power plant site" },
+        { type: "env-construction-starts", duration: 3000, description: "Company starts construction without clearance" },
+        { type: "env-bulldozers-forest", duration: 3000, description: "Bulldozers clearing forest land" },
+        { type: "env-no-eia-done", duration: 3000, description: "No Environmental Impact Assessment done" },
+      ],
+      wrong: [
+        { type: "env-construction-proceeds", duration: 3000, description: "Construction proceeds illegally" },
+        { type: "env-wildlife-displaced", duration: 3000, description: "Wildlife habitat destroyed, animals displaced" },
+        { type: "env-ecosystem-destroyed", duration: 3000, description: "Entire ecosystem irreversibly damaged" },
+        { type: "env-violation-unpunished", duration: 3000, description: "Company escapes without consequences" },
+      ],
+      correct: [
+        { type: "env-activists-intervene", duration: 3000, description: "Environmental activists discover violation" },
+        { type: "env-ngc-petition", duration: 3000, description: "Petition filed in National Green Tribunal" },
+        { type: "env-eia-violation-proven", duration: 3000, description: "EIA Notification 2006 violation proven" },
+        { type: "env-project-halted", duration: 3000, description: "Project halted, company heavily penalized" },
+      ],
+    },
   }
 
 function BriefcaseSVG() {
@@ -2413,6 +2614,12 @@ function MedicalKitSVG() {
 
   const currentScenario = scenarios[scenarioType] || scenarios["police-stop"]
   const scenes = currentScenario[outcome] || currentScenario.setup
+
+  // Reset state when scenarioType or outcome changes
+  useEffect(() => {
+    setCurrentScene(0)
+    setAnimationComplete(false)
+  }, [scenarioType, outcome])
 
   useEffect(() => {
     if (currentScene < scenes.length) {
@@ -9177,6 +9384,2960 @@ function MedicalKitSVG() {
             <motion.div className="absolute top-10 left-1/2 -translate-x-1/2 bg-green-600 text-white px-4 py-2 rounded-lg shadow-lg" initial={{ scale: 0 }} animate={{ scale: 1 }}>
               ✅ Cultural Rights Protected!
             </motion.div>
+            <SceneDescription text={description} />
+          </div>
+        )
+
+      // ENVIRONMENTAL LAWS ANIMATIONS
+      // Level 1: Factory Pollution
+      case "env-factory-riverside":
+        return (
+          <div className="stickman-drama-large">
+            <DetailedBackground type="generic" />
+            <motion.div className="absolute top-12 left-16 w-32 h-24 bg-gray-700 rounded-lg border-4 border-gray-800" animate={{ y: [0, -2, 0] }} transition={{ duration: 3, repeat: Infinity }}>
+              <div className="text-center text-white text-xs mt-2 font-bold">FACTORY</div>
+              <div className="w-full h-12 bg-gray-600 mt-1 flex items-center justify-center">
+                <div className="text-2xl">🏭</div>
+              </div>
+            </motion.div>
+            <motion.div className="absolute bottom-16 left-8 w-80 h-12 bg-blue-400 rounded-t-xl" />
+            <motion.div className="absolute bottom-24 left-20 text-4xl" animate={{ y: [0, 10, 0], rotate: [0, 180, 360] }} transition={{ duration: 2, repeat: Infinity }}>
+              🐟
+            </motion.div>
+            <div className="absolute bottom-24 right-20">
+              <DetailedStickmanSVG type="scared" />
+            </div>
+            <motion.div className="absolute top-28 left-1/2 -translate-x-1/2 text-3xl" animate={{ scale: [1, 1.2, 1] }} transition={{ duration: 1.5, repeat: Infinity }}>
+              💧☠️
+            </motion.div>
+            <SceneDescription text={description} />
+          </div>
+        )
+      
+      case "env-chemical-waste-pipe":
+        return (
+          <div className="stickman-drama-large">
+            <DetailedBackground type="generic" />
+            <div className="absolute top-12 left-16 w-32 h-24 bg-gray-700 rounded-lg">
+              <motion.div className="absolute bottom-0 left-16 w-4 h-20 bg-gradient-to-b from-green-700 to-green-900" animate={{ scale: [1, 1.1, 1] }} transition={{ duration: 1, repeat: Infinity }} />
+              <motion.div className="absolute bottom-20 left-16 text-3xl" animate={{ y: [0, 15, 30] }} transition={{ duration: 2, repeat: Infinity }}>
+                💧
+              </motion.div>
+            </div>
+            <motion.div className="absolute bottom-16 left-8 w-80 h-12 bg-green-700 opacity-70 rounded-t-xl" animate={{ opacity: [0.7, 0.9, 0.7] }} transition={{ duration: 2, repeat: Infinity }} />
+            <SceneDescription text={description} />
+          </div>
+        )
+
+      case "env-dead-fish-floating":
+        return (
+          <div className="stickman-drama-large">
+            <DetailedBackground type="generic" />
+            <motion.div className="absolute bottom-16 left-8 w-80 h-12 bg-green-600 opacity-60 rounded-t-xl" />
+            <motion.div className="absolute bottom-24 left-32 text-5xl rotate-90" animate={{ x: [0, 30, 60] }} transition={{ duration: 4, repeat: Infinity }}>
+              🐟💀
+            </motion.div>
+            <motion.div className="absolute bottom-28 left-48 text-4xl rotate-45" animate={{ x: [60, 30, 0] }} transition={{ duration: 3, repeat: Infinity }}>
+              🐟
+            </motion.div>
+            <motion.div className="absolute bottom-26 left-20 text-3xl" animate={{ y: [0, -5, 0] }} transition={{ duration: 2, repeat: Infinity }}>
+              ☠️
+            </motion.div>
+            <SceneDescription text={description} />
+          </div>
+        )
+      
+      case "env-villagers-sick":
+        return (
+          <div className="stickman-drama-large">
+            <DetailedBackground type="generic" />
+            <div className="absolute bottom-24 left-1/4">
+              <motion.div animate={{ x: [-2, 2, -2] }} transition={{ duration: 0.5, repeat: Infinity }}>
+                <DetailedStickmanSVG type="scared" />
+              </motion.div>
+            </div>
+            <div className="absolute bottom-24 left-1/2 -translate-x-1/2">
+              <motion.div animate={{ rotate: [-5, 5, -5] }} transition={{ duration: 1, repeat: Infinity }}>
+                <DetailedStickmanSVG type="defeated" />
+              </motion.div>
+            </div>
+            <div className="absolute bottom-24 right-1/4">
+              <motion.div animate={{ y: [0, -3, 0] }} transition={{ duration: 1.5, repeat: Infinity }}>
+                <DetailedStickmanSVG type="scared" />
+              </motion.div>
+            </div>
+            <motion.div className="absolute top-16 left-1/2 -translate-x-1/2 text-6xl" animate={{ scale: [1, 1.3, 1] }} transition={{ duration: 1.5, repeat: Infinity }}>
+              🤒😷🤢
+            </motion.div>
+            <SceneDescription text={description} />
+          </div>
+        )
+
+      case "env-ignore-pollution":
+      case "env-more-waste-dumped":
+      case "env-health-crisis-worsens":
+      case "env-right-to-life-violated":
+        return (
+          <div className="stickman-drama-large">
+            <DetailedBackground type="generic" />
+            <motion.div className="absolute bottom-16 left-8 w-80 h-16 bg-green-800 opacity-90 rounded-t-xl" animate={{ opacity: [0.9, 1, 0.9] }} transition={{ duration: 2, repeat: Infinity }} />
+            <motion.div className="absolute bottom-32 left-24 text-6xl" animate={{ y: [0, -15, 0], scale: [1, 1.2, 1] }} transition={{ duration: 2, repeat: Infinity }}>
+              ☠️💀
+            </motion.div>
+            <motion.div className="absolute bottom-24 right-1/4" animate={{ rotate: [-10, 10, -10] }} transition={{ duration: 1, repeat: Infinity }}>
+              <DetailedStickmanSVG type="defeated" />
+            </motion.div>
+            <motion.div className="absolute top-12 left-1/2 -translate-x-1/2 bg-red-600 text-white px-4 py-2 rounded-lg shadow-lg text-lg font-bold" animate={{ scale: [1, 1.15, 1] }} transition={{ duration: 1, repeat: Infinity }}>
+              ❌ Article 21 Violated!
+            </motion.div>
+            <SceneDescription text={description} />
+          </div>
+        )
+
+      case "env-villagers-document-evidence":
+        return (
+          <div className="stickman-drama-large">
+            <DetailedBackground type="office" />
+            <div className="absolute bottom-24 left-1/3">
+              <DetailedStickmanSVG type="confident" />
+            </div>
+            <motion.div className="absolute bottom-32 left-1/2 -translate-x-1/2 text-6xl" animate={{ scale: [1, 1.2, 1], rotate: [0, 10, 0] }} transition={{ duration: 1.5, repeat: Infinity }}>
+              📸
+            </motion.div>
+            <motion.div className="absolute top-20 right-1/3 text-5xl" animate={{ y: [0, -10, 0] }} transition={{ duration: 2, repeat: Infinity }}>
+              💧☠️
+            </motion.div>
+            <motion.div className="absolute top-16 left-1/2 -translate-x-1/2 bg-blue-600 text-white px-4 py-2 rounded-lg shadow-lg" initial={{ scale: 0 }} animate={{ scale: 1 }}>
+              Documenting Evidence
+            </motion.div>
+            <SceneDescription text={description} />
+          </div>
+        )
+
+      case "env-file-complaint-pcb":
+        return (
+          <div className="stickman-drama-large">
+            <DetailedBackground type="office" />
+            <div className="absolute bottom-24 left-1/4">
+              <DetailedStickmanSVG type="confident" />
+            </div>
+            <div className="absolute bottom-24 right-1/4">
+              <LawyerSVG />
+            </div>
+            <motion.div className="absolute top-20 left-1/2 -translate-x-1/2 text-6xl" animate={{ scale: [1, 1.15, 1] }} transition={{ duration: 1.5, repeat: Infinity }}>
+              📋✍️
+            </motion.div>
+            <motion.div className="absolute top-12 left-1/2 -translate-x-1/2 bg-blue-600 text-white px-4 py-2 rounded-lg shadow-lg" initial={{ scale: 0 }} animate={{ scale: 1 }}>
+              Filing PCB Complaint
+            </motion.div>
+            <SceneDescription text={description} />
+          </div>
+        )
+
+      case "env-factory-inspected":
+        return (
+          <div className="stickman-drama-large">
+            <DetailedBackground type="generic" />
+            <div className="absolute top-12 left-16 w-32 h-24 bg-gray-700 rounded-lg border-4 border-yellow-500">
+              <div className="text-center text-white text-xs mt-2">⚠️ INSPECTION</div>
+            </div>
+            <div className="absolute bottom-24 left-1/3">
+              <DetailedStickmanSVG type="police" />
+            </div>
+            <motion.div className="absolute bottom-28 right-1/3 text-5xl" animate={{ rotate: [0, 360] }} transition={{ duration: 2, repeat: Infinity, ease: "linear" }}>
+              🔍
+            </motion.div>
+            <SceneDescription text={description} />
+          </div>
+        )
+
+      case "env-treatment-plant-installed":
+        return (
+          <div className="stickman-drama-large">
+            <DetailedBackground type="generic" />
+            <div className="absolute top-12 left-16 w-32 h-24 bg-gray-700 rounded-lg">
+              <motion.div className="absolute top-4 left-4 text-4xl" animate={{ rotate: 360 }} transition={{ duration: 2, repeat: Infinity, ease: "linear" }}>
+                ⚙️
+              </motion.div>
+              <motion.div className="absolute top-4 right-4 text-2xl" animate={{ scale: [1, 1.3, 1] }} transition={{ duration: 1.5, repeat: Infinity }}>
+                ♻️
+              </motion.div>
+            </div>
+            <div className="absolute bottom-16 left-8 w-80 h-12 bg-blue-400 rounded-t-xl" />
+            <motion.div className="absolute bottom-24 left-40 text-4xl" animate={{ y: [0, -10, 0] }} transition={{ duration: 2, repeat: Infinity }}>
+              🐟✅
+            </motion.div>
+            <motion.div className="absolute top-10 left-1/2 -translate-x-1/2 bg-green-600 text-white px-4 py-2 rounded-lg shadow-lg text-lg font-bold" animate={{ scale: [1, 1.1, 1] }} transition={{ duration: 2, repeat: Infinity }}>
+              ✅ Clean Water Restored!
+            </motion.div>
+            <SceneDescription text={description} />
+          </div>
+        )
+
+      // Level 2: Illegal Deforestation - ALL ANIMATIONS
+      case "env-forest-area":
+        return (
+          <div className="stickman-drama-large">
+            <DetailedBackground type="generic" />
+            <div className="absolute bottom-20 left-12"><TreeSVG /></div>
+            <div className="absolute bottom-20 left-24"><TreeSVG /></div>
+            <div className="absolute bottom-20 left-36"><TreeSVG /></div>
+            <div className="absolute bottom-20 left-48"><TreeSVG /></div>
+            <div className="absolute bottom-20 right-12"><TreeSVG /></div>
+            <div className="absolute bottom-20 right-24"><TreeSVG /></div>
+            <motion.div className="absolute top-16 left-1/2 -translate-x-1/2 text-6xl" animate={{ scale: [1, 1.15, 1] }} transition={{ duration: 2, repeat: Infinity }}>
+              🌳🌲🌴
+            </motion.div>
+            <motion.div className="absolute bottom-32 left-1/3 text-4xl" animate={{ x: [-5, 5, -5] }} transition={{ duration: 2, repeat: Infinity }}>
+              🦌🐦
+            </motion.div>
+            <SceneDescription text={description} />
+          </div>
+        )
+
+      case "env-chainsaws-cutting":
+        return (
+          <div className="stickman-drama-large">
+            <DetailedBackground type="generic" />
+            <div className="absolute bottom-20 left-40 opacity-30"><TreeSVG /></div>
+            <motion.div className="absolute bottom-20 left-20 text-6xl" animate={{ x: [0, 10, 0], rotate: [0, 45, 0] }} transition={{ duration: 0.5, repeat: Infinity }}>
+              🪚
+            </motion.div>
+            <motion.div className="absolute bottom-22 left-32 text-5xl opacity-50" animate={{ opacity: [0.5, 0, 0.5], scale: [1, 0.5, 0] }} transition={{ duration: 1.5, repeat: Infinity }}>
+              🌳
+            </motion.div>
+            <motion.div className="absolute bottom-28 left-28 text-4xl" animate={{ y: [0, 20, 40], opacity: [1, 0.5, 0] }} transition={{ duration: 2, repeat: Infinity }}>
+              🪵
+            </motion.div>
+            <div className="absolute bottom-24 right-1/4">
+              <DetailedStickmanSVG type="police" />
+            </div>
+            <SceneDescription text={description} />
+          </div>
+        )
+
+      case "env-no-clearance-shown":
+        return (
+          <div className="stickman-drama-large">
+            <DetailedBackground type="generic" />
+            <motion.div className="absolute top-16 left-1/2 -translate-x-1/2 bg-red-600 text-white px-4 py-2 rounded-lg shadow-lg text-lg font-bold" animate={{ scale: [1, 1.2, 1] }} transition={{ duration: 1, repeat: Infinity }}>
+              ⚠️ No Forest Clearance!
+            </motion.div>
+            <motion.div className="absolute top-32 left-1/3 text-7xl" animate={{ rotate: [0, 360] }} transition={{ duration: 2, repeat: Infinity, ease: "linear" }}>
+              🚫
+            </motion.div>
+            <motion.div className="absolute bottom-24 right-1/4 text-6xl" animate={{ scale: [1, 1.3, 1] }} transition={{ duration: 1.5, repeat: Infinity }}>
+              📜❌
+            </motion.div>
+            <SceneDescription text={description} />
+          </div>
+        )
+
+      case "env-wildlife-fleeing":
+        return (
+          <div className="stickman-drama-large">
+            <DetailedBackground type="generic" />
+            <motion.div className="absolute bottom-24 left-20 text-5xl" animate={{ x: [0, 150, 300] }} transition={{ duration: 3, repeat: Infinity }}>
+              🦌
+            </motion.div>
+            <motion.div className="absolute bottom-28 left-32 text-4xl" animate={{ x: [0, 180, 360] }} transition={{ duration: 3.5, delay: 0.5, repeat: Infinity }}>
+              🐰
+            </motion.div>
+            <motion.div className="absolute bottom-32 left-16 text-4xl" animate={{ x: [0, 200, 400], y: [0, -20, -40] }} transition={{ duration: 3, delay: 1, repeat: Infinity }}>
+              🐦
+            </motion.div>
+            <motion.div className="absolute bottom-26 left-24 text-3xl" animate={{ x: [0, 160, 320] }} transition={{ duration: 3.2, delay: 0.3, repeat: Infinity }}>
+              🦊
+            </motion.div>
+            <SceneDescription text={description} />
+          </div>
+        )
+
+      case "env-deforestation-continues":
+      case "env-ecosystem-destroyed":
+      case "env-climate-impact":
+      case "env-biodiversity-lost":
+        return (
+          <div className="stickman-drama-large">
+            <DetailedBackground type="generic" />
+            <div className="absolute bottom-20 left-12 opacity-10"><TreeSVG /></div>
+            <div className="absolute bottom-20 left-24 opacity-10"><TreeSVG /></div>
+            <motion.div className="absolute bottom-20 left-36 text-7xl" animate={{ opacity: [1, 0.3, 1] }} transition={{ duration: 2, repeat: Infinity }}>
+              🪵
+            </motion.div>
+            <motion.div className="absolute bottom-24 left-52 text-6xl" animate={{ opacity: [1, 0.3, 1] }} transition={{ duration: 2, delay: 0.5, repeat: Infinity }}>
+              🪵
+            </motion.div>
+            <motion.div className="absolute top-12 left-1/2 -translate-x-1/2 bg-red-600 text-white px-4 py-2 rounded-lg shadow-lg text-lg font-bold" animate={{ scale: [1, 1.15, 1] }} transition={{ duration: 1, repeat: Infinity }}>
+              ❌ Ecosystem Destroyed!
+            </motion.div>
+            <motion.div className="absolute top-32 right-1/4 text-6xl" animate={{ y: [0, 20, 40], opacity: [1, 0.5, 0] }} transition={{ duration: 2, repeat: Infinity }}>
+              💀
+            </motion.div>
+            <SceneDescription text={description} />
+          </div>
+        )
+
+      case "env-activists-alerted":
+      case "env-forest-dept-complaint":
+        return (
+          <div className="stickman-drama-large">
+            <DetailedBackground type="office" />
+            <div className="absolute bottom-24 left-1/4">
+              <DetailedStickmanSVG type="confident" />
+            </div>
+            <div className="absolute bottom-24 right-1/4">
+              <LawyerSVG />
+            </div>
+            <motion.div className="absolute top-20 left-1/2 -translate-x-1/2 text-6xl" animate={{ scale: [1, 1.2, 1] }} transition={{ duration: 1.5, repeat: Infinity }}>
+              📞⚖️
+            </motion.div>
+            <motion.div className="absolute top-12 left-1/2 -translate-x-1/2 bg-blue-600 text-white px-4 py-2 rounded-lg shadow-lg">
+              Filing Forest Complaint
+            </motion.div>
+            <SceneDescription text={description} />
+          </div>
+        )
+
+      case "env-cutting-stopped":
+      case "env-reforestation-ordered":
+        return (
+          <div className="stickman-drama-large">
+            <DetailedBackground type="generic" />
+            <div className="absolute bottom-20 left-16"><TreeSVG /></div>
+            <div className="absolute bottom-20 left-28"><TreeSVG /></div>
+            <div className="absolute bottom-20 left-40"><TreeSVG /></div>
+            <div className="absolute bottom-20 right-16"><TreeSVG /></div>
+            <div className="absolute bottom-20 right-28"><TreeSVG /></div>
+            <div className="absolute bottom-24 right-1/3">
+              <DetailedStickmanSVG type="confident" />
+            </div>
+            <motion.div className="absolute top-20 left-1/3 text-5xl" animate={{ scale: [0, 1, 1] }} transition={{ duration: 2, repeat: Infinity }}>
+              🌱
+            </motion.div>
+            <motion.div className="absolute top-10 left-1/2 -translate-x-1/2 bg-green-600 text-white px-4 py-2 rounded-lg shadow-lg text-lg font-bold" animate={{ scale: [1, 1.1, 1] }} transition={{ duration: 2, repeat: Infinity }}>
+              ✅ Forest Protected!
+            </motion.div>
+            <SceneDescription text={description} />
+          </div>
+        )
+
+      // Level 3: Vehicular Pollution - ALL ANIMATIONS
+      case "env-city-traffic":
+        return (
+          <div className="stickman-drama-large">
+            <DetailedBackground type="highway" />
+            <motion.div className="absolute bottom-24 left-12" animate={{ x: [0, 60, 0] }} transition={{ duration: 4, repeat: Infinity }}>
+              <CarSVG />
+            </motion.div>
+            <motion.div className="absolute bottom-26 right-20" animate={{ x: [0, -60, 0] }} transition={{ duration: 3.5, delay: 1, repeat: Infinity }}>
+              <CarSVG />
+            </motion.div>
+            <div className="absolute bottom-24 right-1/4">
+              <DetailedStickmanSVG type="thinking" />
+            </div>
+            <SceneDescription text={description} />
+          </div>
+        )
+
+      case "env-diesel-smoke-thick":
+        return (
+          <div className="stickman-drama-large">
+            <DetailedBackground type="highway" />
+            <motion.div className="absolute bottom-24 left-20" animate={{ x: [0, 50, 0] }} transition={{ duration: 4, repeat: Infinity }}>
+              <CarSVG />
+            </motion.div>
+            <motion.div className="absolute bottom-28 left-48 text-7xl" animate={{ scale: [1, 1.5, 1], opacity: [0.6, 1, 0.6], x: [0, 30, 60] }} transition={{ duration: 2, repeat: Infinity }}>
+              💨☁️
+            </motion.div>
+            <motion.div className="absolute bottom-32 left-64 text-6xl" animate={{ scale: [1, 1.3, 1], opacity: [0.8, 1, 0.8] }} transition={{ duration: 1.5, delay: 0.5, repeat: Infinity }}>
+              ☁️
+            </motion.div>
+            <SceneDescription text={description} />
+          </div>
+        )
+
+      case "env-people-coughing":
+        return (
+          <div className="stickman-drama-large">
+            <DetailedBackground type="highway" />
+            <div className="absolute bottom-24 left-1/4">
+              <motion.div animate={{ scale: [1, 1.15, 1], x: [-2, 2, -2] }} transition={{ duration: 1, repeat: Infinity }}>
+                <DetailedStickmanSVG type="scared" />
+              </motion.div>
+            </div>
+            <div className="absolute bottom-24 left-1/2 -translate-x-1/2">
+              <motion.div animate={{ rotate: [-5, 5, -5] }} transition={{ duration: 1, repeat: Infinity }}>
+                <DetailedStickmanSVG type="defeated" />
+              </motion.div>
+            </div>
+            <motion.div className="absolute bottom-32 left-1/3 text-5xl" animate={{ y: [-5, 5, -5] }} transition={{ duration: 1, repeat: Infinity }}>
+              😷🤧
+            </motion.div>
+            <motion.div className="absolute bottom-28 right-1/3 text-4xl" animate={{ scale: [1, 1.3, 1] }} transition={{ duration: 1.5, repeat: Infinity }}>
+              🤒
+            </motion.div>
+            <SceneDescription text={description} />
+          </div>
+        )
+
+      case "env-complaint-ignored":
+        return (
+          <div className="stickman-drama-large">
+            <DetailedBackground type="highway" />
+            <div className="absolute bottom-24 left-1/3">
+              <motion.div animate={{ y: [-3, 3, -3] }} transition={{ duration: 1, repeat: Infinity }}>
+                <DetailedStickmanSVG type="defeated" />
+              </motion.div>
+            </div>
+            <motion.div className="absolute top-20 left-1/2 -translate-x-1/2 text-7xl" animate={{ rotate: [0, 360] }} transition={{ duration: 2, repeat: Infinity, ease: "linear" }}>
+              🚫
+            </motion.div>
+            <motion.div className="absolute top-16 right-1/4 text-5xl" animate={{ scale: [1, 1.3, 1] }} transition={{ duration: 1.5, repeat: Infinity }}>
+              📞❌
+            </motion.div>
+            <SceneDescription text={description} />
+          </div>
+        )
+
+      case "env-air-quality-worsens":
+      case "env-respiratory-diseases":
+      case "env-children-affected":
+      case "env-health-crisis":
+        return (
+          <div className="stickman-drama-large">
+            <DetailedBackground type="generic" />
+            <motion.div className="absolute inset-0 bg-gray-700 opacity-70" animate={{ opacity: [0.7, 0.9, 0.7] }} transition={{ duration: 3, repeat: Infinity }} />
+            <motion.div className="absolute top-20 left-1/4 text-8xl" animate={{ y: [0, 30, 0], opacity: [0.8, 1, 0.8] }} transition={{ duration: 3, repeat: Infinity }}>
+              ☁️💨
+            </motion.div>
+            <motion.div className="absolute bottom-24 right-1/3" animate={{ rotate: [-10, 10, -10] }} transition={{ duration: 1, repeat: Infinity }}>
+              <DetailedStickmanSVG type="defeated" />
+            </motion.div>
+            <motion.div className="absolute top-12 left-1/2 -translate-x-1/2 bg-red-600 text-white px-4 py-2 rounded-lg shadow-lg text-lg font-bold" animate={{ scale: [1, 1.15, 1] }} transition={{ duration: 1, repeat: Infinity }}>
+              ❌ Health Emergency!
+            </motion.div>
+            <motion.div className="absolute bottom-32 left-1/4 text-6xl" animate={{ scale: [1, 1.3, 1] }} transition={{ duration: 1.5, repeat: Infinity }}>
+              😷🤒
+            </motion.div>
+            <SceneDescription text={description} />
+          </div>
+        )
+
+      case "env-priya-documents-buses":
+        return (
+          <div className="stickman-drama-large">
+            <DetailedBackground type="highway" />
+            <div className="absolute bottom-24 left-1/3">
+              <DetailedStickmanSVG type="confident" />
+            </div>
+            <motion.div className="absolute bottom-32 left-1/2 -translate-x-1/2 text-6xl" animate={{ scale: [1, 1.2, 1], rotate: [0, -10, 0] }} transition={{ duration: 1.5, repeat: Infinity }}>
+              📸📱
+            </motion.div>
+            <motion.div className="absolute bottom-26 right-1/4" animate={{ x: [100, 50, 0] }} transition={{ duration: 2 }}>
+              <CarSVG />
+            </motion.div>
+            <SceneDescription text={description} />
+          </div>
+        )
+
+      case "env-spcb-complaint":
+        return (
+          <div className="stickman-drama-large">
+            <DetailedBackground type="office" />
+            <div className="absolute bottom-24 left-1/4">
+              <DetailedStickmanSVG type="confident" />
+            </div>
+            <div className="absolute bottom-24 right-1/4">
+              <LawyerSVG />
+            </div>
+            <motion.div className="absolute top-20 left-1/2 -translate-x-1/2 text-6xl" animate={{ scale: [1, 1.2, 1] }} transition={{ duration: 1.5, repeat: Infinity }}>
+              📋✍️
+            </motion.div>
+            <motion.div className="absolute top-12 left-1/2 -translate-x-1/2 bg-blue-600 text-white px-4 py-2 rounded-lg shadow-lg">
+              SPCB Complaint Filed
+            </motion.div>
+            <SceneDescription text={description} />
+          </div>
+        )
+
+      case "env-emission-testing":
+        return (
+          <div className="stickman-drama-large">
+            <DetailedBackground type="highway" />
+            <div className="absolute bottom-24 left-1/4">
+              <CarSVG />
+            </div>
+            <div className="absolute bottom-24 right-1/4">
+              <DetailedStickmanSVG type="police" />
+            </div>
+            <motion.div className="absolute top-20 left-1/2 -translate-x-1/2 text-6xl" animate={{ rotate: [0, 360] }} transition={{ duration: 2, repeat: Infinity, ease: "linear" }}>
+              🔍
+            </motion.div>
+            <motion.div className="absolute bottom-32 left-1/2 -translate-x-1/2 text-4xl" animate={{ scale: [1, 1.3, 1] }} transition={{ duration: 1.5, repeat: Infinity }}>
+              🧪
+            </motion.div>
+            <SceneDescription text={description} />
+          </div>
+        )
+
+      case "env-clean-buses-deployed":
+        return (
+          <div className="stickman-drama-large">
+            <DetailedBackground type="highway" />
+            <div className="absolute bottom-24 left-1/3">
+              <DetailedStickmanSVG type="confident" />
+            </div>
+            <motion.div className="absolute bottom-26 right-1/4" animate={{ x: [100, 0] }} transition={{ duration: 2 }}>
+              <CarSVG />
+            </motion.div>
+            <motion.div className="absolute bottom-32 right-1/3 text-5xl" animate={{ scale: [1, 1.3, 1] }} transition={{ duration: 2, repeat: Infinity }}>
+              ✅♻️
+            </motion.div>
+            <motion.div className="absolute top-10 left-1/2 -translate-x-1/2 bg-green-600 text-white px-4 py-2 rounded-lg shadow-lg text-lg font-bold" animate={{ scale: [1, 1.1, 1] }} transition={{ duration: 2, repeat: Infinity }}>
+              ✅ Clean Air Achieved!
+            </motion.div>
+            <SceneDescription text={description} />
+          </div>
+        )
+
+      // Level 4: Plastic Pollution - ALL ANIMATIONS
+      case "env-grocery-shop":
+        return (
+          <div className="stickman-drama-large">
+            <DetailedBackground type="office" />
+            <div className="absolute top-16 left-20 w-28 h-36 bg-orange-300 rounded-lg border-4 border-orange-600">
+              <div className="text-center mt-2 text-sm font-bold">🏪 SHOP</div>
+              <motion.div className="absolute bottom-4 left-1/2 -translate-x-1/2 text-3xl" animate={{ y: [0, -5, 0] }} transition={{ duration: 2, repeat: Infinity }}>
+                🛒
+              </motion.div>
+            </div>
+            <div className="absolute bottom-24 right-1/3">
+              <DetailedStickmanSVG type="thinking" />
+            </div>
+            <SceneDescription text={description} />
+          </div>
+        )
+
+      case "env-plastic-bags-used":
+        return (
+          <div className="stickman-drama-large">
+            <DetailedBackground type="office" />
+            <div className="absolute top-16 left-20 w-28 h-36 bg-orange-300 rounded-lg border-4 border-orange-600">
+              <div className="text-center mt-2 text-sm font-bold">SHOP</div>
+            </div>
+            <motion.div className="absolute bottom-28 left-40 text-6xl" animate={{ rotate: [0, 15, 0], scale: [1, 1.2, 1] }} transition={{ duration: 2, repeat: Infinity }}>
+              🛍️
+            </motion.div>
+            <motion.div className="absolute bottom-32 left-56 text-5xl" animate={{ rotate: [0, -10, 0] }} transition={{ duration: 1.5, delay: 0.5, repeat: Infinity }}>
+              🛍️
+            </motion.div>
+            <div className="absolute bottom-24 right-1/4">
+              <DetailedStickmanSVG type="citizen" />
+            </div>
+            <SceneDescription text={description} />
+          </div>
+        )
+
+      case "env-customer-notices":
+        return (
+          <div className="stickman-drama-large">
+            <DetailedBackground type="office" />
+            <div className="absolute bottom-24 left-1/4">
+              <DetailedStickmanSVG type="thinking" />
+            </div>
+            <div className="absolute bottom-24 right-1/4">
+              <DetailedStickmanSVG type="citizen" />
+            </div>
+            <motion.div className="absolute top-20 left-1/2 -translate-x-1/2 text-7xl" animate={{ scale: [1, 1.3, 1] }} transition={{ duration: 1.5, repeat: Infinity }}>
+              🛍️⚠️
+            </motion.div>
+            <motion.div className="absolute bottom-32 left-1/2 -translate-x-1/2 text-5xl" animate={{ rotate: [0, 360] }} transition={{ duration: 2, repeat: Infinity, ease: "linear" }}>
+              🚫
+            </motion.div>
+            <SceneDescription text={description} />
+          </div>
+        )
+
+      case "env-shopkeeper-dismissive":
+        return (
+          <div className="stickman-drama-large">
+            <DetailedBackground type="office" />
+            <div className="absolute bottom-24 left-1/4">
+              <motion.div animate={{ rotate: [-5, 5, -5] }} transition={{ duration: 1, repeat: Infinity }}>
+                <DetailedStickmanSVG type="defeated" />
+              </motion.div>
+            </div>
+            <div className="absolute bottom-24 right-1/4">
+              <DetailedStickmanSVG type="confident" />
+            </div>
+            <motion.div className="absolute top-20 left-1/3 text-6xl" animate={{ x: [-10, 10, -10] }} transition={{ duration: 1, repeat: Infinity }}>
+              💬❌
+            </motion.div>
+            <SceneDescription text={description} />
+          </div>
+        )
+
+      case "env-plastic-waste-piles":
+      case "env-drains-clogged":
+        return (
+          <div className="stickman-drama-large">
+            <DetailedBackground type="generic" />
+            <motion.div className="absolute bottom-20 left-16 text-7xl" animate={{ y: [0, 5, 0] }} transition={{ duration: 2, repeat: Infinity }}>
+              🗑️
+            </motion.div>
+            <motion.div className="absolute bottom-24 left-36 text-6xl" animate={{ y: [0, -5, 0] }} transition={{ duration: 2, delay: 0.5, repeat: Infinity }}>
+              🛍️
+            </motion.div>
+            <motion.div className="absolute bottom-28 left-52 text-5xl" animate={{ y: [0, 8, 0] }} transition={{ duration: 2, delay: 1, repeat: Infinity }}>
+              🛍️
+            </motion.div>
+            <motion.div className="absolute bottom-22 right-1/4 text-6xl" animate={{ scale: [1, 1.2, 1] }} transition={{ duration: 1.5, repeat: Infinity }}>
+              💧🚫
+            </motion.div>
+            <SceneDescription text={description} />
+          </div>
+        )
+
+      case "env-animals-harmed":
+      case "env-environment-degraded":
+        return (
+          <div className="stickman-drama-large">
+            <DetailedBackground type="generic" />
+            <motion.div className="absolute bottom-20 left-16 text-7xl" animate={{ y: [0, 5, 0] }} transition={{ duration: 2, repeat: Infinity }}>
+              🗑️
+            </motion.div>
+            <motion.div className="absolute bottom-24 left-40 text-6xl" animate={{ y: [0, -5, 0] }} transition={{ duration: 2, delay: 0.5, repeat: Infinity }}>
+              🛍️
+            </motion.div>
+            <motion.div className="absolute bottom-28 right-1/3 text-6xl" animate={{ x: [-5, 5, -5], rotate: [-10, 10, -10] }} transition={{ duration: 1, repeat: Infinity }}>
+              🐕😢
+            </motion.div>
+            <motion.div className="absolute bottom-32 right-1/4 text-5xl" animate={{ y: [-5, 5, -5] }} transition={{ duration: 1.5, repeat: Infinity }}>
+              🐈💔
+            </motion.div>
+            <motion.div className="absolute top-12 left-1/2 -translate-x-1/2 bg-red-600 text-white px-4 py-2 rounded-lg shadow-lg text-lg font-bold" animate={{ scale: [1, 1.15, 1] }} transition={{ duration: 1, repeat: Infinity }}>
+              ❌ Environment Degraded!
+            </motion.div>
+            <SceneDescription text={description} />
+          </div>
+        )
+
+      case "env-customer-educates":
+      case "env-municipal-complaint":
+        return (
+          <div className="stickman-drama-large">
+            <DetailedBackground type="office" />
+            <div className="absolute bottom-24 left-1/3">
+              <DetailedStickmanSVG type="confident" />
+            </div>
+            <div className="absolute bottom-24 right-1/3">
+              <DetailedStickmanSVG type="thinking" />
+            </div>
+            <motion.div className="absolute top-20 left-1/2 -translate-x-1/2 text-6xl" animate={{ scale: [1, 1.2, 1] }} transition={{ duration: 1.5, repeat: Infinity }}>
+              📋♻️
+            </motion.div>
+            <SceneDescription text={description} />
+          </div>
+        )
+
+      case "env-fine-imposed":
+      case "env-cloth-bags-adopted":
+        return (
+          <div className="stickman-drama-large">
+            <DetailedBackground type="office" />
+            <div className="absolute bottom-24 left-1/3">
+              <DetailedStickmanSVG type="confident" />
+            </div>
+            <motion.div className="absolute bottom-28 right-1/3 text-6xl" animate={{ scale: [1, 1.15, 1] }} transition={{ duration: 2, repeat: Infinity }}>
+              👜♻️
+            </motion.div>
+            <motion.div className="absolute top-10 left-1/2 -translate-x-1/2 bg-green-600 text-white px-4 py-2 rounded-lg shadow-lg text-lg font-bold" animate={{ scale: [1, 1.1, 1] }} transition={{ duration: 2, repeat: Infinity }}>
+              ✅ Eco-Friendly Solution!
+            </motion.div>
+            <SceneDescription text={description} />
+          </div>
+        )
+
+      // Level 5: Noise Pollution - ALL ANIMATIONS
+      case "env-temple-night":
+        return (
+          <div className="stickman-drama-large">
+            <div className="absolute inset-0 bg-gradient-to-b from-indigo-900 to-purple-900" />
+            <motion.div className="absolute top-12 left-12 text-7xl" animate={{ scale: [1, 1.2, 1] }} transition={{ duration: 1.5, repeat: Infinity }}>
+              🏛️
+            </motion.div>
+            <motion.div className="absolute top-8 left-1/2 -translate-x-1/2 text-6xl" animate={{ opacity: [0.3, 1, 0.3] }} transition={{ duration: 2, repeat: Infinity }}>
+              🌙⭐
+            </motion.div>
+            <div className="absolute bottom-24 right-1/4">
+              <DetailedStickmanSVG type="thinking" />
+            </div>
+            <SceneDescription text={description} />
+          </div>
+        )
+
+      case "env-loud-loudspeakers":
+        return (
+          <div className="stickman-drama-large">
+            <div className="absolute inset-0 bg-gradient-to-b from-indigo-900 to-purple-900" />
+            <motion.div className="absolute top-12 left-12 text-6xl" animate={{ scale: [1, 1.3, 1] }} transition={{ duration: 0.5, repeat: Infinity }}>
+              🏛️
+            </motion.div>
+            <motion.div className="absolute top-20 right-16 text-7xl" animate={{ rotate: [0, 360] }} transition={{ duration: 2, repeat: Infinity, ease: "linear" }}>
+              📢
+            </motion.div>
+            <motion.div className="absolute top-28 left-1/2 -translate-x-1/2 text-9xl" animate={{ scale: [1, 1.6, 1] }} transition={{ duration: 0.8, repeat: Infinity }}>
+              🔊
+            </motion.div>
+            <motion.div className="absolute bottom-28 left-1/4 text-5xl" animate={{ scale: [1, 1.4, 1] }} transition={{ duration: 0.6, repeat: Infinity }}>
+              🔊🔊
+            </motion.div>
+            <SceneDescription text={description} />
+          </div>
+        )
+
+      case "env-hospital-nearby":
+        return (
+          <div className="stickman-drama-large">
+            <div className="absolute inset-0 bg-gradient-to-b from-indigo-900 to-purple-900" />
+            <motion.div className="absolute bottom-20 left-16 w-32 h-32 bg-white rounded-lg border-4 border-red-500">
+              <div className="text-center text-red-600 text-5xl mt-10">🏥</div>
+            </motion.div>
+            <motion.div className="absolute top-16 left-1/2 -translate-x-1/2 text-7xl" animate={{ scale: [1, 1.4, 1] }} transition={{ duration: 0.5, repeat: Infinity }}>
+              🔊
+            </motion.div>
+            <div className="absolute bottom-24 right-1/4">
+              <DetailedStickmanSVG type="scared" />
+            </div>
+            <SceneDescription text={description} />
+          </div>
+        )
+
+      case "env-patients-suffering":
+        return (
+          <div className="stickman-drama-large">
+            <div className="absolute inset-0 bg-gradient-to-b from-indigo-900 to-purple-900" />
+            <motion.div className="absolute bottom-20 left-16 w-32 h-32 bg-white rounded-lg border-4 border-red-500">
+              <div className="text-center text-red-600 text-5xl mt-10">🏥</div>
+            </motion.div>
+            <motion.div className="absolute bottom-24 right-1/4" animate={{ x: [-3, 3, -3] }} transition={{ duration: 0.5, repeat: Infinity }}>
+              <DetailedStickmanSVG type="scared" />
+            </motion.div>
+            <motion.div className="absolute bottom-28 left-1/2 -translate-x-1/2" animate={{ rotate: [-10, 10, -10] }} transition={{ duration: 1, repeat: Infinity }}>
+              <DetailedStickmanSVG type="defeated" />
+            </motion.div>
+            <motion.div className="absolute top-16 left-1/2 -translate-x-1/2 text-7xl" animate={{ scale: [1, 1.4, 1] }} transition={{ duration: 0.5, repeat: Infinity }}>
+              🔊😫
+            </motion.div>
+            <SceneDescription text={description} />
+          </div>
+        )
+
+      case "env-noise-continues":
+      case "env-health-deteriorates":
+      case "env-stress-increases":
+      case "env-peace-disturbed":
+        return (
+          <div className="stickman-drama-large">
+            <div className="absolute inset-0 bg-gradient-to-b from-indigo-900 to-purple-900" />
+            <motion.div className="absolute top-12 left-1/4 text-8xl" animate={{ scale: [1, 1.5, 1] }} transition={{ duration: 0.5, repeat: Infinity }}>
+              🔊
+            </motion.div>
+            <motion.div className="absolute top-20 right-1/4 text-7xl" animate={{ scale: [1, 1.4, 1] }} transition={{ duration: 0.6, delay: 0.2, repeat: Infinity }}>
+              🔊
+            </motion.div>
+            <motion.div className="absolute bottom-24 right-1/3" animate={{ rotate: [-15, 15, -15] }} transition={{ duration: 1, repeat: Infinity }}>
+              <DetailedStickmanSVG type="defeated" />
+            </motion.div>
+            <motion.div className="absolute bottom-28 left-1/4" animate={{ y: [-5, 5, -5] }} transition={{ duration: 1, repeat: Infinity }}>
+              <DetailedStickmanSVG type="scared" />
+            </motion.div>
+            <motion.div className="absolute top-10 left-1/2 -translate-x-1/2 bg-red-600 text-white px-4 py-2 rounded-lg shadow-lg text-lg font-bold" animate={{ scale: [1, 1.15, 1] }} transition={{ duration: 1, repeat: Infinity }}>
+              ❌ Peace Disturbed!
+            </motion.div>
+            <SceneDescription text={description} />
+          </div>
+        )
+
+      case "env-residents-approach":
+      case "env-noise-rules-cited":
+        return (
+          <div className="stickman-drama-large">
+            <div className="absolute inset-0 bg-gradient-to-b from-indigo-900 to-purple-900" />
+            <div className="absolute bottom-24 left-1/4">
+              <DetailedStickmanSVG type="confident" />
+            </div>
+            <div className="absolute bottom-24 right-1/4">
+              <DetailedStickmanSVG type="police" />
+            </div>
+            <motion.div className="absolute top-16 left-1/2 -translate-x-1/2 text-6xl" animate={{ scale: [1, 1.2, 1] }} transition={{ duration: 1.5, repeat: Infinity }}>
+              📋⚖️
+            </motion.div>
+            <SceneDescription text={description} />
+          </div>
+        )
+
+      case "env-police-intervene":
+      case "env-volume-lowered":
+        return (
+          <div className="stickman-drama-large">
+            <div className="absolute inset-0 bg-gradient-to-b from-indigo-900 to-purple-900" />
+            <div className="absolute bottom-24 left-1/4">
+              <DetailedStickmanSVG type="confident" />
+            </div>
+            <motion.div className="absolute top-16 left-1/2 -translate-x-1/2 text-6xl" animate={{ scale: [1.3, 1, 1.3] }} transition={{ duration: 2, repeat: Infinity }}>
+              🔉✅
+            </motion.div>
+            <motion.div className="absolute top-10 left-1/2 -translate-x-1/2 bg-green-600 text-white px-4 py-2 rounded-lg shadow-lg text-lg font-bold" animate={{ scale: [1, 1.1, 1] }} transition={{ duration: 2, repeat: Infinity }}>
+              ✅ Noise Reduced - Peace Restored!
+            </motion.div>
+            <SceneDescription text={description} />
+          </div>
+        )
+
+      // Level 6: Wildlife Poaching - ALL ANIMATIONS
+      case "env-national-park":
+        return (
+          <div className="stickman-drama-large">
+            <DetailedBackground type="generic" />
+            <div className="absolute bottom-20 left-12"><TreeSVG /></div>
+            <div className="absolute bottom-20 left-28"><TreeSVG /></div>
+            <div className="absolute bottom-20 right-12"><TreeSVG /></div>
+            <div className="absolute bottom-20 right-28"><TreeSVG /></div>
+            <motion.div className="absolute bottom-28 left-1/3 text-6xl" animate={{ x: [-10, 10, -10] }} transition={{ duration: 2, repeat: Infinity }}>
+              🦌
+            </motion.div>
+            <motion.div className="absolute top-16 left-1/2 -translate-x-1/2 text-5xl" animate={{ scale: [1, 1.2, 1] }} transition={{ duration: 2, repeat: Infinity }}>
+              🏞️🌲
+            </motion.div>
+            <SceneDescription text={description} />
+          </div>
+        )
+
+      case "env-deer-targeted":
+        return (
+          <div className="stickman-drama-large">
+            <DetailedBackground type="generic" />
+            <div className="absolute bottom-20 left-12"><TreeSVG /></div>
+            <div className="absolute bottom-20 right-12"><TreeSVG /></div>
+            <motion.div className="absolute bottom-28 left-1/3 text-7xl" animate={{ x: [-10, 10, -10], scale: [1, 1.2, 1] }} transition={{ duration: 2, repeat: Infinity }}>
+              🦌
+            </motion.div>
+            <div className="absolute bottom-24 right-1/4">
+              <motion.div animate={{ x: [0, -10, 0] }} transition={{ duration: 1, repeat: Infinity }}>
+                <DetailedStickmanSVG type="police" />
+              </motion.div>
+            </div>
+            <motion.div className="absolute top-20 right-1/3 text-5xl" animate={{ scale: [1, 1.3, 1] }} transition={{ duration: 1, repeat: Infinity }}>
+              🎯
+            </motion.div>
+            <SceneDescription text={description} />
+          </div>
+        )
+
+      case "env-shots-fired":
+        return (
+          <div className="stickman-drama-large">
+            <DetailedBackground type="generic" />
+            <motion.div className="absolute bottom-24 left-1/3 text-7xl" animate={{ scale: [1, 0.9, 1], opacity: [1, 0.5, 1] }} transition={{ duration: 1.5, repeat: Infinity }}>
+              🦌
+            </motion.div>
+            <motion.div className="absolute top-20 left-1/2 -translate-x-1/2 text-8xl" animate={{ scale: [0, 1.8, 0] }} transition={{ duration: 1, repeat: Infinity }}>
+              💥
+            </motion.div>
+            <motion.div className="absolute top-28 right-1/3 text-6xl" animate={{ scale: [1, 1.5, 1] }} transition={{ duration: 0.8, repeat: Infinity }}>
+              💥
+            </motion.div>
+            <SceneDescription text={description} />
+          </div>
+        )
+
+      case "env-deer-killed":
+        return (
+          <div className="stickman-drama-large">
+            <DetailedBackground type="generic" />
+            <motion.div className="absolute bottom-24 left-1/3 text-7xl" animate={{ opacity: [1, 0.3, 1], rotate: [0, 90, 90] }} transition={{ duration: 2, repeat: Infinity }}>
+              🦌💔
+            </motion.div>
+            <motion.div className="absolute top-20 left-1/2 -translate-x-1/2 text-6xl" animate={{ y: [0, 10, 0] }} transition={{ duration: 2, repeat: Infinity }}>
+              💀☠️
+            </motion.div>
+            <SceneDescription text={description} />
+          </div>
+        )
+
+      case "env-poaching-continues":
+      case "env-deer-population-declines":
+      case "env-ecosystem-imbalance":
+      case "env-species-endangered":
+        return (
+          <div className="stickman-drama-large">
+            <DetailedBackground type="generic" />
+            <motion.div className="absolute bottom-24 left-1/4 text-6xl opacity-30" animate={{ opacity: [0.3, 0.1, 0.3] }} transition={{ duration: 2, repeat: Infinity }}>
+              🦌
+            </motion.div>
+            <motion.div className="absolute bottom-28 left-1/2 -translate-x-1/2 text-7xl" animate={{ scale: [1, 1.3, 1] }} transition={{ duration: 2, repeat: Infinity }}>
+              💀☠️
+            </motion.div>
+            <motion.div className="absolute top-12 left-1/2 -translate-x-1/2 bg-red-600 text-white px-4 py-2 rounded-lg shadow-lg text-lg font-bold" animate={{ scale: [1, 1.15, 1] }} transition={{ duration: 1, repeat: Infinity }}>
+              ❌ Species Endangered!
+            </motion.div>
+            <SceneDescription text={description} />
+          </div>
+        )
+
+      case "env-rangers-alerted":
+        return (
+          <div className="stickman-drama-large">
+            <DetailedBackground type="generic" />
+            <div className="absolute bottom-20 left-12"><TreeSVG /></div>
+            <div className="absolute bottom-20 right-12"><TreeSVG /></div>
+            <motion.div className="absolute bottom-28 left-1/3 text-6xl" animate={{ x: [-10, 10, -10] }} transition={{ duration: 2, repeat: Infinity }}>
+              🦌
+            </motion.div>
+            <div className="absolute bottom-24 right-1/4">
+              <DetailedStickmanSVG type="police" />
+            </div>
+            <motion.div className="absolute top-20 left-1/2 -translate-x-1/2 text-6xl" animate={{ scale: [1, 1.3, 1] }} transition={{ duration: 1, repeat: Infinity }}>
+              🚨👮
+            </motion.div>
+            <SceneDescription text={description} />
+          </div>
+        )
+
+      case "env-poachers-caught":
+        return (
+          <div className="stickman-drama-large">
+            <DetailedBackground type="generic" />
+            <div className="absolute bottom-24 left-1/4">
+              <DetailedStickmanSVG type="police" />
+            </div>
+            <div className="absolute bottom-24 right-1/4">
+              <motion.div animate={{ x: [-3, 3, -3] }} transition={{ duration: 0.5, repeat: Infinity }}>
+                <DetailedStickmanSVG type="defeated" />
+              </motion.div>
+            </div>
+            <motion.div className="absolute bottom-32 left-1/2 -translate-x-1/2 text-6xl" animate={{ scale: [1, 1.2, 1] }} transition={{ duration: 1.5, repeat: Infinity }}>
+              ⛓️
+            </motion.div>
+            <SceneDescription text={description} />
+          </div>
+        )
+
+      case "env-wildlife-act-invoked":
+      case "env-imprisonment-fine":
+        return (
+          <div className="stickman-drama-large">
+            <DetailedBackground type="office" />
+            <div className="absolute bottom-24 left-1/4">
+              <DetailedStickmanSVG type="police" />
+            </div>
+            <div className="absolute bottom-24 right-1/4">
+              <motion.div animate={{ rotate: [-5, 5, -5] }} transition={{ duration: 1, repeat: Infinity }}>
+                <DetailedStickmanSVG type="defeated" />
+              </motion.div>
+            </div>
+            <motion.div className="absolute top-20 left-1/2 -translate-x-1/2 text-6xl" animate={{ scale: [1, 1.2, 1] }} transition={{ duration: 1.5, repeat: Infinity }}>
+              ⚖️🔒
+            </motion.div>
+            <motion.div className="absolute top-10 left-1/2 -translate-x-1/2 bg-green-600 text-white px-4 py-2 rounded-lg shadow-lg text-lg font-bold" animate={{ scale: [1, 1.1, 1] }} transition={{ duration: 2, repeat: Infinity }}>
+              ✅ Poachers Punished!
+            </motion.div>
+            <SceneDescription text={description} />
+          </div>
+        )
+
+      // Level 7: Industrial Pollution - ALL ANIMATIONS
+      case "env-industrial-area":
+        return (
+          <div className="stickman-drama-large">
+            <DetailedBackground type="generic" />
+            <motion.div className="absolute top-12 left-16 w-36 h-28 bg-gray-700 rounded-lg border-4 border-gray-800" animate={{ y: [0, -2, 0] }} transition={{ duration: 3, repeat: Infinity }}>
+              <div className="text-center text-white text-sm mt-2 font-bold">FACTORY</div>
+              <div className="text-center text-4xl mt-2">🏭</div>
+            </motion.div>
+            <motion.div className="absolute bottom-20 left-1/2 -translate-x-1/2 w-20 h-20 bg-gray-200 rounded-full border-4 border-gray-400">
+              <div className="text-center text-3xl mt-2">🏘️</div>
+            </motion.div>
+            <SceneDescription text={description} />
+          </div>
+        )
+
+      case "env-black-smoke-daily":
+        return (
+          <div className="stickman-drama-large">
+            <DetailedBackground type="generic" />
+            <div className="absolute top-12 left-16 w-36 h-28 bg-gray-700 rounded-lg border-4 border-gray-800">
+              <div className="text-center text-white text-sm mt-2">FACTORY</div>
+            </div>
+            <motion.div className="absolute top-8 left-40 text-8xl" animate={{ scale: [1, 1.5, 1], opacity: [0.7, 1, 0.7], y: [0, -20, -40] }} transition={{ duration: 2, repeat: Infinity }}>
+              ☁️
+            </motion.div>
+            <motion.div className="absolute top-16 left-56 text-7xl" animate={{ scale: [1, 1.4, 1], opacity: [0.8, 1, 0.8], y: [0, -15, -30] }} transition={{ duration: 2.5, delay: 0.5, repeat: Infinity }}>
+              💨
+            </motion.div>
+            <SceneDescription text={description} />
+          </div>
+        )
+
+      case "env-residents-coughing":
+        return (
+          <div className="stickman-drama-large">
+            <DetailedBackground type="generic" />
+            <div className="absolute bottom-24 left-1/4">
+              <motion.div animate={{ scale: [1, 1.15, 1], x: [-2, 2, -2] }} transition={{ duration: 1, repeat: Infinity }}>
+                <DetailedStickmanSVG type="scared" />
+              </motion.div>
+            </div>
+            <div className="absolute bottom-24 left-1/2 -translate-x-1/2">
+              <motion.div animate={{ rotate: [-5, 5, -5] }} transition={{ duration: 1, repeat: Infinity }}>
+                <DetailedStickmanSVG type="defeated" />
+              </motion.div>
+            </div>
+            <motion.div className="absolute bottom-32 left-1/3 text-6xl" animate={{ y: [-5, 5, -5] }} transition={{ duration: 1, repeat: Infinity }}>
+              😷🤧
+            </motion.div>
+            <motion.div className="absolute top-20 left-1/2 -translate-x-1/2 text-7xl" animate={{ scale: [1, 1.3, 1], opacity: [0.7, 1, 0.7] }} transition={{ duration: 2, repeat: Infinity }}>
+              ☁️💨
+            </motion.div>
+            <SceneDescription text={description} />
+          </div>
+        )
+
+      case "env-children-asthma":
+        return (
+          <div className="stickman-drama-large">
+            <DetailedBackground type="generic" />
+            <div className="absolute bottom-24 left-1/3">
+              <motion.div animate={{ y: [-3, 3, -3], scale: [1, 1.1, 1] }} transition={{ duration: 1, repeat: Infinity }}>
+                <DetailedStickmanSVG type="scared" />
+              </motion.div>
+            </div>
+            <motion.div className="absolute bottom-32 left-1/2 -translate-x-1/2 text-6xl" animate={{ scale: [1, 1.3, 1] }} transition={{ duration: 1.5, repeat: Infinity }}>
+              👶😷
+            </motion.div>
+            <motion.div className="absolute top-20 left-1/2 -translate-x-1/2 text-7xl" animate={{ scale: [1, 1.3, 1], opacity: [0.7, 1, 0.7] }} transition={{ duration: 2, repeat: Infinity }}>
+              ☁️
+            </motion.div>
+            <SceneDescription text={description} />
+          </div>
+        )
+
+      case "env-pollution-unchecked":
+      case "env-chronic-diseases":
+      case "env-life-expectancy-drops":
+      case "env-mass-health-crisis":
+        return (
+          <div className="stickman-drama-large">
+            <DetailedBackground type="generic" />
+            <motion.div className="absolute inset-0 bg-gray-800 opacity-70" animate={{ opacity: [0.7, 0.9, 0.7] }} transition={{ duration: 3, repeat: Infinity }} />
+            <motion.div className="absolute top-20 left-1/4 text-9xl" animate={{ y: [0, 30, 0], opacity: [0.8, 1, 0.8] }} transition={{ duration: 3, repeat: Infinity }}>
+              ☁️
+            </motion.div>
+            <motion.div className="absolute bottom-24 right-1/3" animate={{ rotate: [-10, 10, -10] }} transition={{ duration: 1, repeat: Infinity }}>
+              <DetailedStickmanSVG type="defeated" />
+            </motion.div>
+            <motion.div className="absolute bottom-28 left-1/4" animate={{ y: [-5, 5, -5] }} transition={{ duration: 1.5, repeat: Infinity }}>
+              <DetailedStickmanSVG type="scared" />
+            </motion.div>
+            <motion.div className="absolute top-12 left-1/2 -translate-x-1/2 bg-red-600 text-white px-4 py-2 rounded-lg shadow-lg text-lg font-bold" animate={{ scale: [1, 1.15, 1] }} transition={{ duration: 1, repeat: Infinity }}>
+              ❌ Health Emergency!
+            </motion.div>
+            <SceneDescription text={description} />
+          </div>
+        )
+
+      case "env-residents-unite":
+      case "env-pcb-inspection":
+        return (
+          <div className="stickman-drama-large">
+            <DetailedBackground type="office" />
+            <div className="absolute bottom-24 left-1/4">
+              <DetailedStickmanSVG type="confident" />
+            </div>
+            <div className="absolute bottom-24 right-1/4">
+              <DetailedStickmanSVG type="police" />
+            </div>
+            <motion.div className="absolute top-20 left-1/2 -translate-x-1/2 text-6xl" animate={{ scale: [1, 1.2, 1] }} transition={{ duration: 1.5, repeat: Infinity }}>
+              🔍📋
+            </motion.div>
+            <SceneDescription text={description} />
+          </div>
+        )
+
+      case "env-air-filters-mandated":
+      case "env-compliance-achieved":
+        return (
+          <div className="stickman-drama-large">
+            <DetailedBackground type="generic" />
+            <div className="absolute top-12 left-16 w-36 h-28 bg-gray-700 rounded-lg">
+              <motion.div className="absolute top-4 left-4 text-4xl" animate={{ rotate: 360 }} transition={{ duration: 2, repeat: Infinity, ease: "linear" }}>
+                ⚙️
+              </motion.div>
+              <motion.div className="absolute top-4 right-4 text-3xl" animate={{ scale: [1, 1.3, 1] }} transition={{ duration: 1.5, repeat: Infinity }}>
+                ♻️
+              </motion.div>
+            </div>
+            <div className="absolute bottom-24 right-1/3">
+              <DetailedStickmanSVG type="confident" />
+            </div>
+            <motion.div className="absolute top-10 left-1/2 -translate-x-1/2 bg-green-600 text-white px-4 py-2 rounded-lg shadow-lg text-lg font-bold" animate={{ scale: [1, 1.1, 1] }} transition={{ duration: 2, repeat: Infinity }}>
+              ✅ Air Quality Improved!
+            </motion.div>
+            <SceneDescription text={description} />
+          </div>
+        )
+
+      // Level 8: Waste Dumping - ALL ANIMATIONS
+      case "env-housing-society":
+        return (
+          <div className="stickman-drama-large">
+            <DetailedBackground type="generic" />
+            <motion.div className="absolute top-16 left-16 w-40 h-32 bg-orange-200 rounded-lg border-4 border-orange-400">
+              <div className="text-center text-orange-800 text-sm mt-2 font-bold">SOCIETY</div>
+              <div className="text-center text-4xl mt-3">🏘️</div>
+            </motion.div>
+            <div className="absolute bottom-24 right-1/3">
+              <DetailedStickmanSVG type="thinking" />
+            </div>
+            <SceneDescription text={description} />
+          </div>
+        )
+
+      case "env-garbage-dumped-open":
+        return (
+          <div className="stickman-drama-large">
+            <DetailedBackground type="generic" />
+            <motion.div className="absolute bottom-20 left-20 text-7xl" animate={{ y: [0, 5, 0] }} transition={{ duration: 2, repeat: Infinity }}>
+              🗑️
+            </motion.div>
+            <motion.div className="absolute bottom-24 left-40 text-6xl" animate={{ y: [0, -5, 0] }} transition={{ duration: 2, delay: 0.3, repeat: Infinity }}>
+              🗑️
+            </motion.div>
+            <motion.div className="absolute bottom-22 left-56 text-5xl" animate={{ y: [0, 8, 0] }} transition={{ duration: 2, delay: 0.6, repeat: Infinity }}>
+              🗑️
+            </motion.div>
+            <SceneDescription text={description} />
+          </div>
+        )
+
+      case "env-no-segregation":
+        return (
+          <div className="stickman-drama-large">
+            <DetailedBackground type="generic" />
+            <motion.div className="absolute bottom-20 left-20 text-6xl" animate={{ y: [0, 5, 0] }} transition={{ duration: 2, repeat: Infinity }}>
+              🗑️
+            </motion.div>
+            <motion.div className="absolute bottom-24 left-40 text-5xl" animate={{ rotate: [0, 15, 0] }} transition={{ duration: 1.5, repeat: Infinity }}>
+              🍌🥤
+            </motion.div>
+            <motion.div className="absolute bottom-22 left-56 text-5xl" animate={{ rotate: [0, -15, 0] }} transition={{ duration: 1.5, delay: 0.5, repeat: Infinity }}>
+              📦🛍️
+            </motion.div>
+            <motion.div className="absolute top-20 left-1/2 -translate-x-1/2 text-6xl" animate={{ rotate: [0, 360] }} transition={{ duration: 2, repeat: Infinity, ease: "linear" }}>
+              🚫
+            </motion.div>
+            <SceneDescription text={description} />
+          </div>
+        )
+
+      case "env-stench-spread":
+        return (
+          <div className="stickman-drama-large">
+            <DetailedBackground type="generic" />
+            <motion.div className="absolute bottom-20 left-20 text-7xl" animate={{ y: [0, 5, 0] }} transition={{ duration: 2, repeat: Infinity }}>
+              🗑️
+            </motion.div>
+            <motion.div className="absolute bottom-28 left-40 text-6xl" animate={{ scale: [1, 1.5, 1], opacity: [0.5, 1, 0.5] }} transition={{ duration: 2, repeat: Infinity }}>
+              💨🤢
+            </motion.div>
+            <div className="absolute bottom-24 right-1/4">
+              <motion.div animate={{ x: [-3, 3, -3] }} transition={{ duration: 0.5, repeat: Infinity }}>
+                <DetailedStickmanSVG type="scared" />
+              </motion.div>
+            </div>
+            <SceneDescription text={description} />
+          </div>
+        )
+
+      case "env-waste-pile-grows":
+      case "env-disease-outbreak":
+      case "env-groundwater-contaminated":
+      case "env-public-health-emergency":
+        return (
+          <div className="stickman-drama-large">
+            <DetailedBackground type="generic" />
+            <motion.div className="absolute bottom-20 left-16 text-8xl" animate={{ y: [0, 5, 0], scale: [1, 1.2, 1] }} transition={{ duration: 2, repeat: Infinity }}>
+              🗑️
+            </motion.div>
+            <motion.div className="absolute bottom-24 left-40 text-7xl" animate={{ y: [0, -5, 0] }} transition={{ duration: 2, delay: 0.5, repeat: Infinity }}>
+              🗑️
+            </motion.div>
+            <motion.div className="absolute bottom-28 right-1/3" animate={{ rotate: [-10, 10, -10] }} transition={{ duration: 1, repeat: Infinity }}>
+              <DetailedStickmanSVG type="defeated" />
+            </motion.div>
+            <motion.div className="absolute top-12 left-1/2 -translate-x-1/2 bg-red-600 text-white px-4 py-2 rounded-lg shadow-lg text-lg font-bold" animate={{ scale: [1, 1.15, 1] }} transition={{ duration: 1, repeat: Infinity }}>
+              ❌ Health Emergency!
+            </motion.div>
+            <motion.div className="absolute top-32 right-1/4 text-6xl" animate={{ scale: [1, 1.3, 1] }} transition={{ duration: 1.5, repeat: Infinity }}>
+              🦟🪰☠️
+            </motion.div>
+            <SceneDescription text={description} />
+          </div>
+        )
+
+      case "env-resident-complaint":
+      case "env-swm-rules-cited":
+        return (
+          <div className="stickman-drama-large">
+            <DetailedBackground type="office" />
+            <div className="absolute bottom-24 left-1/4">
+              <DetailedStickmanSVG type="confident" />
+            </div>
+            <div className="absolute bottom-24 right-1/4">
+              <LawyerSVG />
+            </div>
+            <motion.div className="absolute top-20 left-1/2 -translate-x-1/2 text-6xl" animate={{ scale: [1, 1.2, 1] }} transition={{ duration: 1.5, repeat: Infinity }}>
+              📋⚖️
+            </motion.div>
+            <SceneDescription text={description} />
+          </div>
+        )
+
+      case "env-segregation-bins":
+        return (
+          <div className="stickman-drama-large">
+            <DetailedBackground type="generic" />
+            <motion.div className="absolute bottom-24 left-20 text-6xl" animate={{ scale: [0, 1, 1] }} transition={{ duration: 1.5 }}>
+              🟢
+            </motion.div>
+            <motion.div className="absolute bottom-24 left-36 text-6xl" animate={{ scale: [0, 1, 1] }} transition={{ duration: 1.5, delay: 0.3 }}>
+              🔵
+            </motion.div>
+            <motion.div className="absolute bottom-24 left-52 text-6xl" animate={{ scale: [0, 1, 1] }} transition={{ duration: 1.5, delay: 0.6 }}>
+              🔴
+            </motion.div>
+            <div className="absolute bottom-24 right-1/4">
+              <DetailedStickmanSVG type="confident" />
+            </div>
+            <motion.div className="absolute top-20 left-1/2 -translate-x-1/2 text-5xl" animate={{ scale: [1, 1.2, 1] }} transition={{ duration: 2, repeat: Infinity }}>
+              ♻️✅
+            </motion.div>
+            <SceneDescription text={description} />
+          </div>
+        )
+
+      case "env-proper-disposal":
+        return (
+          <div className="stickman-drama-large">
+            <DetailedBackground type="generic" />
+            <div className="absolute bottom-24 left-1/3">
+              <DetailedStickmanSVG type="confident" />
+            </div>
+            <motion.div className="absolute bottom-28 right-1/3 text-6xl" animate={{ scale: [1, 1.2, 1] }} transition={{ duration: 2, repeat: Infinity }}>
+              ♻️🗑️✅
+            </motion.div>
+            <motion.div className="absolute top-10 left-1/2 -translate-x-1/2 bg-green-600 text-white px-4 py-2 rounded-lg shadow-lg text-lg font-bold" animate={{ scale: [1, 1.1, 1] }} transition={{ duration: 2, repeat: Infinity }}>
+              ✅ Waste Managed Properly!
+            </motion.div>
+            <SceneDescription text={description} />
+          </div>
+        )
+
+      // Level 9: Burning Plastic - ALL ANIMATIONS
+      case "env-backyard-scene":
+        return (
+          <div className="stickman-drama-large">
+            <DetailedBackground type="generic" />
+            <motion.div className="absolute top-16 left-16 w-32 h-28 bg-green-200 rounded-lg border-4 border-green-400">
+              <div className="text-center text-green-800 text-sm mt-2 font-bold">BACKYARD</div>
+              <div className="text-center text-4xl mt-3">🏡</div>
+            </motion.div>
+            <div className="absolute bottom-24 right-1/3">
+              <DetailedStickmanSVG type="thinking" />
+            </div>
+            <SceneDescription text={description} />
+          </div>
+        )
+
+      case "env-plastic-pile":
+        return (
+          <div className="stickman-drama-large">
+            <DetailedBackground type="generic" />
+            <motion.div className="absolute bottom-20 left-1/3 text-7xl" animate={{ y: [0, 5, 0] }} transition={{ duration: 2, repeat: Infinity }}>
+              🛍️
+            </motion.div>
+            <motion.div className="absolute bottom-24 left-1/2 -translate-x-1/2 text-6xl" animate={{ y: [0, -5, 0] }} transition={{ duration: 2, delay: 0.3, repeat: Infinity }}>
+              🛍️
+            </motion.div>
+            <motion.div className="absolute bottom-22 right-1/3 text-5xl" animate={{ rotate: [0, 15, 0] }} transition={{ duration: 1.5, repeat: Infinity }}>
+              🥤📦
+            </motion.div>
+            <div className="absolute bottom-24 right-1/4">
+              <DetailedStickmanSVG type="thinking" />
+            </div>
+            <SceneDescription text={description} />
+          </div>
+        )
+
+      case "env-sets-fire":
+        return (
+          <div className="stickman-drama-large">
+            <DetailedBackground type="generic" />
+            <motion.div className="absolute bottom-24 left-1/3 text-7xl" animate={{ scale: [1, 1.3, 1] }} transition={{ duration: 1, repeat: Infinity }}>
+              🔥
+            </motion.div>
+            <motion.div className="absolute bottom-28 left-1/2 -translate-x-1/2 text-6xl" animate={{ scale: [1, 1.5, 1], opacity: [0.7, 1, 0.7] }} transition={{ duration: 0.8, repeat: Infinity }}>
+              🔥
+            </motion.div>
+            <motion.div className="absolute bottom-22 right-1/3 text-5xl" animate={{ y: [0, 5, 0], opacity: [0.5, 0, 0.5] }} transition={{ duration: 1.5, repeat: Infinity }}>
+              🛍️
+            </motion.div>
+            <div className="absolute bottom-24 right-1/4">
+              <DetailedStickmanSVG type="defeated" />
+            </div>
+            <SceneDescription text={description} />
+          </div>
+        )
+
+      case "env-toxic-fumes":
+        return (
+          <div className="stickman-drama-large">
+            <DetailedBackground type="generic" />
+            <motion.div className="absolute bottom-24 left-1/3 text-6xl" animate={{ scale: [1, 1.3, 1] }} transition={{ duration: 1, repeat: Infinity }}>
+              🔥
+            </motion.div>
+            <motion.div className="absolute bottom-32 left-1/2 -translate-x-1/2 text-8xl" animate={{ scale: [1, 1.5, 1], opacity: [0.7, 1, 0.7], y: [0, -20, -40] }} transition={{ duration: 2, repeat: Infinity }}>
+              ☁️💀
+            </motion.div>
+            <motion.div className="absolute top-20 right-1/4 text-7xl" animate={{ scale: [1, 1.4, 1], opacity: [0.8, 1, 0.8] }} transition={{ duration: 2, delay: 0.5, repeat: Infinity }}>
+              ☠️
+            </motion.div>
+            <SceneDescription text={description} />
+          </div>
+        )
+
+      case "env-burning-continues":
+      case "env-neighbors-affected":
+      case "env-cancer-risk":
+      case "env-civic-duty-violated":
+        return (
+          <div className="stickman-drama-large">
+            <DetailedBackground type="generic" />
+            <motion.div className="absolute bottom-24 left-1/4 text-7xl" animate={{ scale: [1, 1.3, 1] }} transition={{ duration: 1, repeat: Infinity }}>
+              🔥
+            </motion.div>
+            <motion.div className="absolute bottom-32 left-1/2 -translate-x-1/2 text-8xl" animate={{ scale: [1, 1.5, 1], opacity: [0.7, 1, 0.7], y: [0, -20, 0] }} transition={{ duration: 2, repeat: Infinity }}>
+              ☁️☠️
+            </motion.div>
+            <motion.div className="absolute bottom-28 right-1/3" animate={{ rotate: [-10, 10, -10] }} transition={{ duration: 1, repeat: Infinity }}>
+              <DetailedStickmanSVG type="defeated" />
+            </motion.div>
+            <motion.div className="absolute top-12 left-1/2 -translate-x-1/2 bg-red-600 text-white px-4 py-2 rounded-lg shadow-lg text-lg font-bold" animate={{ scale: [1, 1.15, 1] }} transition={{ duration: 1, repeat: Infinity }}>
+              ❌ Article 51A(g) Violated!
+            </motion.div>
+            <SceneDescription text={description} />
+          </div>
+        )
+
+      case "env-neighbor-educates":
+      case "env-article-51a-cited":
+        return (
+          <div className="stickman-drama-large">
+            <DetailedBackground type="generic" />
+            <div className="absolute bottom-24 left-1/4">
+              <DetailedStickmanSVG type="confident" />
+            </div>
+            <div className="absolute bottom-24 right-1/4">
+              <DetailedStickmanSVG type="thinking" />
+            </div>
+            <motion.div className="absolute top-20 left-1/2 -translate-x-1/2 text-6xl" animate={{ scale: [1, 1.2, 1] }} transition={{ duration: 1.5, repeat: Infinity }}>
+              📋🌍
+            </motion.div>
+            <SceneDescription text={description} />
+          </div>
+        )
+
+      case "env-plastic-recycled":
+      case "env-community-aware":
+        return (
+          <div className="stickman-drama-large">
+            <DetailedBackground type="generic" />
+            <div className="absolute bottom-24 left-1/3">
+              <DetailedStickmanSVG type="confident" />
+            </div>
+            <motion.div className="absolute bottom-28 right-1/3 text-7xl" animate={{ scale: [1, 1.2, 1] }} transition={{ duration: 2, repeat: Infinity }}>
+              ♻️🛍️
+            </motion.div>
+            <motion.div className="absolute top-10 left-1/2 -translate-x-1/2 bg-green-600 text-white px-4 py-2 rounded-lg shadow-lg text-lg font-bold" animate={{ scale: [1, 1.1, 1] }} transition={{ duration: 2, repeat: Infinity }}>
+              ✅ Plastic Recycled Properly!
+            </motion.div>
+            <SceneDescription text={description} />
+          </div>
+        )
+
+      // Level 10: EIA Violation - ALL ANIMATIONS
+      case "env-protected-forest":
+        return (
+          <div className="stickman-drama-large">
+            <DetailedBackground type="generic" />
+            <div className="absolute bottom-20 left-12"><TreeSVG /></div>
+            <div className="absolute bottom-20 left-28"><TreeSVG /></div>
+            <div className="absolute bottom-20 left-44"><TreeSVG /></div>
+            <div className="absolute bottom-20 right-12"><TreeSVG /></div>
+            <div className="absolute bottom-20 right-28"><TreeSVG /></div>
+            <div className="absolute bottom-20 right-44"><TreeSVG /></div>
+            <motion.div className="absolute top-16 left-1/2 -translate-x-1/2 text-6xl" animate={{ scale: [1, 1.2, 1] }} transition={{ duration: 2, repeat: Infinity }}>
+              🏞️🌳🦌
+            </motion.div>
+            <SceneDescription text={description} />
+          </div>
+        )
+
+      case "env-construction-starts":
+        return (
+          <div className="stickman-drama-large">
+            <DetailedBackground type="generic" />
+            <div className="absolute bottom-20 left-12"><TreeSVG /></div>
+            <div className="absolute bottom-20 right-12"><TreeSVG /></div>
+            <motion.div className="absolute bottom-24 left-1/3 text-7xl" animate={{ y: [0, -5, 0] }} transition={{ duration: 2, repeat: Infinity }}>
+              🏗️
+            </motion.div>
+            <motion.div className="absolute top-20 left-1/2 -translate-x-1/2 text-6xl" animate={{ scale: [1, 1.3, 1] }} transition={{ duration: 1.5, repeat: Infinity }}>
+              ⚡🔌
+            </motion.div>
+            <SceneDescription text={description} />
+          </div>
+        )
+
+      case "env-bulldozers-forest":
+        return (
+          <div className="stickman-drama-large">
+            <DetailedBackground type="generic" />
+            <div className="absolute bottom-20 left-40 opacity-20"><TreeSVG /></div>
+            <motion.div className="absolute bottom-24 left-20 text-7xl" animate={{ x: [0, 30, 0] }} transition={{ duration: 3, repeat: Infinity }}>
+              🚜
+            </motion.div>
+            <motion.div className="absolute bottom-22 left-36 text-5xl opacity-50" animate={{ opacity: [0.5, 0, 0.5], scale: [1, 0.5, 0] }} transition={{ duration: 1.5, repeat: Infinity }}>
+              🌳
+            </motion.div>
+            <motion.div className="absolute bottom-28 left-32 text-4xl" animate={{ y: [0, 20, 40], opacity: [1, 0.5, 0] }} transition={{ duration: 2, repeat: Infinity }}>
+              🪵
+            </motion.div>
+            <SceneDescription text={description} />
+          </div>
+        )
+
+      case "env-no-eia-done":
+        return (
+          <div className="stickman-drama-large">
+            <DetailedBackground type="generic" />
+            <motion.div className="absolute top-16 left-1/2 -translate-x-1/2 bg-red-600 text-white px-4 py-2 rounded-lg shadow-lg text-lg font-bold" animate={{ scale: [1, 1.2, 1] }} transition={{ duration: 1, repeat: Infinity }}>
+              ⚠️ No EIA Clearance!
+            </motion.div>
+            <motion.div className="absolute top-32 left-1/3 text-8xl" animate={{ rotate: [0, 360] }} transition={{ duration: 2, repeat: Infinity, ease: "linear" }}>
+              🚫
+            </motion.div>
+            <motion.div className="absolute bottom-24 right-1/4 text-7xl" animate={{ scale: [1, 1.3, 1] }} transition={{ duration: 1.5, repeat: Infinity }}>
+              📜❌
+            </motion.div>
+            <SceneDescription text={description} />
+          </div>
+        )
+
+      case "env-construction-proceeds":
+      case "env-wildlife-displaced":
+      case "env-ecosystem-destroyed":
+      case "env-violation-unpunished":
+        return (
+          <div className="stickman-drama-large">
+            <DetailedBackground type="generic" />
+            <div className="absolute bottom-20 left-12 opacity-10"><TreeSVG /></div>
+            <motion.div className="absolute bottom-24 left-1/3 text-7xl" animate={{ scale: [1, 1.2, 1] }} transition={{ duration: 2, repeat: Infinity }}>
+              🏗️⚡
+            </motion.div>
+            <motion.div className="absolute bottom-28 right-1/3 text-6xl" animate={{ x: [0, 100, 200], opacity: [1, 0.5, 0] }} transition={{ duration: 3, repeat: Infinity }}>
+              🦌💔
+            </motion.div>
+            <motion.div className="absolute top-12 left-1/2 -translate-x-1/2 bg-red-600 text-white px-4 py-2 rounded-lg shadow-lg text-lg font-bold" animate={{ scale: [1, 1.15, 1] }} transition={{ duration: 1, repeat: Infinity }}>
+              ❌ Ecosystem Destroyed!
+            </motion.div>
+            <SceneDescription text={description} />
+          </div>
+        )
+
+      case "env-activists-intervene":
+      case "env-ngc-petition":
+        return (
+          <div className="stickman-drama-large">
+            <DetailedBackground type="office" />
+            <div className="absolute bottom-24 left-1/4">
+              <DetailedStickmanSVG type="confident" />
+            </div>
+            <div className="absolute bottom-24 right-1/4">
+              <LawyerSVG />
+            </div>
+            <motion.div className="absolute top-20 left-1/2 -translate-x-1/2 text-6xl" animate={{ scale: [1, 1.2, 1] }} transition={{ duration: 1.5, repeat: Infinity }}>
+              📋⚖️🌍
+            </motion.div>
+            <motion.div className="absolute top-12 left-1/2 -translate-x-1/2 bg-blue-600 text-white px-4 py-2 rounded-lg shadow-lg">
+              National Green Tribunal
+            </motion.div>
+            <SceneDescription text={description} />
+          </div>
+        )
+
+      case "env-eia-violation-proven":
+      case "env-project-halted":
+        return (
+          <div className="stickman-drama-large">
+            <DetailedBackground type="generic" />
+            <div className="absolute bottom-20 left-12"><TreeSVG /></div>
+            <div className="absolute bottom-20 left-28"><TreeSVG /></div>
+            <div className="absolute bottom-20 right-12"><TreeSVG /></div>
+            <div className="absolute bottom-20 right-28"><TreeSVG /></div>
+            <div className="absolute bottom-24 right-1/3">
+              <DetailedStickmanSVG type="confident" />
+            </div>
+            <motion.div className="absolute bottom-28 left-1/3 text-7xl" animate={{ scale: [1, 0, 0] }} transition={{ duration: 2 }}>
+              🏗️🚫
+            </motion.div>
+            <motion.div className="absolute top-10 left-1/2 -translate-x-1/2 bg-green-600 text-white px-4 py-2 rounded-lg shadow-lg text-lg font-bold" animate={{ scale: [1, 1.1, 1] }} transition={{ duration: 2, repeat: Infinity }}>
+              ✅ Forest Protected!
+            </motion.div>
+            <SceneDescription text={description} />
+          </div>
+        )
+
+      // FUNDAMENTAL RIGHTS ANIMATIONS - ALL 12 LEVELS
+      case "job-interview":
+        return (
+          <div className="stickman-drama-large">
+            <DetailedBackground type="office" />
+            <div className="absolute bottom-24 left-1/4"><DetailedStickmanSVG type="defeated" /></div>
+            <motion.div className="absolute top-20 left-1/2 -translate-x-1/2 text-7xl" animate={{ rotate: [0, 360] }} transition={{ duration: 2, repeat: Infinity, ease: "linear" }}>🚫</motion.div>
+            <div className="absolute bottom-24 right-1/4"><DetailedStickmanSVG type="thinking" /></div>
+            <SceneDescription text={description} />
+          </div>
+        )
+      case "protest":
+        return (
+          <div className="stickman-drama-large">
+            <DetailedBackground type="generic" />
+            <div className="absolute bottom-24 left-1/4"><DetailedStickmanSVG type="confident" /></div>
+            <div className="absolute bottom-24 left-1/2 -translate-x-1/2"><DetailedStickmanSVG type="confident" /></div>
+            <div className="absolute bottom-24 right-1/4"><DetailedStickmanSVG type="confident" /></div>
+            <motion.div className="absolute top-20 left-1/2 -translate-x-1/2 text-7xl" animate={{ scale: [1, 1.2, 1] }} transition={{ duration: 1.5, repeat: Infinity }}>📢✊</motion.div>
+            <SceneDescription text={description} />
+          </div>
+        )
+      case "religious-discrimination":
+        return (
+          <div className="stickman-drama-large">
+            <DetailedBackground type="office" />
+            <div className="absolute bottom-24 left-1/4"><DetailedStickmanSVG type="defeated" /></div>
+            <motion.div className="absolute top-20 left-1/2 -translate-x-1/2 text-7xl" animate={{ rotate: [0, 360] }} transition={{ duration: 2, repeat: Infinity, ease: "linear" }}>🚫</motion.div>
+            <motion.div className="absolute bottom-28 right-1/4 text-6xl" animate={{ scale: [1, 1.3, 1] }} transition={{ duration: 1.5, repeat: Infinity }}>🕉️☪️✝️</motion.div>
+            <SceneDescription text={description} />
+          </div>
+        )
+      case "gender-discrimination":
+        return (
+          <div className="stickman-drama-large">
+            <DetailedBackground type="office" />
+            <div className="absolute bottom-24 left-1/4"><DetailedStickmanSVG type="defeated" /></div>
+            <motion.div className="absolute top-20 left-1/2 -translate-x-1/2 text-7xl" animate={{ rotate: [0, 360] }} transition={{ duration: 2, repeat: Infinity, ease: "linear" }}>🚫</motion.div>
+            <motion.div className="absolute bottom-28 right-1/4 text-6xl" animate={{ scale: [1, 1.3, 1] }} transition={{ duration: 1.5, repeat: Infinity }}>👩⚖️</motion.div>
+            <SceneDescription text={description} />
+          </div>
+        )
+      case "press-freedom":
+        return (
+          <div className="stickman-drama-large">
+            <DetailedBackground type="office" />
+            <div className="absolute bottom-24 left-1/4"><DetailedStickmanSVG type="confident" /></div>
+            <motion.div className="absolute top-20 left-1/2 -translate-x-1/2 text-7xl" animate={{ scale: [1, 1.3, 1] }} transition={{ duration: 1.5, repeat: Infinity }}>📰✍️</motion.div>
+            <div className="absolute bottom-24 right-1/4"><DetailedStickmanSVG type="police" /></div>
+            <SceneDescription text={description} />
+          </div>
+        )
+      case "right-to-shelter":
+        return (
+          <div className="stickman-drama-large">
+            <DetailedBackground type="generic" />
+            <motion.div className="absolute bottom-24 left-1/3" animate={{ x: [0, 100, 200], opacity: [1, 0.5, 0] }} transition={{ duration: 3, repeat: Infinity }}><DetailedStickmanSVG type="scared" /></motion.div>
+            <motion.div className="absolute top-20 left-1/2 -translate-x-1/2 text-7xl" animate={{ scale: [1, 1.3, 1] }} transition={{ duration: 1.5, repeat: Infinity }}>🏠💔</motion.div>
+            <SceneDescription text={description} />
+          </div>
+        )
+      case "arbitrary-arrest":
+        return (
+          <div className="stickman-drama-large">
+            <DetailedBackground type="office" />
+            <div className="absolute bottom-24 left-1/4"><DetailedStickmanSVG type="police" /></div>
+            <div className="absolute bottom-24 right-1/4"><motion.div animate={{ x: [-3, 3, -3] }} transition={{ duration: 0.5, repeat: Infinity }}><DetailedStickmanSVG type="scared" /></motion.div></div>
+            <motion.div className="absolute top-20 left-1/2 -translate-x-1/2 text-7xl" animate={{ scale: [1, 1.3, 1] }} transition={{ duration: 1.5, repeat: Infinity }}>⛓️❓</motion.div>
+            <SceneDescription text={description} />
+          </div>
+        )
+      case "forced-labor":
+        return (
+          <div className="stickman-drama-large">
+            <DetailedBackground type="generic" />
+            <motion.div className="absolute bottom-24 left-1/3 text-7xl" animate={{ x: [-5, 5, -5], y: [-3, 3, -3] }} transition={{ duration: 1, repeat: Infinity }}>👷⛓️</motion.div>
+            <motion.div className="absolute top-20 left-1/2 -translate-x-1/2 text-7xl" animate={{ rotate: [0, 360] }} transition={{ duration: 2, repeat: Infinity, ease: "linear" }}>🚫</motion.div>
+            <SceneDescription text={description} />
+          </div>
+        )
+      case "religious-instruction":
+        return (
+          <div className="stickman-drama-large">
+            <DetailedBackground type="office" />
+            <div className="absolute bottom-24 left-1/4"><motion.div animate={{ x: [-3, 3, -3] }} transition={{ duration: 0.5, repeat: Infinity }}><DetailedStickmanSVG type="scared" /></motion.div></div>
+            <motion.div className="absolute top-20 left-1/2 -translate-x-1/2 text-7xl" animate={{ scale: [1, 1.3, 1] }} transition={{ duration: 1.5, repeat: Infinity }}>🙏🚫</motion.div>
+            <SceneDescription text={description} />
+          </div>
+        )
+      case "minority-education":
+        return (
+          <div className="stickman-drama-large">
+            <DetailedBackground type="office" />
+            <motion.div className="absolute bottom-24 left-1/3 text-7xl" animate={{ scale: [1, 1.2, 1] }} transition={{ duration: 2, repeat: Infinity }}>🏫📚</motion.div>
+            <motion.div className="absolute top-20 left-1/2 -translate-x-1/2 text-6xl" animate={{ y: [0, -10, 0] }} transition={{ duration: 2, repeat: Infinity }}>✅</motion.div>
+            <div className="absolute bottom-24 right-1/4"><DetailedStickmanSVG type="confident" /></div>
+            <SceneDescription text={description} />
+          </div>
+        )
+      case "constitutional-remedies":
+        return (
+          <div className="stickman-drama-large">
+            <DetailedBackground type="office" />
+            <div className="absolute bottom-24 left-1/4"><DetailedStickmanSVG type="confident" /></div>
+            <div className="absolute bottom-24 right-1/4"><LawyerSVG /></div>
+            <motion.div className="absolute top-20 left-1/2 -translate-x-1/2 text-7xl" animate={{ scale: [1, 1.2, 1] }} transition={{ duration: 1.5, repeat: Infinity }}>⚖️📜</motion.div>
+            <SceneDescription text={description} />
+          </div>
+        )
+
+      // TRAFFIC RULES ANIMATIONS - ALL 10 LEVELS
+      // Level 1: Helmet
+      case "helmet":
+        return (
+          <div className="stickman-drama-large">
+            <DetailedBackground type="highway" />
+            <motion.div className="absolute bottom-24 left-1/3" animate={{ x: [0, 30, 0] }} transition={{ duration: 3, repeat: Infinity }}>
+              <svg width="60" height="80" viewBox="0 0 60 80">
+                <ellipse cx="30" cy="50" rx="15" ry="8" fill="#374151" />
+                <ellipse cx="30" cy="48" rx="13" ry="7" fill="#4b5563" />
+                <circle cx="30" cy="25" r="10" fill="#fbbf24" />
+                <line x1="30" y1="35" x2="30" y2="55" stroke="#374151" strokeWidth="3" />
+                <line x1="30" y1="55" x2="20" y2="70" stroke="#374151" strokeWidth="3" />
+                <line x1="30" y1="55" x2="40" y2="70" stroke="#374151" strokeWidth="3" />
+                <text x="30" y="28" textAnchor="middle" fontSize="12" fill="#fff">🏍️</text>
+              </svg>
+            </motion.div>
+            <div className="absolute bottom-24 right-1/4">
+              <DetailedStickmanSVG type="police" />
+            </div>
+            <motion.div className="absolute top-20 left-1/2 -translate-x-1/2 text-6xl" animate={{ scale: [1, 1.3, 1] }} transition={{ duration: 1.5, repeat: Infinity }}>
+              🪖❌
+            </motion.div>
+            <SceneDescription text={description} />
+          </div>
+        )
+
+      // Level 2: Seatbelt
+      case "seatbelt":
+        return (
+          <div className="stickman-drama-large">
+            <DetailedBackground type="highway" />
+            <div className="absolute bottom-24 left-1/3">
+              <CarSVG />
+            </div>
+            <motion.div className="absolute bottom-32 left-1/3 text-5xl" animate={{ x: [-5, 5, -5] }} transition={{ duration: 1, repeat: Infinity }}>
+              👤👤
+            </motion.div>
+            <motion.div className="absolute top-20 left-1/2 -translate-x-1/2 text-7xl" animate={{ scale: [1, 1.4, 1], rotate: [0, 15, 0] }} transition={{ duration: 1.5, repeat: Infinity }}>
+              🚫
+            </motion.div>
+            <motion.div className="absolute top-28 right-1/3 text-5xl" animate={{ opacity: [1, 0.3, 1] }} transition={{ duration: 1, repeat: Infinity }}>
+              🔒❌
+            </motion.div>
+            <SceneDescription text={description} />
+          </div>
+        )
+
+      // Level 3: Speeding
+      case "speeding":
+        return (
+          <div className="stickman-drama-large">
+            <DetailedBackground type="highway" />
+            <motion.div className="absolute bottom-24 left-12" animate={{ x: [0, 200, 400] }} transition={{ duration: 2, repeat: Infinity }}>
+              <CarSVG />
+            </motion.div>
+            <motion.div className="absolute bottom-32 left-32 text-6xl" animate={{ x: [0, 180, 360], opacity: [1, 0.5, 0] }} transition={{ duration: 2, repeat: Infinity }}>
+              💨💨
+            </motion.div>
+            <motion.div className="absolute top-16 left-1/2 -translate-x-1/2 text-7xl" animate={{ scale: [1, 1.5, 1] }} transition={{ duration: 0.8, repeat: Infinity }}>
+              ⚡
+            </motion.div>
+            <div className="absolute top-20 right-16">
+              <SpeedLimitSignSVG limit={50} />
+            </div>
+            <SceneDescription text={description} />
+          </div>
+        )
+
+      // Level 4: Zebra Crossing
+      case "zebra":
+        return (
+          <div className="stickman-drama-large">
+            <DetailedBackground type="highway" />
+            <div className="absolute bottom-16 left-1/4 w-64 h-4">
+              {[...Array(8)].map((_, i) => (
+                <div key={i} className={`absolute h-4 w-6 ${i % 2 === 0 ? 'bg-white' : 'bg-gray-800'}`} style={{ left: `${i * 32}px` }} />
+              ))}
+            </div>
+            <motion.div className="absolute bottom-24 left-1/3" animate={{ x: [-20, 0, 20] }} transition={{ duration: 2, repeat: Infinity }}>
+              <DetailedStickmanSVG type="scared" />
+            </motion.div>
+            <motion.div className="absolute bottom-24 right-1/4" animate={{ x: [50, 0] }} transition={{ duration: 1.5 }}>
+              <CarSVG />
+            </motion.div>
+            <motion.div className="absolute top-20 left-1/2 -translate-x-1/2 text-7xl" animate={{ scale: [1, 1.3, 1] }} transition={{ duration: 1, repeat: Infinity }}>
+              ⚠️
+            </motion.div>
+            <SceneDescription text={description} />
+          </div>
+        )
+
+      // Level 5: Drunk Driving
+      case "drunk-driving":
+        return (
+          <div className="stickman-drama-large">
+            <DetailedBackground type="highway" />
+            <div className="absolute bottom-24 left-1/3">
+              <motion.div animate={{ rotate: [-5, 5, -5], x: [-10, 10, -10] }} transition={{ duration: 1, repeat: Infinity }}>
+                <CarSVG />
+              </motion.div>
+            </div>
+            <motion.div className="absolute bottom-32 left-1/4 text-6xl" animate={{ scale: [1, 1.3, 1], opacity: [0.7, 1, 0.7] }} transition={{ duration: 1.5, repeat: Infinity }}>
+              🍺🍷
+            </motion.div>
+            <div className="absolute bottom-24 right-1/4">
+              <DetailedStickmanSVG type="police" />
+            </div>
+            <motion.div className="absolute top-20 left-1/2 -translate-x-1/2 text-7xl" animate={{ rotate: [0, 360] }} transition={{ duration: 2, repeat: Infinity, ease: "linear" }}>
+              🚨
+            </motion.div>
+            <SceneDescription text={description} />
+          </div>
+        )
+
+      // Level 6: Mobile Use
+      case "mobile-use":
+        return (
+          <div className="stickman-drama-large">
+            <DetailedBackground type="highway" />
+            <div className="absolute bottom-24 left-1/3">
+              <CarSVG />
+            </div>
+            <motion.div className="absolute bottom-32 left-1/3 text-6xl" animate={{ rotate: [0, -15, 0] }} transition={{ duration: 1.5, repeat: Infinity }}>
+              📱
+            </motion.div>
+            <motion.div className="absolute top-16 left-1/4 w-20 h-16 bg-red-500 rounded-full" animate={{ scale: [1, 1.3, 1], opacity: [0.5, 1, 0.5] }} transition={{ duration: 1, repeat: Infinity }}>
+              <div className="text-center text-white text-5xl mt-1">🚦</div>
+            </motion.div>
+            <motion.div className="absolute top-20 left-1/2 -translate-x-1/2 text-7xl" animate={{ scale: [1, 1.4, 1] }} transition={{ duration: 1.5, repeat: Infinity }}>
+              ⚠️📵
+            </motion.div>
+            <SceneDescription text={description} />
+          </div>
+        )
+
+      // Level 7: Red Light
+      case "red-light":
+        return (
+          <div className="stickman-drama-large">
+            <DetailedBackground type="highway" />
+            <motion.div className="absolute top-12 left-1/4 w-16 h-40 bg-gray-800 rounded-lg">
+              <motion.div className="absolute top-4 left-1/2 -translate-x-1/2 w-10 h-10 bg-red-500 rounded-full" animate={{ opacity: [1, 0.3, 1] }} transition={{ duration: 1, repeat: Infinity }} />
+              <div className="absolute top-20 left-1/2 -translate-x-1/2 w-10 h-10 bg-yellow-300 opacity-30 rounded-full" />
+              <div className="absolute top-28 left-1/2 -translate-x-1/2 w-10 h-10 bg-green-400 opacity-30 rounded-full" />
+            </motion.div>
+            <motion.div className="absolute bottom-24 left-1/3" animate={{ x: [0, 100, 200] }} transition={{ duration: 2, repeat: Infinity }}>
+              <CarSVG />
+            </motion.div>
+            <motion.div className="absolute top-20 left-1/2 -translate-x-1/2 text-8xl" animate={{ scale: [1, 1.5, 1] }} transition={{ duration: 1, repeat: Infinity }}>
+              🚫
+            </motion.div>
+            <SceneDescription text={description} />
+          </div>
+        )
+
+      // Level 8: Overtaking
+      case "overtaking":
+        return (
+          <div className="stickman-drama-large">
+            <DetailedBackground type="highway" />
+            <motion.div className="absolute bottom-24 left-1/4" animate={{ x: [0, 50, 0] }} transition={{ duration: 3, repeat: Infinity }}>
+              <CarSVG />
+            </motion.div>
+            <motion.div className="absolute bottom-26 left-1/2 -translate-x-1/2" animate={{ x: [0, -80, -160] }} transition={{ duration: 3, repeat: Infinity }}>
+              <CarSVG />
+            </motion.div>
+            <motion.div className="absolute top-16 left-1/3 text-7xl" animate={{ scale: [1, 1.4, 1] }} transition={{ duration: 1, repeat: Infinity }}>
+              ⚠️
+            </motion.div>
+            <motion.div className="absolute top-20 right-1/4 text-6xl" animate={{ opacity: [1, 0.3, 1] }} transition={{ duration: 1.5, repeat: Infinity }}>
+              🚧
+            </motion.div>
+            <SceneDescription text={description} />
+          </div>
+        )
+
+      // Level 9: Stop Sign
+      case "stop-sign":
+        return (
+          <div className="stickman-drama-large">
+            <DetailedBackground type="highway" />
+            <div className="absolute top-16 left-1/4">
+              <svg width="80" height="80" viewBox="0 0 80 80">
+                <polygon points="40,8 60,18 70,38 70,58 60,68 40,78 20,68 10,58 10,38 20,18" fill="#ef4444" stroke="#fff" strokeWidth="4" />
+                <text x="40" y="50" textAnchor="middle" fontSize="24" fill="#fff" fontWeight="bold">STOP</text>
+              </svg>
+            </div>
+            <motion.div className="absolute bottom-24 left-1/3" animate={{ x: [0, 50, 100] }} transition={{ duration: 2, repeat: Infinity }}>
+              <CarSVG />
+            </motion.div>
+            <motion.div className="absolute top-20 left-1/2 -translate-x-1/2 text-7xl" animate={{ scale: [1, 1.5, 1] }} transition={{ duration: 1, repeat: Infinity }}>
+              🚫
+            </motion.div>
+            <SceneDescription text={description} />
+          </div>
+        )
+
+      // Level 10: Document Check
+      case "police-stop":
+        return (
+          <div className="stickman-drama-large">
+            <DetailedBackground type="highway" />
+            <div className="absolute bottom-24 left-1/4">
+              <CarSVG />
+            </div>
+            <div className="absolute bottom-24 right-1/4">
+              <DetailedStickmanSVG type="police" />
+            </div>
+            <motion.div className="absolute bottom-32 left-1/2 -translate-x-1/2 text-6xl" animate={{ scale: [1, 1.2, 1] }} transition={{ duration: 1.5, repeat: Infinity }}>
+              📄🪪
+            </motion.div>
+            <motion.div className="absolute top-20 left-1/2 -translate-x-1/2 text-5xl" animate={{ y: [0, -10, 0] }} transition={{ duration: 2, repeat: Infinity }}>
+              ✅
+            </motion.div>
+            <SceneDescription text={description} />
+          </div>
+        )
+
+      // CRIMINAL LAW ANIMATIONS - ALL 12 LEVELS
+      // Level 1 & 2: Police Encounter and Arrest (already handled above in Fundamental Rights section)
+      
+      // Level 3: Informing Reason for Arrest
+      case "inform-reason-arrest":
+        return (
+          <div className="stickman-drama-large">
+            <DetailedBackground type="office" />
+            <div className="absolute bottom-24 left-1/4">
+              <DetailedStickmanSVG type="police" />
+            </div>
+            <div className="absolute bottom-24 right-1/4">
+              <motion.div animate={{ x: [-3, 3, -3] }} transition={{ duration: 0.5, repeat: Infinity }}>
+                <DetailedStickmanSVG type="scared" />
+              </motion.div>
+            </div>
+            <motion.div className="absolute top-20 left-1/2 -translate-x-1/2 text-6xl" animate={{ scale: [1, 1.2, 1] }} transition={{ duration: 1.5, repeat: Infinity }}>
+              📋❓
+            </motion.div>
+            <motion.div className="absolute bottom-32 left-1/2 -translate-x-1/2 text-5xl" animate={{ y: [0, -5, 0] }} transition={{ duration: 2, repeat: Infinity }}>
+              ⚖️
+            </motion.div>
+            <SceneDescription text={description} />
+          </div>
+        )
+
+      // Level 4: Right to Lawyer
+      case "right-to-lawyer":
+        return (
+          <div className="stickman-drama-large">
+            <DetailedBackground type="office" />
+            <div className="absolute bottom-24 left-1/4">
+              <DetailedStickmanSVG type="confident" />
+            </div>
+            <div className="absolute bottom-24 right-1/4">
+              <LawyerSVG />
+            </div>
+            <motion.div className="absolute top-20 left-1/2 -translate-x-1/2 text-6xl" animate={{ scale: [1, 1.2, 1] }} transition={{ duration: 1.5, repeat: Infinity }}>
+              👨‍⚖️📞
+            </motion.div>
+            <motion.div className="absolute bottom-32 left-1/2 -translate-x-1/2 bg-blue-600 text-white px-4 py-2 rounded-lg shadow-lg">
+              Right to Legal Counsel
+            </motion.div>
+            <SceneDescription text={description} />
+          </div>
+        )
+
+      // Level 5: Inform Relative
+      case "inform-relative":
+        return (
+          <div className="stickman-drama-large">
+            <DetailedBackground type="office" />
+            <div className="absolute bottom-24 left-1/4">
+              <DetailedStickmanSVG type="scared" />
+            </div>
+            <div className="absolute bottom-24 left-1/2 -translate-x-1/2">
+              <DetailedStickmanSVG type="police" />
+            </div>
+            <div className="absolute bottom-24 right-1/4">
+              <DetailedStickmanSVG type="citizen" />
+            </div>
+            <motion.div className="absolute top-20 left-1/2 -translate-x-1/2 text-7xl" animate={{ scale: [1, 1.3, 1] }} transition={{ duration: 1.5, repeat: Infinity }}>
+              📞👨‍👩‍👧
+            </motion.div>
+            <SceneDescription text={description} />
+          </div>
+        )
+
+      // Level 6: Right to Silence
+      case "right-to-silence":
+        return (
+          <div className="stickman-drama-large">
+            <DetailedBackground type="office" />
+            <div className="absolute bottom-24 left-1/4">
+              <DetailedStickmanSVG type="police" />
+            </div>
+            <div className="absolute bottom-24 right-1/4">
+              <DetailedStickmanSVG type="confident" />
+            </div>
+            <motion.div className="absolute top-20 left-1/2 -translate-x-1/2 text-8xl" animate={{ scale: [1, 1.3, 1] }} transition={{ duration: 1.5, repeat: Infinity }}>
+              🤐
+            </motion.div>
+            <motion.div className="absolute bottom-32 left-1/2 -translate-x-1/2 bg-blue-600 text-white px-4 py-2 rounded-lg shadow-lg">
+              Right to Remain Silent
+            </motion.div>
+            <SceneDescription text={description} />
+          </div>
+        )
+
+      // Level 7: Produce Before Magistrate (24h)
+      case "produce-magistrate":
+        return (
+          <div className="stickman-drama-large">
+            <DetailedBackground type="office" />
+            <div className="absolute bottom-24 left-1/4">
+              <DetailedStickmanSVG type="police" />
+            </div>
+            <div className="absolute bottom-24 left-1/2 -translate-x-1/2">
+              <motion.div animate={{ x: [-3, 3, -3] }} transition={{ duration: 0.5, repeat: Infinity }}>
+                <DetailedStickmanSVG type="scared" />
+              </motion.div>
+            </div>
+            <div className="absolute bottom-24 right-1/4">
+              <LawyerSVG />
+            </div>
+            <motion.div className="absolute top-16 left-1/2 -translate-x-1/2 text-7xl" animate={{ scale: [1, 1.2, 1] }} transition={{ duration: 1.5, repeat: Infinity }}>
+              ⏰24h
+            </motion.div>
+            <motion.div className="absolute top-28 left-1/2 -translate-x-1/2 text-5xl" animate={{ y: [0, -5, 0] }} transition={{ duration: 2, repeat: Infinity }}>
+              👨‍⚖️
+            </motion.div>
+            <SceneDescription text={description} />
+          </div>
+        )
+
+      // Level 8: Bailable Offence - Bail Right
+      case "bailable-bail":
+        return (
+          <div className="stickman-drama-large">
+            <DetailedBackground type="office" />
+            <div className="absolute bottom-24 left-1/4">
+              <DetailedStickmanSVG type="confident" />
+            </div>
+            <div className="absolute bottom-24 right-1/4">
+              <LawyerSVG />
+            </div>
+            <motion.div className="absolute top-20 left-1/2 -translate-x-1/2 text-7xl" animate={{ scale: [1, 1.3, 1] }} transition={{ duration: 1.5, repeat: Infinity }}>
+              💰🔓
+            </motion.div>
+            <motion.div className="absolute bottom-32 left-1/2 -translate-x-1/2 bg-green-600 text-white px-4 py-2 rounded-lg shadow-lg" animate={{ scale: [1, 1.1, 1] }} transition={{ duration: 2, repeat: Infinity }}>
+              ✅ Bail Granted
+            </motion.div>
+            <SceneDescription text={description} />
+          </div>
+        )
+
+      // Level 9: Handcuffing - Necessity Only
+      case "handcuffing":
+        return (
+          <div className="stickman-drama-large">
+            <DetailedBackground type="generic" />
+            <div className="absolute bottom-24 left-1/4">
+              <DetailedStickmanSVG type="police" />
+            </div>
+            <div className="absolute bottom-24 right-1/4">
+              <motion.div animate={{ x: [-2, 2, -2] }} transition={{ duration: 0.5, repeat: Infinity }}>
+                <DetailedStickmanSVG type="defeated" />
+              </motion.div>
+            </div>
+            <motion.div className="absolute bottom-32 left-1/2 -translate-x-1/2 text-7xl" animate={{ rotate: [0, 15, 0] }} transition={{ duration: 1.5, repeat: Infinity }}>
+              ⛓️
+            </motion.div>
+            <motion.div className="absolute top-20 left-1/2 -translate-x-1/2 text-6xl" animate={{ scale: [1, 1.3, 1] }} transition={{ duration: 1.5, repeat: Infinity }}>
+              ⚠️
+            </motion.div>
+            <SceneDescription text={description} />
+          </div>
+        )
+
+      // Level 10: Medical Exam to Document Torture
+      case "medical-exam":
+        return (
+          <div className="stickman-drama-large">
+            <DetailedBackground type="office" />
+            <div className="absolute bottom-24 left-1/3">
+              <motion.div animate={{ y: [-3, 3, -3] }} transition={{ duration: 1, repeat: Infinity }}>
+                <DetailedStickmanSVG type="defeated" />
+              </motion.div>
+            </div>
+            <div className="absolute bottom-24 right-1/3">
+              <svg width="60" height="80" viewBox="0 0 60 80">
+                <circle cx="30" cy="25" r="10" fill="#fbbf24" />
+                <line x1="30" y1="35" x2="30" y2="55" stroke="#374151" strokeWidth="3" />
+                <line x1="30" y1="40" x2="20" y2="50" stroke="#374151" strokeWidth="3" />
+                <line x1="30" y1="40" x2="40" y2="50" stroke="#374151" strokeWidth="3" />
+                <line x1="30" y1="55" x2="20" y2="75" stroke="#374151" strokeWidth="3" />
+                <line x1="30" y1="55" x2="40" y2="75" stroke="#374151" strokeWidth="3" />
+                <text x="30" y="28" textAnchor="middle" fontSize="12" fill="#fff">🩺</text>
+              </svg>
+            </div>
+            <motion.div className="absolute top-20 left-1/2 -translate-x-1/2 text-7xl" animate={{ scale: [1, 1.2, 1] }} transition={{ duration: 1.5, repeat: Infinity }}>
+              🏥📋
+            </motion.div>
+            <SceneDescription text={description} />
+          </div>
+        )
+
+      // Level 11: Section 41A Notice Before Arrest
+      case "section-41a-notice":
+        return (
+          <div className="stickman-drama-large">
+            <DetailedBackground type="office" />
+            <div className="absolute bottom-24 left-1/4">
+              <DetailedStickmanSVG type="police" />
+            </div>
+            <div className="absolute bottom-24 right-1/4">
+              <DetailedStickmanSVG type="thinking" />
+            </div>
+            <motion.div className="absolute top-16 left-1/2 -translate-x-1/2 text-7xl" animate={{ scale: [1, 1.2, 1], y: [0, -10, 0] }} transition={{ duration: 1.5, repeat: Infinity }}>
+              📨
+            </motion.div>
+            <motion.div className="absolute top-28 left-1/2 -translate-x-1/2 bg-blue-600 text-white px-4 py-2 rounded-lg shadow-lg text-sm">
+              Section 41A Notice
+            </motion.div>
+            <SceneDescription text={description} />
+          </div>
+        )
+
+      // Level 12: Forced Confession / Blank Papers
+      case "forced-confession":
+        return (
+          <div className="stickman-drama-large">
+            <DetailedBackground type="office" />
+            <div className="absolute bottom-24 left-1/4">
+              <DetailedStickmanSVG type="police" />
+            </div>
+            <div className="absolute bottom-24 right-1/4">
+              <motion.div animate={{ rotate: [-10, 10, -10], x: [-3, 3, -3] }} transition={{ duration: 0.5, repeat: Infinity }}>
+                <DetailedStickmanSVG type="scared" />
+              </motion.div>
+            </div>
+            <motion.div className="absolute top-20 left-1/2 -translate-x-1/2 text-7xl" animate={{ scale: [1, 1.4, 1] }} transition={{ duration: 1, repeat: Infinity }}>
+              📄✍️
+            </motion.div>
+            <motion.div className="absolute bottom-32 left-1/2 -translate-x-1/2 text-6xl" animate={{ rotate: [0, 360] }} transition={{ duration: 2, repeat: Infinity, ease: "linear" }}>
+              🚫
+            </motion.div>
+            <motion.div className="absolute top-12 left-1/2 -translate-x-1/2 bg-red-600 text-white px-4 py-2 rounded-lg shadow-lg">
+              ❌ Forced Confession Illegal
+            </motion.div>
+            <SceneDescription text={description} />
+          </div>
+        )
+
+      // CONSUMER RIGHTS ANIMATIONS - 10 LEVELS (shopping & restaurant already done above)
+      // Levels 3-12
+      case "ecommerce-defect":
+        return (
+          <div className="stickman-drama-large">
+            <DetailedBackground type="office" />
+            <motion.div className="absolute bottom-24 left-1/3 text-7xl" animate={{ rotate: [0, 15, 0] }} transition={{ duration: 1.5, repeat: Infinity }}>
+              📱❌
+            </motion.div>
+            <motion.div className="absolute top-20 left-1/4 text-6xl" animate={{ scale: [1, 1.3, 1] }} transition={{ duration: 1.5, repeat: Infinity }}>
+              📦
+            </motion.div>
+            <div className="absolute bottom-24 right-1/4">
+              <DetailedStickmanSVG type="defeated" />
+            </div>
+            <SceneDescription text={description} />
+          </div>
+        )
+
+      case "warranty-defect-store":
+      case "warranty-denial":
+        return (
+          <div className="stickman-drama-large">
+            <DetailedBackground type="office" />
+            <div className="absolute bottom-24 left-1/4">
+              <DetailedStickmanSVG type="confident" />
+            </div>
+            <motion.div className="absolute bottom-28 left-1/2 -translate-x-1/2 text-6xl" animate={{ scale: [1, 1.2, 1] }} transition={{ duration: 1.5, repeat: Infinity }}>
+              📃🔧
+            </motion.div>
+            <div className="absolute bottom-24 right-1/4">
+              <DetailedStickmanSVG type="thinking" />
+            </div>
+            <SceneDescription text={description} />
+          </div>
+        )
+
+      case "misleading-ad":
+        return (
+          <div className="stickman-drama-large">
+            <DetailedBackground type="generic" />
+            <motion.div className="absolute top-16 left-1/3 w-32 h-24 bg-yellow-300 rounded-lg border-4 border-yellow-500" animate={{ scale: [1, 1.1, 1] }} transition={{ duration: 1.5, repeat: Infinity }}>
+              <div className="text-center mt-4 text-2xl">📺✨</div>
+            </motion.div>
+            <motion.div className="absolute top-20 left-1/2 -translate-x-1/2 text-7xl" animate={{ rotate: [0, 360] }} transition={{ duration: 2, repeat: Infinity, ease: "linear" }}>
+              🚫
+            </motion.div>
+            <div className="absolute bottom-24 right-1/3">
+              <DetailedStickmanSVG type="defeated" />
+            </div>
+            <SceneDescription text={description} />
+          </div>
+        )
+
+      case "overcharge":
+        return (
+          <div className="stickman-drama-large">
+            <DetailedBackground type="office" />
+            <motion.div className="absolute bottom-24 left-1/3 text-7xl" animate={{ scale: [1, 1.3, 1] }} transition={{ duration: 1.5, repeat: Infinity }}>
+              💰💸
+            </motion.div>
+            <motion.div className="absolute top-20 left-1/2 -translate-x-1/2 text-6xl" animate={{ y: [0, -10, 0] }} transition={{ duration: 2, repeat: Infinity }}>
+              🧾📊
+            </motion.div>
+            <div className="absolute bottom-24 right-1/4">
+              <DetailedStickmanSVG type="scared" />
+            </div>
+            <SceneDescription text={description} />
+          </div>
+        )
+
+      case "online-coaching":
+      case "institute-closure":
+        return (
+          <div className="stickman-drama-large">
+            <DetailedBackground type="office" />
+            <motion.div className="absolute top-16 left-1/4 text-7xl" animate={{ opacity: [1, 0.3, 1] }} transition={{ duration: 2, repeat: Infinity }}>
+              🎓❌
+            </motion.div>
+            <motion.div className="absolute bottom-24 left-1/3 text-6xl" animate={{ rotate: [0, 15, 0] }} transition={{ duration: 1.5, repeat: Infinity }}>
+              💰💸
+            </motion.div>
+            <div className="absolute bottom-24 right-1/4">
+              <DetailedStickmanSVG type="defeated" />
+            </div>
+            <SceneDescription text={description} />
+          </div>
+        )
+
+      case "no-return":
+        return (
+          <div className="stickman-drama-large">
+            <DetailedBackground type="office" />
+            <motion.div className="absolute bottom-24 left-1/3 text-7xl" animate={{ rotate: [0, -15, 0] }} transition={{ duration: 1.5, repeat: Infinity }}>
+              👕📏
+            </motion.div>
+            <motion.div className="absolute top-20 left-1/2 -translate-x-1/2 text-7xl" animate={{ scale: [1, 1.3, 1] }} transition={{ duration: 1.5, repeat: Infinity }}>
+              🚫
+            </motion.div>
+            <div className="absolute bottom-24 right-1/4">
+              <DetailedStickmanSVG type="thinking" />
+            </div>
+            <SceneDescription text={description} />
+          </div>
+        )
+
+      case "digital-payment":
+        return (
+          <div className="stickman-drama-large">
+            <DetailedBackground type="office" />
+            <motion.div className="absolute bottom-24 left-1/3 text-7xl" animate={{ rotate: [0, -20, 0], scale: [1, 1.2, 1] }} transition={{ duration: 1.5, repeat: Infinity }}>
+              📱💳
+            </motion.div>
+            <motion.div className="absolute top-20 left-1/2 -translate-x-1/2 text-7xl" animate={{ scale: [1, 1.4, 1] }} transition={{ duration: 1, repeat: Infinity }}>
+              ❌
+            </motion.div>
+            <div className="absolute bottom-24 right-1/4">
+              <DetailedStickmanSVG type="scared" />
+            </div>
+            <SceneDescription text={description} />
+          </div>
+        )
+
+      case "food-safety":
+        return (
+          <div className="stickman-drama-large">
+            <DetailedBackground type="office" />
+            <motion.div className="absolute bottom-24 left-1/3 text-7xl" animate={{ scale: [1, 1.2, 1] }} transition={{ duration: 1.5, repeat: Infinity }}>
+              🍔🤢
+            </motion.div>
+            <motion.div className="absolute top-20 left-1/2 -translate-x-1/2 text-6xl" animate={{ y: [0, 10, 0] }} transition={{ duration: 2, repeat: Infinity }}>
+              ⚠️🏥
+            </motion.div>
+            <div className="absolute bottom-24 right-1/4">
+              <motion.div animate={{ x: [-3, 3, -3] }} transition={{ duration: 0.5, repeat: Infinity }}>
+                <DetailedStickmanSVG type="defeated" />
+              </motion.div>
+            </div>
+            <SceneDescription text={description} />
+          </div>
+        )
+
+      // CYBER LAWS ANIMATIONS - 10 LEVELS
+      case "phishing":
+        return (
+          <div className="stickman-drama-large">
+            <DetailedBackground type="generic" />
+            <motion.div className="absolute bottom-24 left-1/3 text-7xl" animate={{ rotate: [0, -15, 0] }} transition={{ duration: 1.5, repeat: Infinity }}>
+              📧🎣
+            </motion.div>
+            <motion.div className="absolute top-20 left-1/2 -translate-x-1/2 text-7xl" animate={{ scale: [1, 1.4, 1] }} transition={{ duration: 1, repeat: Infinity }}>
+              ⚠️
+            </motion.div>
+            <div className="absolute bottom-24 right-1/4">
+              <DetailedStickmanSVG type="scared" />
+            </div>
+            <SceneDescription text={description} />
+          </div>
+        )
+
+      case "hacking":
+        return (
+          <div className="stickman-drama-large">
+            <DetailedBackground type="generic" />
+            <motion.div className="absolute bottom-24 left-1/3 text-7xl" animate={{ scale: [1, 1.3, 1] }} transition={{ duration: 1, repeat: Infinity }}>
+              💻🔓
+            </motion.div>
+            <motion.div className="absolute top-20 left-1/2 -translate-x-1/2 text-7xl" animate={{ rotate: [0, 360] }} transition={{ duration: 2, repeat: Infinity, ease: "linear" }}>
+              🚨
+            </motion.div>
+            <div className="absolute bottom-24 right-1/4">
+              <DetailedStickmanSVG type="police" />
+            </div>
+            <SceneDescription text={description} />
+          </div>
+        )
+
+      case "online-harassment":
+        return (
+          <div className="stickman-drama-large">
+            <DetailedBackground type="generic" />
+            <motion.div className="absolute bottom-24 left-1/3 text-7xl" animate={{ y: [0, 10, 0] }} transition={{ duration: 2, repeat: Infinity }}>
+              📱💬
+            </motion.div>
+            <motion.div className="absolute top-20 left-1/2 -translate-x-1/2 text-7xl" animate={{ scale: [1, 1.3, 1] }} transition={{ duration: 1.5, repeat: Infinity }}>
+              😭💔
+            </motion.div>
+            <div className="absolute bottom-24 right-1/4">
+              <motion.div animate={{ x: [-3, 3, -3] }} transition={{ duration: 0.5, repeat: Infinity }}>
+                <DetailedStickmanSVG type="defeated" />
+              </motion.div>
+            </div>
+            <SceneDescription text={description} />
+          </div>
+        )
+
+      case "data-theft":
+        return (
+          <div className="stickman-drama-large">
+            <DetailedBackground type="generic" />
+            <motion.div className="absolute bottom-24 left-1/3 text-7xl" animate={{ x: [0, 50, 100], opacity: [1, 0.5, 0] }} transition={{ duration: 2, repeat: Infinity }}>
+              📂💾
+            </motion.div>
+            <motion.div className="absolute top-20 left-1/2 -translate-x-1/2 text-7xl" animate={{ scale: [1, 1.4, 1] }} transition={{ duration: 1, repeat: Infinity }}>
+              🚫
+            </motion.div>
+            <div className="absolute bottom-24 right-1/4">
+              <DetailedStickmanSVG type="scared" />
+            </div>
+            <SceneDescription text={description} />
+          </div>
+        )
+
+      case "identity-theft":
+        return (
+          <div className="stickman-drama-large">
+            <DetailedBackground type="generic" />
+            <motion.div className="absolute bottom-24 left-1/3 text-7xl" animate={{ rotate: [0, 360] }} transition={{ duration: 3, repeat: Infinity, ease: "linear" }}>
+              🎭
+            </motion.div>
+            <motion.div className="absolute top-20 left-1/2 -translate-x-1/2 text-7xl" animate={{ scale: [1, 1.3, 1] }} transition={{ duration: 1.5, repeat: Infinity }}>
+              🪪❌
+            </motion.div>
+            <div className="absolute bottom-24 right-1/4">
+              <DetailedStickmanSVG type="defeated" />
+            </div>
+            <SceneDescription text={description} />
+          </div>
+        )
+
+      case "online-fraud":
+        return (
+          <div className="stickman-drama-large">
+            <DetailedBackground type="generic" />
+            <motion.div className="absolute bottom-24 left-1/3 text-7xl" animate={{ scale: [1, 1.3, 1] }} transition={{ duration: 1.5, repeat: Infinity }}>
+              💰💸
+            </motion.div>
+            <motion.div className="absolute top-20 left-1/2 -translate-x-1/2 text-7xl" animate={{ y: [0, -10, 0] }} transition={{ duration: 2, repeat: Infinity }}>
+              🎯🚫
+            </motion.div>
+            <div className="absolute bottom-24 right-1/4">
+              <DetailedStickmanSVG type="scared" />
+            </div>
+            <SceneDescription text={description} />
+          </div>
+        )
+
+      case "cyberbullying":
+        return (
+          <div className="stickman-drama-large">
+            <DetailedBackground type="generic" />
+            <motion.div className="absolute bottom-24 left-1/3 text-7xl" animate={{ scale: [1, 1.2, 1] }} transition={{ duration: 1, repeat: Infinity }}>
+              📱😢
+            </motion.div>
+            <motion.div className="absolute top-20 left-1/2 -translate-x-1/2 text-7xl" animate={{ rotate: [0, 10, 0] }} transition={{ duration: 1.5, repeat: Infinity }}>
+              💬💔
+            </motion.div>
+            <div className="absolute bottom-24 right-1/4">
+              <motion.div animate={{ y: [-3, 3, -3] }} transition={{ duration: 1, repeat: Infinity }}>
+                <DetailedStickmanSVG type="defeated" />
+              </motion.div>
+            </div>
+            <SceneDescription text={description} />
+          </div>
+        )
+
+      case "fake-profile":
+        return (
+          <div className="stickman-drama-large">
+            <DetailedBackground type="generic" />
+            <motion.div className="absolute bottom-24 left-1/3 text-7xl" animate={{ rotate: [0, 180, 360] }} transition={{ duration: 3, repeat: Infinity }}>
+              👤❌
+            </motion.div>
+            <motion.div className="absolute top-20 left-1/2 -translate-x-1/2 text-7xl" animate={{ scale: [1, 1.3, 1] }} transition={{ duration: 1.5, repeat: Infinity }}>
+              🎭🚫
+            </motion.div>
+            <div className="absolute bottom-24 right-1/4">
+              <DetailedStickmanSVG type="thinking" />
+            </div>
+            <SceneDescription text={description} />
+          </div>
+        )
+
+      case "copyright-infringement":
+        return (
+          <div className="stickman-drama-large">
+            <DetailedBackground type="generic" />
+            <motion.div className="absolute bottom-24 left-1/3 text-7xl" animate={{ scale: [1, 1.2, 1] }} transition={{ duration: 1.5, repeat: Infinity }}>
+              ©️🚫
+            </motion.div>
+            <motion.div className="absolute top-20 left-1/2 -translate-x-1/2 text-7xl" animate={{ rotate: [0, 360] }} transition={{ duration: 2, repeat: Infinity, ease: "linear" }}>
+              ⚖️
+            </motion.div>
+            <div className="absolute bottom-24 right-1/4">
+              <DetailedStickmanSVG type="police" />
+            </div>
+            <SceneDescription text={description} />
+          </div>
+        )
+
+      case "unauthorized-access":
+        return (
+          <div className="stickman-drama-large">
+            <DetailedBackground type="generic" />
+            <motion.div className="absolute bottom-24 left-1/3 text-7xl" animate={{ x: [-10, 10, -10] }} transition={{ duration: 1, repeat: Infinity }}>
+              🔒💻
+            </motion.div>
+            <motion.div className="absolute top-20 left-1/2 -translate-x-1/2 text-7xl" animate={{ scale: [1, 1.4, 1] }} transition={{ duration: 1, repeat: Infinity }}>
+              🚨
+            </motion.div>
+            <div className="absolute bottom-24 right-1/4">
+              <DetailedStickmanSVG type="police" />
+            </div>
+            <SceneDescription text={description} />
+          </div>
+        )
+
+      // EMPLOYMENT LAWS - 10 LEVELS
+      case "hiring-discrimination":
+        return (
+          <div className="stickman-drama-large">
+            <DetailedBackground type="office" />
+            <div className="absolute bottom-24 left-1/4"><DetailedStickmanSVG type="defeated" /></div>
+            <motion.div className="absolute top-20 left-1/2 -translate-x-1/2 text-7xl" animate={{ rotate: [0, 360] }} transition={{ duration: 2, repeat: Infinity, ease: "linear" }}>🚫</motion.div>
+            <div className="absolute bottom-24 right-1/4"><DetailedStickmanSVG type="thinking" /></div>
+            <SceneDescription text={description} />
+          </div>
+        )
+      case "minimum-wage":
+        return (
+          <div className="stickman-drama-large">
+            <DetailedBackground type="office" />
+            <motion.div className="absolute bottom-24 left-1/3 text-7xl" animate={{ scale: [1, 1.3, 1] }} transition={{ duration: 1.5, repeat: Infinity }}>💰📉</motion.div>
+            <div className="absolute bottom-24 right-1/4"><DetailedStickmanSVG type="defeated" /></div>
+            <SceneDescription text={description} />
+          </div>
+        )
+      case "wrongful-termination":
+        return (
+          <div className="stickman-drama-large">
+            <DetailedBackground type="office" />
+            <div className="absolute bottom-24 left-1/4"><DetailedStickmanSVG type="scared" /></div>
+            <motion.div className="absolute top-20 left-1/2 -translate-x-1/2 text-7xl" animate={{ scale: [1, 1.4, 1] }} transition={{ duration: 1, repeat: Infinity }}>📄❌</motion.div>
+            <div className="absolute bottom-24 right-1/4"><LawyerSVG /></div>
+            <SceneDescription text={description} />
+          </div>
+        )
+      case "workplace-harassment":
+        return (
+          <div className="stickman-drama-large">
+            <DetailedBackground type="office" />
+            <div className="absolute bottom-24 left-1/4"><motion.div animate={{ x: [-3, 3, -3] }} transition={{ duration: 0.5, repeat: Infinity }}><DetailedStickmanSVG type="defeated" /></motion.div></div>
+            <motion.div className="absolute top-20 left-1/2 -translate-x-1/2 text-7xl" animate={{ scale: [1, 1.3, 1] }} transition={{ duration: 1.5, repeat: Infinity }}>😢💔</motion.div>
+            <SceneDescription text={description} />
+          </div>
+        )
+      case "overtime-pay":
+        return (
+          <div className="stickman-drama-large">
+            <DetailedBackground type="office" />
+            <motion.div className="absolute bottom-24 left-1/3 text-7xl" animate={{ rotate: [0, 360] }} transition={{ duration: 3, repeat: Infinity, ease: "linear" }}>⏰</motion.div>
+            <motion.div className="absolute top-20 left-1/2 -translate-x-1/2 text-6xl" animate={{ scale: [1, 1.3, 1] }} transition={{ duration: 1.5, repeat: Infinity }}>💰➕</motion.div>
+            <SceneDescription text={description} />
+          </div>
+        )
+      case "maternity-leave":
+        return (
+          <div className="stickman-drama-large">
+            <DetailedBackground type="office" />
+            <motion.div className="absolute bottom-24 left-1/3 text-7xl" animate={{ scale: [1, 1.2, 1] }} transition={{ duration: 2, repeat: Infinity }}>👶🤱</motion.div>
+            <div className="absolute bottom-24 right-1/4"><DetailedStickmanSVG type="confident" /></div>
+            <SceneDescription text={description} />
+          </div>
+        )
+      case "workplace-safety":
+        return (
+          <div className="stickman-drama-large">
+            <DetailedBackground type="generic" />
+            <motion.div className="absolute bottom-24 left-1/3 text-7xl" animate={{ scale: [1, 1.3, 1] }} transition={{ duration: 1, repeat: Infinity }}>⚠️🏗️</motion.div>
+            <div className="absolute bottom-24 right-1/4"><DetailedStickmanSVG type="defeated" /></div>
+            <SceneDescription text={description} />
+          </div>
+        )
+      case "equal-pay":
+        return (
+          <div className="stickman-drama-large">
+            <DetailedBackground type="office" />
+            <div className="absolute bottom-24 left-1/4"><DetailedStickmanSVG type="confident" /></div>
+            <motion.div className="absolute bottom-28 left-1/2 -translate-x-1/2 text-7xl" animate={{ scale: [1, 1.2, 1] }} transition={{ duration: 1.5, repeat: Infinity }}>💰⚖️</motion.div>
+            <div className="absolute bottom-24 right-1/4"><DetailedStickmanSVG type="citizen" /></div>
+            <SceneDescription text={description} />
+          </div>
+        )
+      case "contract-worker":
+        return (
+          <div className="stickman-drama-large">
+            <DetailedBackground type="office" />
+            <motion.div className="absolute bottom-24 left-1/3 text-7xl" animate={{ rotate: [0, 10, 0] }} transition={{ duration: 1.5, repeat: Infinity }}>📄✍️</motion.div>
+            <div className="absolute bottom-24 right-1/4"><DetailedStickmanSVG type="thinking" /></div>
+            <SceneDescription text={description} />
+          </div>
+        )
+      case "union-rights":
+        return (
+          <div className="stickman-drama-large">
+            <DetailedBackground type="office" />
+            <div className="absolute bottom-24 left-1/4"><DetailedStickmanSVG type="confident" /></div>
+            <div className="absolute bottom-24 left-1/2 -translate-x-1/2"><DetailedStickmanSVG type="confident" /></div>
+            <div className="absolute bottom-24 right-1/4"><DetailedStickmanSVG type="confident" /></div>
+            <motion.div className="absolute top-20 left-1/2 -translate-x-1/2 text-7xl" animate={{ scale: [1, 1.2, 1] }} transition={{ duration: 1.5, repeat: Infinity }}>🤝✊</motion.div>
+            <SceneDescription text={description} />
+          </div>
+        )
+
+      // HUMAN RIGHTS - 8 LEVELS
+      case "hr-gender-job-discrimination":
+        return (
+          <div className="stickman-drama-large">
+            <DetailedBackground type="office" />
+            <div className="absolute bottom-24 left-1/4"><DetailedStickmanSVG type="defeated" /></div>
+            <motion.div className="absolute top-20 left-1/2 -translate-x-1/2 text-7xl" animate={{ rotate: [0, 360] }} transition={{ duration: 2, repeat: Infinity, ease: "linear" }}>🚫</motion.div>
+            <motion.div className="absolute bottom-28 right-1/4 text-6xl" animate={{ scale: [1, 1.3, 1] }} transition={{ duration: 1.5, repeat: Infinity }}>👩⚖️</motion.div>
+            <SceneDescription text={description} />
+          </div>
+        )
+      case "hr-right-to-education":
+        return (
+          <div className="stickman-drama-large">
+            <DetailedBackground type="generic" />
+            <motion.div className="absolute bottom-24 left-1/3 text-7xl" animate={{ scale: [1, 1.2, 1] }} transition={{ duration: 2, repeat: Infinity }}>📚🎓</motion.div>
+            <div className="absolute bottom-24 right-1/4"><DetailedStickmanSVG type="confident" /></div>
+            <SceneDescription text={description} />
+          </div>
+        )
+      case "hr-freedom-expression":
+        return (
+          <div className="stickman-drama-large">
+            <DetailedBackground type="office" />
+            <div className="absolute bottom-24 left-1/4"><DetailedStickmanSVG type="confident" /></div>
+            <motion.div className="absolute top-20 left-1/2 -translate-x-1/2 text-7xl" animate={{ scale: [1, 1.3, 1] }} transition={{ duration: 1.5, repeat: Infinity }}>💬📢</motion.div>
+            <div className="absolute bottom-24 right-1/4"><DetailedStickmanSVG type="police" /></div>
+            <SceneDescription text={description} />
+          </div>
+        )
+      case "hr-forced-displacement":
+        return (
+          <div className="stickman-drama-large">
+            <DetailedBackground type="generic" />
+            <motion.div className="absolute bottom-24 left-1/3" animate={{ x: [0, 100, 200], opacity: [1, 0.5, 0] }} transition={{ duration: 3, repeat: Infinity }}><DetailedStickmanSVG type="scared" /></motion.div>
+            <motion.div className="absolute top-20 left-1/2 -translate-x-1/2 text-7xl" animate={{ scale: [1, 1.3, 1] }} transition={{ duration: 1.5, repeat: Infinity }}>🏠💔</motion.div>
+            <SceneDescription text={description} />
+          </div>
+        )
+      case "hr-torture":
+        return (
+          <div className="stickman-drama-large">
+            <DetailedBackground type="generic" />
+            <div className="absolute bottom-24 left-1/4"><DetailedStickmanSVG type="police" /></div>
+            <div className="absolute bottom-24 right-1/4"><motion.div animate={{ rotate: [-15, 15, -15], x: [-3, 3, -3] }} transition={{ duration: 0.5, repeat: Infinity }}><DetailedStickmanSVG type="defeated" /></motion.div></div>
+            <motion.div className="absolute top-20 left-1/2 -translate-x-1/2 text-7xl" animate={{ scale: [1, 1.4, 1] }} transition={{ duration: 1, repeat: Infinity }}>🚫💔</motion.div>
+            <SceneDescription text={description} />
+          </div>
+        )
+      case "hr-fair-trial":
+        return (
+          <div className="stickman-drama-large">
+            <DetailedBackground type="office" />
+            <div className="absolute bottom-24 left-1/4"><DetailedStickmanSVG type="confident" /></div>
+            <div className="absolute bottom-24 right-1/4"><LawyerSVG /></div>
+            <motion.div className="absolute top-20 left-1/2 -translate-x-1/2 text-7xl" animate={{ scale: [1, 1.2, 1] }} transition={{ duration: 1.5, repeat: Infinity }}>⚖️👨‍⚖️</motion.div>
+            <SceneDescription text={description} />
+          </div>
+        )
+      case "hr-privacy":
+        return (
+          <div className="stickman-drama-large">
+            <DetailedBackground type="generic" />
+            <motion.div className="absolute bottom-24 left-1/3 text-7xl" animate={{ scale: [1, 1.3, 1] }} transition={{ duration: 1.5, repeat: Infinity }}>🔒🏠</motion.div>
+            <div className="absolute bottom-24 right-1/4"><DetailedStickmanSVG type="confident" /></div>
+            <SceneDescription text={description} />
+          </div>
+        )
+      case "hr-assembly":
+        return (
+          <div className="stickman-drama-large">
+            <DetailedBackground type="generic" />
+            <div className="absolute bottom-24 left-1/4"><DetailedStickmanSVG type="confident" /></div>
+            <div className="absolute bottom-24 left-1/2 -translate-x-1/2"><DetailedStickmanSVG type="confident" /></div>
+            <div className="absolute bottom-24 right-1/4"><DetailedStickmanSVG type="confident" /></div>
+            <motion.div className="absolute top-20 left-1/2 -translate-x-1/2 text-7xl" animate={{ scale: [1, 1.2, 1] }} transition={{ duration: 1.5, repeat: Infinity }}>👥📢</motion.div>
+            <SceneDescription text={description} />
+          </div>
+        )
+
+      // WOMEN'S RIGHTS - 8 LEVELS
+      case "domestic-violence":
+        return (
+          <div className="stickman-drama-large">
+            <DetailedBackground type="generic" />
+            <div className="absolute bottom-24 left-1/4"><motion.div animate={{ rotate: [-10, 10, -10], x: [-3, 3, -3] }} transition={{ duration: 0.5, repeat: Infinity }}><DetailedStickmanSVG type="defeated" /></motion.div></div>
+            <motion.div className="absolute top-20 left-1/2 -translate-x-1/2 text-7xl" animate={{ scale: [1, 1.4, 1] }} transition={{ duration: 1, repeat: Infinity }}>🚫💔</motion.div>
+            <div className="absolute bottom-24 right-1/4"><DetailedStickmanSVG type="police" /></div>
+            <SceneDescription text={description} />
+          </div>
+        )
+      case "dowry":
+        return (
+          <div className="stickman-drama-large">
+            <DetailedBackground type="generic" />
+            <motion.div className="absolute bottom-24 left-1/3 text-7xl" animate={{ scale: [1, 1.3, 1] }} transition={{ duration: 1.5, repeat: Infinity }}>💰🚫</motion.div>
+            <div className="absolute bottom-24 right-1/4"><DetailedStickmanSVG type="defeated" /></div>
+            <SceneDescription text={description} />
+          </div>
+        )
+      case "sexual-harassment":
+        return (
+          <div className="stickman-drama-large">
+            <DetailedBackground type="office" />
+            <div className="absolute bottom-24 left-1/4"><motion.div animate={{ x: [-3, 3, -3] }} transition={{ duration: 0.5, repeat: Infinity }}><DetailedStickmanSVG type="scared" /></motion.div></div>
+            <motion.div className="absolute top-20 left-1/2 -translate-x-1/2 text-7xl" animate={{ scale: [1, 1.3, 1] }} transition={{ duration: 1.5, repeat: Infinity }}>🚫💔</motion.div>
+            <div className="absolute bottom-24 right-1/4"><LawyerSVG /></div>
+            <SceneDescription text={description} />
+          </div>
+        )
+      case "property-rights":
+        return (
+          <div className="stickman-drama-large">
+            <DetailedBackground type="generic" />
+            <div className="absolute bottom-24 left-1/4"><DetailedStickmanSVG type="confident" /></div>
+            <motion.div className="absolute top-20 left-1/2 -translate-x-1/2 text-7xl" animate={{ scale: [1, 1.2, 1] }} transition={{ duration: 1.5, repeat: Infinity }}>🏠⚖️</motion.div>
+            <div className="absolute bottom-24 right-1/4"><LawyerSVG /></div>
+            <SceneDescription text={description} />
+          </div>
+        )
+      case "workplace-discrimination":
+        return (
+          <div className="stickman-drama-large">
+            <DetailedBackground type="office" />
+            <div className="absolute bottom-24 left-1/4"><DetailedStickmanSVG type="defeated" /></div>
+            <motion.div className="absolute top-20 left-1/2 -translate-x-1/2 text-7xl" animate={{ rotate: [0, 360] }} transition={{ duration: 2, repeat: Infinity, ease: "linear" }}>🚫</motion.div>
+            <motion.div className="absolute bottom-28 right-1/4 text-6xl" animate={{ scale: [1, 1.3, 1] }} transition={{ duration: 1.5, repeat: Infinity }}>💼⚖️</motion.div>
+            <SceneDescription text={description} />
+          </div>
+        )
+      case "reproductive-rights":
+        return (
+          <div className="stickman-drama-large">
+            <DetailedBackground type="office" />
+            <div className="absolute bottom-24 left-1/3"><DetailedStickmanSVG type="confident" /></div>
+            <motion.div className="absolute top-20 left-1/2 -translate-x-1/2 text-7xl" animate={{ scale: [1, 1.2, 1] }} transition={{ duration: 2, repeat: Infinity }}>🏥✅</motion.div>
+            <SceneDescription text={description} />
+          </div>
+        )
+      case "education-girls":
+        return (
+          <div className="stickman-drama-large">
+            <DetailedBackground type="office" />
+            <motion.div className="absolute bottom-24 left-1/3 text-7xl" animate={{ scale: [1, 1.2, 1] }} transition={{ duration: 2, repeat: Infinity }}>👧📚</motion.div>
+            <div className="absolute bottom-24 right-1/4"><DetailedStickmanSVG type="confident" /></div>
+            <SceneDescription text={description} />
+          </div>
+        )
+      case "legal-age-marriage":
+        return (
+          <div className="stickman-drama-large">
+            <DetailedBackground type="generic" />
+            <motion.div className="absolute bottom-24 left-1/3 text-7xl" animate={{ scale: [1, 1.2, 1] }} transition={{ duration: 1.5, repeat: Infinity }}>👧💍</motion.div>
+            <motion.div className="absolute top-20 left-1/2 -translate-x-1/2 text-7xl" animate={{ rotate: [0, 360] }} transition={{ duration: 2, repeat: Infinity, ease: "linear" }}>🚫</motion.div>
+            <div className="absolute bottom-24 right-1/4"><DetailedStickmanSVG type="police" /></div>
+            <SceneDescription text={description} />
+          </div>
+        )
+
+      // CHILD RIGHTS - 10 LEVELS
+      case "child-labor":
+        return (
+          <div className="stickman-drama-large">
+            <DetailedBackground type="generic" />
+            <motion.div className="absolute bottom-24 left-1/3 text-7xl" animate={{ x: [-5, 5, -5], y: [-3, 3, -3] }} transition={{ duration: 1, repeat: Infinity }}>👶🏭</motion.div>
+            <motion.div className="absolute top-20 left-1/2 -translate-x-1/2 text-7xl" animate={{ rotate: [0, 360] }} transition={{ duration: 2, repeat: Infinity, ease: "linear" }}>🚫</motion.div>
+            <div className="absolute bottom-24 right-1/4"><DetailedStickmanSVG type="police" /></div>
+            <SceneDescription text={description} />
+          </div>
+        )
+      case "child-education":
+        return (
+          <div className="stickman-drama-large">
+            <DetailedBackground type="office" />
+            <motion.div className="absolute bottom-24 left-1/3 text-7xl" animate={{ scale: [1, 1.2, 1] }} transition={{ duration: 2, repeat: Infinity }}>👦📚</motion.div>
+            <div className="absolute bottom-24 right-1/4"><DetailedStickmanSVG type="confident" /></div>
+            <SceneDescription text={description} />
+          </div>
+        )
+      case "child-abuse":
+        return (
+          <div className="stickman-drama-large">
+            <DetailedBackground type="generic" />
+            <div className="absolute bottom-24 left-1/4"><motion.div animate={{ rotate: [-15, 15, -15], x: [-3, 3, -3] }} transition={{ duration: 0.5, repeat: Infinity }}><DetailedStickmanSVG type="defeated" /></motion.div></div>
+            <motion.div className="absolute top-20 left-1/2 -translate-x-1/2 text-7xl" animate={{ scale: [1, 1.4, 1] }} transition={{ duration: 1, repeat: Infinity }}>👶💔</motion.div>
+            <div className="absolute bottom-24 right-1/4"><DetailedStickmanSVG type="police" /></div>
+            <SceneDescription text={description} />
+          </div>
+        )
+      case "child-marriage":
+        return (
+          <div className="stickman-drama-large">
+            <DetailedBackground type="generic" />
+            <motion.div className="absolute bottom-24 left-1/3 text-7xl" animate={{ scale: [1, 1.2, 1] }} transition={{ duration: 1.5, repeat: Infinity }}>👧💍</motion.div>
+            <motion.div className="absolute top-20 left-1/2 -translate-x-1/2 text-7xl" animate={{ rotate: [0, 360] }} transition={{ duration: 2, repeat: Infinity, ease: "linear" }}>🚫</motion.div>
+            <div className="absolute bottom-24 right-1/4"><DetailedStickmanSVG type="police" /></div>
+            <SceneDescription text={description} />
+          </div>
+        )
+      case "child-trafficking":
+        return (
+          <div className="stickman-drama-large">
+            <DetailedBackground type="generic" />
+            <motion.div className="absolute bottom-24 left-1/3 text-7xl" animate={{ x: [0, 100, 200], opacity: [1, 0.5, 0] }} transition={{ duration: 3, repeat: Infinity }}>👶😢</motion.div>
+            <motion.div className="absolute top-20 left-1/2 -translate-x-1/2 text-7xl" animate={{ scale: [1, 1.4, 1] }} transition={{ duration: 1, repeat: Infinity }}>🚨</motion.div>
+            <div className="absolute bottom-24 right-1/4"><DetailedStickmanSVG type="police" /></div>
+            <SceneDescription text={description} />
+          </div>
+        )
+      case "child-health":
+        return (
+          <div className="stickman-drama-large">
+            <DetailedBackground type="office" />
+            <motion.div className="absolute bottom-24 left-1/3 text-7xl" animate={{ scale: [1, 1.2, 1] }} transition={{ duration: 2, repeat: Infinity }}>👶🏥</motion.div>
+            <div className="absolute bottom-24 right-1/4"><DetailedStickmanSVG type="confident" /></div>
+            <SceneDescription text={description} />
+          </div>
+        )
+      case "child-adoption":
+        return (
+          <div className="stickman-drama-large">
+            <DetailedBackground type="office" />
+            <motion.div className="absolute bottom-24 left-1/3 text-7xl" animate={{ scale: [1, 1.2, 1] }} transition={{ duration: 2, repeat: Infinity }}>👶👨‍👩‍👧</motion.div>
+            <motion.div className="absolute top-20 left-1/2 -translate-x-1/2 text-6xl" animate={{ y: [0, -10, 0] }} transition={{ duration: 2, repeat: Infinity }}>⚖️✅</motion.div>
+            <SceneDescription text={description} />
+          </div>
+        )
+      case "child-pornography":
+        return (
+          <div className="stickman-drama-large">
+            <DetailedBackground type="generic" />
+            <motion.div className="absolute bottom-24 left-1/3 text-7xl" animate={{ scale: [1, 1.3, 1] }} transition={{ duration: 1, repeat: Infinity }}>📱❌</motion.div>
+            <motion.div className="absolute top-20 left-1/2 -translate-x-1/2 text-7xl" animate={{ rotate: [0, 360] }} transition={{ duration: 2, repeat: Infinity, ease: "linear" }}>🚨</motion.div>
+            <div className="absolute bottom-24 right-1/4"><DetailedStickmanSVG type="police" /></div>
+            <SceneDescription text={description} />
+          </div>
+        )
+      case "child-custody":
+        return (
+          <div className="stickman-drama-large">
+            <DetailedBackground type="office" />
+            <div className="absolute bottom-24 left-1/4"><DetailedStickmanSVG type="thinking" /></div>
+            <motion.div className="absolute bottom-28 left-1/2 -translate-x-1/2 text-7xl" animate={{ scale: [1, 1.2, 1] }} transition={{ duration: 1.5, repeat: Infinity }}>👶⚖️</motion.div>
+            <div className="absolute bottom-24 right-1/4"><LawyerSVG /></div>
+            <SceneDescription text={description} />
+          </div>
+        )
+      case "child-neglect":
+        return (
+          <div className="stickman-drama-large">
+            <DetailedBackground type="generic" />
+            <motion.div className="absolute bottom-24 left-1/3 text-7xl" animate={{ y: [-3, 3, -3] }} transition={{ duration: 1, repeat: Infinity }}>👶😢</motion.div>
+            <motion.div className="absolute top-20 left-1/2 -translate-x-1/2 text-7xl" animate={{ scale: [1, 1.3, 1] }} transition={{ duration: 1.5, repeat: Infinity }}>⚠️</motion.div>
+            <div className="absolute bottom-24 right-1/4"><DetailedStickmanSVG type="police" /></div>
+            <SceneDescription text={description} />
+          </div>
+        )
+
+      // FAMILY & MARRIAGE LAWS - 10 LEVELS
+      case "fm-marriage-registration":
+        return (
+          <div className="stickman-drama-large">
+            <DetailedBackground type="office" />
+            <motion.div className="absolute bottom-24 left-1/3 text-7xl" animate={{ scale: [1, 1.2, 1] }} transition={{ duration: 2, repeat: Infinity }}>💑📝</motion.div>
+            <motion.div className="absolute top-20 left-1/2 -translate-x-1/2 text-6xl" animate={{ y: [0, -10, 0] }} transition={{ duration: 2, repeat: Infinity }}>✅</motion.div>
+            <SceneDescription text={description} />
+          </div>
+        )
+      case "fm-divorce":
+        return (
+          <div className="stickman-drama-large">
+            <DetailedBackground type="office" />
+            <div className="absolute bottom-24 left-1/4"><DetailedStickmanSVG type="defeated" /></div>
+            <motion.div className="absolute bottom-28 left-1/2 -translate-x-1/2 text-7xl" animate={{ scale: [1, 1.2, 1] }} transition={{ duration: 1.5, repeat: Infinity }}>💔⚖️</motion.div>
+            <div className="absolute bottom-24 right-1/4"><LawyerSVG /></div>
+            <SceneDescription text={description} />
+          </div>
+        )
+      case "fm-maintenance":
+        return (
+          <div className="stickman-drama-large">
+            <DetailedBackground type="office" />
+            <div className="absolute bottom-24 left-1/4"><DetailedStickmanSVG type="confident" /></div>
+            <motion.div className="absolute top-20 left-1/2 -translate-x-1/2 text-7xl" animate={{ scale: [1, 1.3, 1] }} transition={{ duration: 1.5, repeat: Infinity }}>💰👶</motion.div>
+            <div className="absolute bottom-24 right-1/4"><LawyerSVG /></div>
+            <SceneDescription text={description} />
+          </div>
+        )
+      case "fm-custody":
+        return (
+          <div className="stickman-drama-large">
+            <DetailedBackground type="office" />
+            <div className="absolute bottom-24 left-1/4"><DetailedStickmanSVG type="thinking" /></div>
+            <motion.div className="absolute bottom-28 left-1/2 -translate-x-1/2 text-7xl" animate={{ scale: [1, 1.2, 1] }} transition={{ duration: 1.5, repeat: Infinity }}>👶⚖️</motion.div>
+            <div className="absolute bottom-24 right-1/4"><DetailedStickmanSVG type="thinking" /></div>
+            <SceneDescription text={description} />
+          </div>
+        )
+      case "fm-adoption":
+        return (
+          <div className="stickman-drama-large">
+            <DetailedBackground type="office" />
+            <motion.div className="absolute bottom-24 left-1/3 text-7xl" animate={{ scale: [1, 1.2, 1] }} transition={{ duration: 2, repeat: Infinity }}>👶👨‍👩‍👧</motion.div>
+            <motion.div className="absolute top-20 left-1/2 -translate-x-1/2 text-6xl" animate={{ y: [0, -10, 0] }} transition={{ duration: 2, repeat: Infinity }}>💕✅</motion.div>
+            <SceneDescription text={description} />
+          </div>
+        )
+      case "fm-property-inheritance":
+        return (
+          <div className="stickman-drama-large">
+            <DetailedBackground type="generic" />
+            <div className="absolute bottom-24 left-1/4"><DetailedStickmanSVG type="thinking" /></div>
+            <motion.div className="absolute top-20 left-1/2 -translate-x-1/2 text-7xl" animate={{ scale: [1, 1.2, 1] }} transition={{ duration: 1.5, repeat: Infinity }}>🏠📜</motion.div>
+            <div className="absolute bottom-24 right-1/4"><LawyerSVG /></div>
+            <SceneDescription text={description} />
+          </div>
+        )
+      case "fm-domestic-violence-act":
+        return (
+          <div className="stickman-drama-large">
+            <DetailedBackground type="generic" />
+            <div className="absolute bottom-24 left-1/4"><motion.div animate={{ rotate: [-10, 10, -10], x: [-3, 3, -3] }} transition={{ duration: 0.5, repeat: Infinity }}><DetailedStickmanSVG type="defeated" /></motion.div></div>
+            <motion.div className="absolute top-20 left-1/2 -translate-x-1/2 text-7xl" animate={{ scale: [1, 1.4, 1] }} transition={{ duration: 1, repeat: Infinity }}>🚫💔</motion.div>
+            <div className="absolute bottom-24 right-1/4"><DetailedStickmanSVG type="police" /></div>
+            <SceneDescription text={description} />
+          </div>
+        )
+      case "fm-protection-order":
+        return (
+          <div className="stickman-drama-large">
+            <DetailedBackground type="office" />
+            <div className="absolute bottom-24 left-1/4"><DetailedStickmanSVG type="confident" /></div>
+            <motion.div className="absolute top-20 left-1/2 -translate-x-1/2 text-7xl" animate={{ scale: [1, 1.2, 1] }} transition={{ duration: 1.5, repeat: Infinity }}>🛡️⚖️</motion.div>
+            <div className="absolute bottom-24 right-1/4"><LawyerSVG /></div>
+            <SceneDescription text={description} />
+          </div>
+        )
+      case "fm-dowry":
+        return (
+          <div className="stickman-drama-large">
+            <DetailedBackground type="generic" />
+            <motion.div className="absolute bottom-24 left-1/3 text-7xl" animate={{ scale: [1, 1.3, 1] }} transition={{ duration: 1.5, repeat: Infinity }}>💰🚫</motion.div>
+            <motion.div className="absolute top-20 left-1/2 -translate-x-1/2 text-6xl" animate={{ rotate: [0, 360] }} transition={{ duration: 2, repeat: Infinity, ease: "linear" }}>⚖️</motion.div>
+            <div className="absolute bottom-24 right-1/4"><DetailedStickmanSVG type="defeated" /></div>
+            <SceneDescription text={description} />
+          </div>
+        )
+      case "fm-livein":
+        return (
+          <div className="stickman-drama-large">
+            <DetailedBackground type="generic" />
+            <motion.div className="absolute bottom-24 left-1/3 text-7xl" animate={{ scale: [1, 1.2, 1] }} transition={{ duration: 2, repeat: Infinity }}>🏠👫</motion.div>
+            <motion.div className="absolute top-20 left-1/2 -translate-x-1/2 text-6xl" animate={{ y: [0, -10, 0] }} transition={{ duration: 2, repeat: Infinity }}>⚖️✅</motion.div>
+            <SceneDescription text={description} />
+          </div>
+        )
+
+      // EDUCATIONAL RIGHTS - 10 LEVELS
+      case "edu-free-admission":
+        return (
+          <div className="stickman-drama-large">
+            <DetailedBackground type="office" />
+            <motion.div className="absolute bottom-24 left-1/3 text-7xl" animate={{ scale: [1, 1.2, 1] }} transition={{ duration: 2, repeat: Infinity }}>👧🎓</motion.div>
+            <motion.div className="absolute top-20 left-1/2 -translate-x-1/2 text-6xl" animate={{ y: [0, -10, 0] }} transition={{ duration: 2, repeat: Infinity }}>✅📚</motion.div>
+            <div className="absolute bottom-24 right-1/4"><DetailedStickmanSVG type="confident" /></div>
+            <SceneDescription text={description} />
+          </div>
+        )
+      case "edu-discrimination":
+        return (
+          <div className="stickman-drama-large">
+            <DetailedBackground type="office" />
+            <div className="absolute bottom-24 left-1/4"><DetailedStickmanSVG type="defeated" /></div>
+            <motion.div className="absolute top-20 left-1/2 -translate-x-1/2 text-7xl" animate={{ rotate: [0, 360] }} transition={{ duration: 2, repeat: Infinity, ease: "linear" }}>🚫</motion.div>
+            <motion.div className="absolute bottom-28 right-1/4 text-6xl" animate={{ scale: [1, 1.3, 1] }} transition={{ duration: 1.5, repeat: Infinity }}>📚⚖️</motion.div>
+            <SceneDescription text={description} />
+          </div>
+        )
+      case "edu-ews-quota":
+        return (
+          <div className="stickman-drama-large">
+            <DetailedBackground type="office" />
+            <motion.div className="absolute bottom-24 left-1/3 text-7xl" animate={{ scale: [1, 1.2, 1] }} transition={{ duration: 2, repeat: Infinity }}>👶🎓</motion.div>
+            <motion.div className="absolute top-20 left-1/2 -translate-x-1/2 text-6xl" animate={{ y: [0, -10, 0] }} transition={{ duration: 2, repeat: Infinity }}>25%✅</motion.div>
+            <SceneDescription text={description} />
+          </div>
+        )
+      case "edu-corporal-punishment":
+        return (
+          <div className="stickman-drama-large">
+            <DetailedBackground type="office" />
+            <div className="absolute bottom-24 left-1/4"><motion.div animate={{ rotate: [-15, 15, -15], x: [-3, 3, -3] }} transition={{ duration: 0.5, repeat: Infinity }}><DetailedStickmanSVG type="defeated" /></motion.div></div>
+            <motion.div className="absolute top-20 left-1/2 -translate-x-1/2 text-7xl" animate={{ scale: [1, 1.4, 1] }} transition={{ duration: 1, repeat: Infinity }}>🚫👋</motion.div>
+            <div className="absolute bottom-24 right-1/4"><DetailedStickmanSVG type="police" /></div>
+            <SceneDescription text={description} />
+          </div>
+        )
+      case "edu-quality-facilities":
+        return (
+          <div className="stickman-drama-large">
+            <DetailedBackground type="office" />
+            <motion.div className="absolute bottom-24 left-1/3 text-7xl" animate={{ scale: [1, 1.3, 1] }} transition={{ duration: 1.5, repeat: Infinity }}>🏫🚰</motion.div>
+            <motion.div className="absolute top-20 left-1/2 -translate-x-1/2 text-6xl" animate={{ y: [0, -10, 0] }} transition={{ duration: 2, repeat: Infinity }}>✅</motion.div>
+            <SceneDescription text={description} />
+          </div>
+        )
+      case "edu-disability-rights":
+        return (
+          <div className="stickman-drama-large">
+            <DetailedBackground type="office" />
+            <motion.div className="absolute bottom-24 left-1/3 text-7xl" animate={{ scale: [1, 1.2, 1] }} transition={{ duration: 2, repeat: Infinity }}>🦽📚</motion.div>
+            <motion.div className="absolute top-20 left-1/2 -translate-x-1/2 text-6xl" animate={{ y: [0, -10, 0] }} transition={{ duration: 2, repeat: Infinity }}>✅🎓</motion.div>
+            <div className="absolute bottom-24 right-1/4"><DetailedStickmanSVG type="confident" /></div>
+            <SceneDescription text={description} />
+          </div>
+        )
+      case "edu-midday-meals":
+        return (
+          <div className="stickman-drama-large">
+            <DetailedBackground type="office" />
+            <motion.div className="absolute bottom-24 left-1/3 text-7xl" animate={{ scale: [1, 1.2, 1] }} transition={{ duration: 2, repeat: Infinity }}>🍱👦</motion.div>
+            <motion.div className="absolute top-20 left-1/2 -translate-x-1/2 text-6xl" animate={{ y: [0, -10, 0] }} transition={{ duration: 2, repeat: Infinity }}>✅</motion.div>
+            <SceneDescription text={description} />
+          </div>
+        )
+      case "edu-dropout-prevention":
+        return (
+          <div className="stickman-drama-large">
+            <DetailedBackground type="generic" />
+            <motion.div className="absolute bottom-24 left-1/3 text-7xl" animate={{ x: [-5, 5, -5] }} transition={{ duration: 1, repeat: Infinity }}>👦🏭</motion.div>
+            <motion.div className="absolute top-20 left-1/2 -translate-x-1/2 text-7xl" animate={{ scale: [1, 1.3, 1] }} transition={{ duration: 1.5, repeat: Infinity }}>🚫</motion.div>
+            <div className="absolute bottom-24 right-1/4"><DetailedStickmanSVG type="police" /></div>
+            <SceneDescription text={description} />
+          </div>
+        )
+      case "edu-gender-equality":
+        return (
+          <div className="stickman-drama-large">
+            <DetailedBackground type="office" />
+            <motion.div className="absolute bottom-24 left-1/3 text-7xl" animate={{ scale: [1, 1.2, 1] }} transition={{ duration: 2, repeat: Infinity }}>👧👦</motion.div>
+            <motion.div className="absolute top-20 left-1/2 -translate-x-1/2 text-6xl" animate={{ y: [0, -10, 0] }} transition={{ duration: 2, repeat: Infinity }}>⚖️✅</motion.div>
+            <SceneDescription text={description} />
+          </div>
+        )
+      case "edu-language-culture":
+        return (
+          <div className="stickman-drama-large">
+            <DetailedBackground type="office" />
+            <motion.div className="absolute bottom-24 left-1/3 text-7xl" animate={{ scale: [1, 1.2, 1] }} transition={{ duration: 2, repeat: Infinity }}>📚🌍</motion.div>
+            <motion.div className="absolute top-20 left-1/2 -translate-x-1/2 text-6xl" animate={{ y: [0, -10, 0] }} transition={{ duration: 2, repeat: Infinity }}>✅</motion.div>
+            <div className="absolute bottom-24 right-1/4"><DetailedStickmanSVG type="confident" /></div>
             <SceneDescription text={description} />
           </div>
         )
