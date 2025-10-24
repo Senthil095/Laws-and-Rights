@@ -49,7 +49,7 @@ export function Navbar() {
     <motion.nav
       initial={{ opacity: 0, y: -20 }}
       animate={{ opacity: 1, y: 0 }}
-      className="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-purple-100"
+      className="sticky top-0 z-50 bg-white/80 dark:bg-gray-900/80 backdrop-blur-md border-b border-purple-100 dark:border-purple-900"
     >
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
@@ -69,7 +69,7 @@ export function Navbar() {
               <Link
                 key={item.href}
                 href={item.href}
-                className="flex items-center space-x-1 text-gray-600 hover:text-purple-600 transition-colors duration-200"
+                className="flex items-center space-x-1 text-gray-600 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 transition-colors duration-200"
               >
                 <item.icon className="h-4 w-4" />
                 <span>{item.label}</span>
@@ -83,9 +83,9 @@ export function Navbar() {
             {user ? (
               <>
                 <StreakDisplay compact />
-                <div className="flex items-center space-x-2 px-3 py-2 bg-purple-50 rounded-lg">
-                  <User className="h-4 w-4 text-purple-600" />
-                  <span className="text-sm font-medium text-purple-700">{getUserName()}</span>
+                <div className="flex items-center space-x-2 px-3 py-2 bg-purple-50 dark:bg-purple-900/30 rounded-lg">
+                  <User className="h-4 w-4 text-purple-600 dark:text-purple-400" />
+                  <span className="text-sm font-medium text-purple-700 dark:text-purple-300">{getUserName()}</span>
                 </div>
                 <Button variant="ghost" size="sm" onClick={handleLogout}>
                   <LogOut className="h-4 w-4 mr-2" />
@@ -128,7 +128,7 @@ export function Navbar() {
                       key={item.href}
                       href={item.href}
                       onClick={() => setIsOpen(false)}
-                      className="flex items-center space-x-2 text-gray-600 hover:text-purple-600 transition-colors duration-200 p-2 rounded-lg hover:bg-purple-50"
+                      className="flex items-center space-x-2 text-gray-600 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 transition-colors duration-200 p-2 rounded-lg hover:bg-purple-50 dark:hover:bg-purple-900/30"
                     >
                       <item.icon className="h-5 w-5" />
                       <span>{item.label}</span>
@@ -141,9 +141,9 @@ export function Navbar() {
                         <div className="mb-3">
                           <StreakDisplay compact />
                         </div>
-                        <div className="flex items-center space-x-2 px-3 py-2 bg-purple-50 rounded-lg mb-2">
-                          <User className="h-4 w-4 text-purple-600" />
-                          <span className="text-sm font-medium text-purple-700">{getUserName()}</span>
+                        <div className="flex items-center space-x-2 px-3 py-2 bg-purple-50 dark:bg-purple-900/30 rounded-lg mb-2">
+                          <User className="h-4 w-4 text-purple-600 dark:text-purple-400" />
+                          <span className="text-sm font-medium text-purple-700 dark:text-purple-300">{getUserName()}</span>
                         </div>
                         <Button 
                           variant="ghost" 

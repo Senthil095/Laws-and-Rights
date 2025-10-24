@@ -110,7 +110,7 @@ export default function FeedbackPage() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-50 to-pink-50">
+    <div className="min-h-screen bg-gradient-to-br from-purple-50 to-pink-50 dark:from-gray-900 dark:to-purple-950">
       <div className="container mx-auto px-4 py-8">
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="max-w-2xl mx-auto">
           <div className="flex items-center gap-4 mb-6">
@@ -121,8 +121,8 @@ export default function FeedbackPage() {
               </Button>
             </Link>
             <div>
-              <h1 className="text-3xl font-bold text-gray-900">Share Your Feedback</h1>
-              <p className="text-gray-600">Help us improve your learning experience</p>
+              <h1 className="text-3xl font-bold text-gray-900 dark:text-white">Share Your Feedback</h1>
+              <p className="text-gray-600 dark:text-gray-300">Help us improve your learning experience</p>
             </div>
           </div>
 
@@ -201,7 +201,7 @@ export default function FeedbackPage() {
                           className={`h-6 w-6 ${
                             Number.parseInt(formData.rating) >= star
                               ? "fill-yellow-400 text-yellow-400"
-                              : "text-gray-300"
+                              : "text-gray-300 dark:text-gray-600"
                           }`}
                         />
                       </Button>
@@ -282,9 +282,9 @@ export default function FeedbackPage() {
             transition={{ delay: 0.2 }}
             className="mt-6 text-center"
           >
-            <Card className="bg-gradient-to-r from-green-50 to-purple-50 border-purple-200">
+            <Card className="bg-gradient-to-r from-green-50 to-purple-50 dark:from-green-950/20 dark:to-purple-950/20 border-purple-200 dark:border-purple-800">
               <CardContent className="p-4">
-                <p className="text-sm text-gray-600">
+                <p className="text-sm text-gray-600 dark:text-gray-300">
                   <strong>Thank you for helping us improve!</strong> Your feedback is valuable and helps us create a
                   better learning experience for everyone. We typically respond to feedback within 24-48 hours.
                 </p>

@@ -70,7 +70,7 @@ export default function AchievementsPage() {
   })
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-50 to-pink-50 py-12 px-4">
+    <div className="min-h-screen bg-gradient-to-br from-purple-50 to-pink-50 dark:from-gray-900 dark:to-purple-950 py-12 px-4">
       <div className="container mx-auto max-w-6xl">
         {/* Header */}
         <motion.div
@@ -89,7 +89,7 @@ export default function AchievementsPage() {
             <h1 className="text-4xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
               Your Achievements
             </h1>
-            <p className="text-gray-600 mt-2">Track your progress and earned rewards</p>
+            <p className="text-gray-600 dark:text-gray-300 mt-2">Track your progress and earned rewards</p>
           </div>
           
           {/* Points and Streak Summary */}
@@ -101,7 +101,7 @@ export default function AchievementsPage() {
                     <Trophy className="h-8 w-8 text-white" />
                   </div>
                   <div>
-                    <p className="text-sm text-gray-600">Quiz Points</p>
+                    <p className="text-sm text-gray-600 dark:text-gray-300">Quiz Points</p>
                     <p className="text-3xl font-bold text-purple-600">{totalPoints}</p>
                   </div>
                 </div>
@@ -116,7 +116,7 @@ export default function AchievementsPage() {
                       <Flame className="h-8 w-8 text-white" />
                     </div>
                     <div>
-                      <p className="text-sm text-gray-600">Streak Points</p>
+                      <p className="text-sm text-gray-600 dark:text-gray-300">Streak Points</p>
                       <p className="text-3xl font-bold text-orange-600">{streakData.totalPoints || 0}</p>
                     </div>
                   </div>
@@ -160,14 +160,14 @@ export default function AchievementsPage() {
                       initial={{ opacity: 0, x: -20 }}
                       animate={{ opacity: 1, x: 0 }}
                       transition={{ delay: 0.1 + index * 0.05 }}
-                      className="p-4 bg-gray-50 rounded-lg"
+                      className="p-4 bg-gray-50 dark:bg-gray-800/50 rounded-lg"
                     >
                       <div className="flex items-center justify-between mb-2">
                         <div className="flex items-center gap-3">
                           <span className="text-2xl">{category.badge?.icon || "📚"}</span>
                           <div>
-                            <h3 className="font-semibold text-gray-800">{category.title}</h3>
-                            <p className="text-sm text-gray-600">
+                            <h3 className="font-semibold text-gray-800 dark:text-gray-100">{category.title}</h3>
+                            <p className="text-sm text-gray-600 dark:text-gray-300">
                               {category.completedLevels} / {category.totalLevels} levels completed
                             </p>
                           </div>
@@ -183,12 +183,12 @@ export default function AchievementsPage() {
                         </div>
                       </div>
                       <Progress value={category.progress} className="h-2" />
-                      <p className="text-xs text-gray-500 mt-1">{category.progress}% complete</p>
+                      <p className="text-xs text-gray-500 dark:text-gray-400 mt-1">{category.progress}% complete</p>
                     </motion.div>
                   ))}
                   
                   {categoryStats.length === 0 && (
-                    <div className="text-center py-8 text-gray-500">
+                    <div className="text-center py-8 text-gray-500 dark:text-gray-400">
                       <Trophy className="h-12 w-12 mx-auto mb-3 opacity-50" />
                       <p>No progress yet. Start playing to earn points!</p>
                       <Link href="/">
@@ -276,16 +276,16 @@ export default function AchievementsPage() {
                         className={`p-4 rounded-lg border-2 ${
                           isEarned
                             ? "bg-gradient-to-r " + badge.color + " border-transparent text-white"
-                            : "bg-gray-100 border-gray-300 opacity-50"
+                            : "bg-gray-100 dark:bg-gray-800/30 border-gray-300 dark:border-gray-700 opacity-50"
                         }`}
                       >
                         <div className="flex items-start gap-3">
                           <span className="text-3xl">{badge.icon}</span>
                           <div className="flex-1">
-                            <h4 className={`font-semibold ${isEarned ? "text-white" : "text-gray-700"}`}>
+                            <h4 className={`font-semibold ${isEarned ? "text-white" : "text-gray-700 dark:text-gray-200"}`}>
                               {badge.name}
                             </h4>
-                            <p className={`text-sm ${isEarned ? "text-white/90" : "text-gray-600"}`}>
+                            <p className={`text-sm ${isEarned ? "text-white/90" : "text-gray-600 dark:text-gray-300"}`}>
                               {badge.description}
                             </p>
                             {isEarned && (
